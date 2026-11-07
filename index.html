@@ -294,6 +294,15 @@ h1,h2,h3{text-wrap:balance}
 .c30 h2{margin:18px 0 0;font-weight:800;font-size:clamp(22px,2.4vw,32px);line-height:1.2;letter-spacing:-.04em;max-width:24ch}
 .c30-text{display:grid;gap:14px;color:var(--ink-2);margin-top:22px}
 .c30-text p{margin:0}
+.case{grid-column:1/-1;border-top:1px solid var(--line);padding-top:clamp(24px,3vw,36px)}
+.case-l{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
+.case-steps{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.case-steps li{background:var(--mist);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.5;color:var(--ink-2)}
+.case-steps li:last-child{background:var(--deep);color:#D5EBDF}
+.case-steps b{font-weight:800;font-size:18px;letter-spacing:-.02em;color:var(--ink)}
+.case-steps li:last-child b{color:#fff}
+@media(max-width:900px){.case-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.case-steps{grid-template-columns:1fr}}
 .c30-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .c30-steps{margin-top:20px}
 .c30-steps li{background:var(--mist)}
@@ -463,6 +472,15 @@ h1,h2,h3{text-wrap:balance}
           <div><b>People</b>Set goals, judge situations and carry responsibility.</div>
           <div><b>AI agents</b>Carry out delegated tasks across company systems and data.</div>
         </div>
+      </div>
+      <div class="case">
+        <p class="case-l">What it looks like in practice</p>
+        <ol class="case-steps">
+          <li><b>The problem</b><span>A company wants to grow, but not by hiring more people for every next step. It wants to grow through a better system.</span></li>
+          <li><b>Where we start</b><span>First, we understand how the company really works. Where people wait, where information gets retyped and where decisions rest on one person.</span></li>
+          <li><b>The change</b><span>Step by step, we automate, hand work to agents and rebuild operations. From individual processes all the way to the structure of the whole company.</span></li>
+          <li><b>The goal</b><span>A company that runs on the Company 2030 logic. It’s a long-term process, not a one-off project.</span></li>
+        </ol>
       </div>
     </div>
   </div>
