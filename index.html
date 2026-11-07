@@ -309,6 +309,17 @@ h1,h2,h3{text-wrap:balance}
 @media(max-width:900px){.c30-card{grid-template-columns:1fr}}
 @media(max-width:480px){.roles{grid-template-columns:1fr}.loop .st{font-size:12px;padding:7px 10px}}
 @media (prefers-reduced-motion:reduce){.loop .arc{animation:none}}
+.notes{padding-top:var(--sec)}
+.ngrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ncard{background:var(--card);border-radius:clamp(22px,2.6vw,30px);padding:14px 14px 24px;text-decoration:none;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s}
+.ncard:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,19,17,.08)}
+.ncard img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px}
+.ncard .nt,.ncard h3,.ncard p,.ncard .nr{padding:0 10px}
+.ncard .nt{font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep);margin-top:6px}
+.ncard h3{font-weight:700;font-size:21px;line-height:1.2;letter-spacing:-.03em}
+.ncard p{font-size:15px;line-height:1.5;color:var(--ink-2)}
+.ncard .nr{margin-top:auto;font-weight:600;font-size:14px;color:var(--deep)}
+@media(max-width:900px){.ngrid{grid-template-columns:1fr}}
 .why,.build{padding-top:var(--sec)}
 .build.tight{padding-top:14px}
 .why .sec-head h2{font-size:clamp(28px,3.6vw,48px);max-width:30ch;margin-left:auto;margin-right:auto}
@@ -368,6 +379,7 @@ h1,h2,h3{text-wrap:balance}
     <nav class="nav" aria-label="Hlavní">
       <a href="#company2030">Co stavím</a>
       <a href="#proc">Co mě zajímá</a>
+      <a href="#zapisky">Zápisky</a>
       <a href="#cesta">Kapitoly</a>
       <a href="#rozhovory">Rozhovory</a>
       <a href="#osobne">Osobně</a>
@@ -502,6 +514,21 @@ h1,h2,h3{text-wrap:balance}
         <p>Ta otázka propojuje technologii s věcmi, které lidé v publiku řeší osobně. Co se mám učit? Za co ponesu odpovědnost? Jak povedu tým? Co bude moje hodnota?</p>
         <p>A z pohledu firmy: jak si uchová zkušenosti? A jak poznáme, že nám nový způsob práce skutečně prospívá?</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4b · ZÁPISKY -->
+<section class="notes" id="zapisky" aria-labelledby="zapisky-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Zápisky · Bez návodu</span>
+      <h2 id="zapisky-h">Co stavím, co si myslím a co mě změnilo</h2>
+    </div>
+    <div class="ngrid">
+      <a class="ncard" href="/zapisky/od-reakce-k-predikci/"><img src="img/portret-800.jpg" alt="" loading="lazy"><span class="nt">Co stavím · Enter</span><h3>Firma neroste rychleji, než stíhají rozhodovat její lidé</h3><p>Proč škálování podle mě začíná u předvídání, ne u dalších lidí, kteří budou hasit.</p><span class="nr">Číst →</span></a>
+      <a class="ncard" href="/zapisky/kathmandu-hozeny-do-problemu/"><img src="img/kmd-office.jpg" alt="" loading="lazy"><span class="nt">Co mě změnilo · Kathmandu</span><h3>Hozený rovnou do problému. Co mě naučil americký tým v Kathmandu</h3><p>Po letech vlastního podnikání jsem začínal znovu, uvnitř globální firmy na druhém konci světa.</p><span class="nr">Číst →</span></a>
+      <a class="ncard" href="/zapisky/adapted-znovu/"><img src="img/repre-ms-pruvod.jpg" alt="" loading="lazy"><span class="nt">Co mě změnilo · Adapted</span><h3>Co mi vzal covid a proč Adapted stavíme jinak</h3><p>Vždycky může přijít něco, co neovlivníte. Můžete ale stavět tak, aby vás to nezlomilo.</p><span class="nr">Číst →</span></a>
     </div>
   </div>
 </section>

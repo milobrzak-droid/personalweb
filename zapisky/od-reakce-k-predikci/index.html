@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Firma neroste rychleji, než stíhají rozhodovat její lidé · Milo Brzák</title>
+<meta name="description" content="Proč škálování podle mě začíná u předvídání, ne u dalších lidí, kteří budou hasit.">
+<link rel="canonical" href="https://milobrzak.com/zapisky/od-reakce-k-predikci/">
+<meta name="author" content="Miloslav Brzák">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:url" content="https://milobrzak.com/zapisky/od-reakce-k-predikci/">
+<meta property="og:title" content="Firma neroste rychleji, než stíhají rozhodovat její lidé">
+<meta property="og:description" content="Proč škálování podle mě začíná u předvídání, ne u dalších lidí, kteří budou hasit.">
+<meta property="og:image" content="https://milobrzak.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F4F2;--card:#FFFFFF;--ink:#0E1311;--ink-2:#3A403D;--ink-3:#6B716E;--line:#E2E5E1;--mint:#BBEED1;--mist:#E7F7EE;--signal:#41E39E;--deep:#006740;--sans:"Poppins",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,monospace}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px))}
+.head{position:sticky;top:0;z-index:5;background:rgba(243,244,242,.9);backdrop-filter:blur(12px)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{color:var(--ink);display:inline-flex}.logo{height:26px;width:auto;overflow:visible}
+.back{font:500 14px/1 var(--sans);text-decoration:none;color:var(--ink-2)}.back:hover{color:var(--deep)}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.chip i{width:6px;height:6px;border-radius:50%;background:var(--signal)}
+article{max-width:740px;margin:0 auto;padding:clamp(40px,7vw,90px) 0 40px}
+h1{margin:22px 0 0;font-weight:700;font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.04em;text-wrap:balance}
+.lead{margin:20px 0 0;font-size:clamp(19px,2vw,23px);line-height:1.5;color:var(--deep);font-weight:500}
+.meta{margin-top:20px;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.hero{margin:36px 0 8px;border-radius:28px;overflow:hidden;aspect-ratio:16/9}.hero img{width:100%;height:100%;object-fit:cover}
+.body p,.body ul{margin:22px 0 0;color:var(--ink-2)}
+.body h2{margin:44px 0 0;font-weight:700;font-size:clamp(23px,2.6vw,30px);line-height:1.2;letter-spacing:-.03em;color:var(--ink)}
+.body strong{color:var(--ink)}
+.body ul{padding:0;list-style:none;display:grid;gap:10px}
+.body li{background:var(--card);border-radius:16px;padding:14px 18px 14px 44px;position:relative}
+.body li::before{content:"";position:absolute;left:18px;top:24px;width:10px;height:10px;border-radius:50%;background:var(--signal)}
+.end{margin-top:56px;padding:28px;background:var(--card);border-radius:24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.end p{margin:0;color:var(--ink-2);font-size:16px}
+.btn{display:inline-flex;align-items:center;height:46px;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font:500 15px/1 var(--sans)}.btn:hover{background:var(--signal);color:var(--ink)}
+.more{max-width:740px;margin:0 auto;padding:0 0 80px}
+.more h3{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin:0 0 14px}
+.more a{display:block;background:var(--card);border-radius:18px;padding:18px 22px;text-decoration:none;font-weight:600;line-height:1.3;margin-top:10px}.more a:hover{background:var(--mint)}
+.more small{display:block;font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep);margin-bottom:6px}
+.foot{padding:24px 0;font-size:13px;color:var(--ink-3);border-top:1px solid var(--line)}
+:focus-visible{outline:2px solid var(--deep);outline-offset:4px;border-radius:6px}
+</style>
+</head>
+<body>
+<header class="head"><div class="wrap"><a class="brand" href="/" aria-label="Milo, hlavní stránka"><svg class="logo" viewBox="-4 -8 262 112" aria-hidden="true"><g fill="currentColor"><path d="M0 100V0h25l23 57L71 0h25v100H74V42L56 88H40L22 42v58z"/><rect x="110" y="32" width="22" height="68"/><rect x="146" y="0" width="22" height="100"/><circle cx="216" cy="66" r="24.5" fill="none" stroke="currentColor" stroke-width="22"/></g><circle class="dot" cx="121" cy="9" r="12" fill="#41E39E"/></svg></a><a class="back" href="/#zapisky">← Všechny zápisky</a></div></header>
+<main class="wrap">
+<article>
+  <span class="chip"><i></i>Co stavím · Enter</span>
+  <h1>Firma neroste rychleji, než stíhají rozhodovat její lidé</h1>
+  <p class="lead">Proč škálování podle mě začíná u předvídání, ne u dalších lidí, kteří budou hasit.</p>
+  <p class="meta">Milo Brzák · Zápisky Bez návodu · listopad 2026</p>
+  <figure class="hero" style="margin-left:0;margin-right:0"><img src="/img/portret-800.jpg" alt="" loading="eager"></figure>
+  <div class="body">
+<p>Většina firem neroste tak rychle, jak by mohla. Často ne kvůli trhu, ale kvůli tomu, jak se v nich rozhoduje.</p>
+<p>Rozhodnutí přichází až ve chvíli, kdy se něco stane. Zákazník si stěžuje, chybí materiál, faktura je po splatnosti, člověk odchází. Vedení řeší to, co už nastalo. Do určité velikosti to funguje. Pak se to zlomí.</p>
+<p>S každým dalším zákazníkem, zakázkou a člověkem přibývá událostí, na které je potřeba reagovat. Když všechny končí u několika lidí, firma roste jen tak rychle, jak rychle tihle lidé stíhají. Zakladatel se stane úzkým hrdlem. Ne proto, že by nechtěl předávat. Jen on má celý obraz.</p>
+<h2>Škálovat neznamená přidat lidi k reakci</h2>
+<p>Znamená to posunout rozhodování dopředu.</p>
+<p>Firma má většinu informací, které potřebuje, dávno předtím, než se problém projeví. Jsou v objednávkách, v e-mailech, v číslech a ve zkušenostech lidí. Jen nejsou propojené a nikdo se na ně nepodívá včas.</p>
+<p>V Enteru proto stavíme systémy, které ta data spojí a sledují je průběžně. Agent si všimne, že se zpožďuje dodávka, dřív než to zjistí zákazník. Připraví podklady. Člověk pak rozhoduje dřív a s lepšími informacemi. Tomu říkáme od reakce k predikci.</p>
+<h2>Predikce není věštění</h2>
+<p>Je to disciplína. Vědět, které signály sledovat, kdo vlastní jaké rozhodnutí a co se má stát, když signál přijde. Technologie to umožní. Nejdřív si to ale musí ujasnit firma sama.</p>
+<p>Na ostrově u Sumatry jsem dvakrát rozhodoval, jestli vyslat loď proti bouřce s člověkem do nemocnice. Tam jsem pochopil, jak vypadá rozhodnutí, které přijde pozdě a s neúplnými informacemi. Ve firmě to tak být nemusí.</p>
+<p>Otázka, kterou si teď kladu: které rozhodnutí v naší firmě by šlo udělat o týden dřív, kdybychom se dívali na správná data?</p>
+  </div>
+  <div class="end"><p>Máte k tomu co říct? Rád si přečtu jiný pohled.</p><a class="btn" href="mailto:milo@enterai.cz">Napište mi</a></div>
+</article>
+<section class="more"><h3>Další zápisky</h3><a href="/zapisky/kathmandu-hozeny-do-problemu/"><small>Co mě změnilo · Kathmandu</small>Hozený rovnou do problému. Co mě naučil americký tým v Kathmandu</a><a href="/zapisky/adapted-znovu/"><small>Co mě změnilo · Adapted</small>Co mi vzal covid a proč Adapted stavíme jinak</a></section>
+</main>
+<footer class="foot"><div class="wrap">© 2026 Miloslav Brzák · <a href="https://www.linkedin.com/in/milobrzak" rel="me noopener" target="_blank">LinkedIn ↗</a></div></footer>
+</body>
+</html>
