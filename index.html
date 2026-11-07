@@ -28,7 +28,7 @@
  "worksFor":{"@type":"Organization","name":"Enter","url":"https://enter.ltd"},
  "affiliation":{"@type":"CollegeOrUniversity","name":"Vysoká škola ekonomie a managementu","alternateName":"VŠEM"},
  "sameAs":["https://www.linkedin.com/in/milobrzak"],
- "knowsAbout":["Adaptace","Agentic Company","Řízení změny","Krizové řízení","Adaptive surfing"]}
+ "knowsAbout":["Company 2030","Spolupráce lidí a AI agentů","Adaptace","Agentic Company","Řízení změny","Krizové řízení","Adaptive surfing"]}
 </script>
 <style>
 /* Minimal: světle šedý papír, bílé karty, černé písmo, zelená jen jako akcent. Tok stránky stoupá nahoru: start → cesta → co předávám → pozvání. */
@@ -274,8 +274,32 @@ h1,h2,h3{text-wrap:balance}
 @media (max-width:720px){.dots ol{grid-template-columns:repeat(3,1fr);row-gap:22px}.dots svg{display:none}.dots .d{background:var(--signal);border-color:var(--signal)}}
 @media (prefers-reduced-motion:reduce){.dots path,.dots .d{transition:none}}
 /* v1.2 · co mě zajímá, co stavím */
+.c30{padding-top:var(--sec)}
+.c30-card{background:var(--card);border-radius:clamp(24px,3vw,36px);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.c30-brand{font:700 clamp(44px,7vw,96px)/.92 var(--sans);letter-spacing:-.05em;margin:18px 0 0}
+.c30-brand span{color:var(--signal)}
+.c30 h2{margin:18px 0 0;font-weight:600;font-size:clamp(22px,2.4vw,32px);line-height:1.2;letter-spacing:-.03em;max-width:24ch}
+.c30-text{display:grid;gap:14px;color:var(--ink-2);margin-top:22px}
+.c30-text p{margin:0}
+.c30-card .btn{margin-top:26px}
+.loop{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin:0 auto}
+.loop svg{position:absolute;inset:0;width:100%;height:100%}
+.loop .ring{fill:none;stroke:var(--mint);stroke-width:18}
+.loop .arc{fill:none;stroke:var(--signal);stroke-width:18;stroke-linecap:round;stroke-dasharray:120 1000;animation:loopspin 9s linear infinite;transform-origin:50% 50%}
+@keyframes loopspin{to{transform:rotate(360deg)}}
+.loop .core{position:absolute;inset:27%;border-radius:50%;background:var(--deep);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px}
+.loop .core b{font:700 clamp(20px,2.4vw,30px)/1 var(--sans);letter-spacing:-.03em}
+.loop .core small{margin-top:8px;font:500 10px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint)}
+.loop .st{position:absolute;transform:translate(-50%,-50%);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:600 14px/1 var(--sans);white-space:nowrap;box-shadow:0 6px 18px rgba(14,19,17,.06)}
+.loop .st i{font:500 10px/1 var(--mono);font-style:normal;color:var(--deep);margin-right:6px}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.roles div{border-radius:18px;padding:14px 16px;background:var(--mist);font-size:14px;line-height:1.45;color:var(--ink-2)}
+.roles b{display:block;font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep);margin-bottom:6px}
+@media(max-width:900px){.c30-card{grid-template-columns:1fr}}
+@media(max-width:480px){.roles{grid-template-columns:1fr}.loop .st{font-size:12px;padding:7px 10px}}
+@media (prefers-reduced-motion:reduce){.loop .arc{animation:none}}
 .why,.build{padding-top:var(--sec)}
-.why .sec-head h2{max-width:22ch;margin-left:auto;margin-right:auto}
+.why .sec-head h2{font-size:clamp(28px,3.6vw,48px);max-width:30ch;margin-left:auto;margin-right:auto}
 .why-text{max-width:720px;margin:0 auto;display:grid;gap:16px;font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);text-align:center}
 .stances{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .stances li{background:var(--card);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px}
@@ -330,6 +354,7 @@ h1,h2,h3{text-wrap:balance}
   <div class="wrap">
     <a class="brand" href="#top">Milo<b>.</b>B</a>
     <nav class="nav" aria-label="Hlavní">
+      <a href="#company2030">Company 2030</a>
       <a href="#proc">Co mě zajímá</a>
       <a href="#stavim">Co stavím</a>
       <a href="#cesta">Kapitoly</a>
@@ -390,17 +415,51 @@ h1,h2,h3{text-wrap:balance}
   </div>
 </section>
 
+<!-- 2b · COMPANY 2030 -->
+<section class="c30" id="company2030" aria-labelledby="c30-h">
+  <div class="wrap">
+    <div class="c30-card">
+      <div>
+        <span class="chip"><i></i>Na čem dnes pracuji</span>
+        <p class="c30-brand">Company <span>2030</span></p>
+        <h2 id="c30-h">Jak bude fungovat firma, ve které pracují lidé a AI společně?</h2>
+        <div class="c30-text">
+          <p>Představuji si firmu, která dokáže využívat vlastní zkušenosti, průběžně se zlepšovat a svěřovat agentům jasně vymezenou práci. Lidé v ní určují směr, tvoří, rozvíjejí vztahy a odpovídají za rozhodnutí.</p>
+          <p>S Enterem pracujeme na tom, jak tuto představu převést do každodenního provozu. Propojujeme lidi, firemní data a systémy do smyčky rozhodování, práce a učení.</p>
+          <p>Zajímá mě přitom i lidská stránka té změny. Co se potřebujeme naučit, jak předávat odpovědnost a na co využijeme prostor, který získáme.</p>
+        </div>
+        <a class="btn" href="https://company2030.com" target="_blank" rel="noopener">Prozkoumat Company 2030 →</a>
+      </div>
+      <div>
+        <div class="loop" role="img" aria-label="Loop 2030: smyčka rozhodnutí, práce, výsledků a učení">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="38" transform="scale(1)" style="stroke-width:4.5"/><circle class="arc" cx="50" cy="50" r="38" style="stroke-width:4.5;stroke-dasharray:28 211"/></svg>
+          <div class="core"><b>Loop</b><small>princip, jak firma funguje</small></div>
+          <span class="st" style="left:50%;top:12%"><i>01</i>Rozhodnutí</span>
+          <span class="st" style="left:88%;top:50%"><i>02</i>Práce</span>
+          <span class="st" style="left:50%;top:88%"><i>03</i>Výsledky</span>
+          <span class="st" style="left:12%;top:50%"><i>04</i>Učení</span>
+        </div>
+        <div class="roles">
+          <div><b>Lidé</b>Určují cíle, posuzují situace a nesou odpovědnost.</div>
+          <div><b>AI agenti</b>Vykonávají svěřené úkoly nad firemními systémy a daty.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 3 · CO MĚ ZAJÍMÁ A PROČ -->
 <section class="why" id="proc" aria-labelledby="proc-h">
   <div class="wrap">
     <div class="sec-head">
       <span class="chip"><i></i>Co mě zajímá a proč</span>
-      <h2 id="proc-h">Chci, aby lidé měli větší možnost rozhodovat o tom, jak pracují a žijí.</h2>
+      <h2 id="proc-h">Zajímá mě, co lidé dokážou, když se naučí pracovat v nových podmínkách. A když mají možnost ty podmínky sami měnit.</h2>
     </div>
     <div class="why-text">
-      <p>Ve sportu, podnikání i technologiích mě zajímá, co člověku otevře další možnosti. Někdy se potřebuje něco naučit. Někdy změnit způsob práce. A někdy potřebujeme změnit podmínky, které mu stojí v cestě.</p>
-      <p>Dnes s Enterem stavím systémy, ve kterých část práce přebírá AI. Zajímá mě, jak díky tomu mohou lidé získat větší prostor pro vlastní úsudek, tvoření, vztahy a život.</p>
-      <p>Součástí téhle cesty je schopnost vstoupit do neznámého, učit se od lidí, kteří vědí víc, a převzít odpovědnost za další krok.</p>
+      <p>Tuhle otázku si nesu ze sportu, podnikání i života v různých zemích. Dnes ji přenáším do technologií a do způsobu, jak fungují firmy.</p>
+      <p>S Enterem pracuji na podobě firmy, ve které lidé a AI agenti spolupracují, zkušenosti se proměňují v lepší rozhodování a každodenní provoz dokáže zvládnout více práce samostatně.</p>
+      <p><strong>Company 2030</strong> je vize, kterou tím sleduji. Firma, která se průběžně učí, dává lidem prostor tvořit a rozhodovat a dokáže růst bez toho, aby každý další krok znamenal větší závislost na několika přetížených lidech.</p>
+      <p>Chci přispět k tomu, abychom uměli takové firmy stavět. A zároveň se učili dobře žít ve světě, který tím vytváříme.</p>
     </div>
     <ol class="stances">
       <li><span class="num">1</span><h3>Schopnost učit se otevírá další možnosti.</h3><p>Jak začít v neznámém prostředí, přiznat si mezery a využít to, co už umím.</p><small>Sport, podnikání, změny zemí a pracovních prostředí</small></li>
@@ -409,11 +468,11 @@ h1,h2,h3{text-wrap:balance}
       <li class="key"><span class="num">4</span><h3>O přínosu AI rozhoduje i to, co uděláme s uvolněnou kapacitou.</h3><p>Jak propojit automatizaci s kvalitou práce, výsledky firmy a životem lidí.</p><small>Enter a výuka Agentic Company na VŠEM</small></li>
     </ol>
     <div class="question">
-      <span class="chip"><i></i>Otázka, kterou nosím do debat</span>
-      <p class="q">Když nám technologie umožní udělat víc, podle čeho se rozhodneme, na co tu schopnost využijeme?</p>
+      <span class="chip"><i></i>Otázka, kterou nosím na pódia</span>
+      <p class="q">Co bude dělat člověk ve firmě, která dokáže stále více práce zvládnout sama?</p>
       <div class="q-cols">
-        <p>Můžeme stavět firmy, ve kterých se méně času ztrácí přepisováním informací, hledáním podkladů a čekáním na rozhodnutí. Lidé pak mohou věnovat víc pozornosti tomu, kde mají zkušenost, úsudek a odpovědnost.</p>
-        <p>O tom, kam ten získaný prostor nasměrujeme, rozhodujeme my. Ušetřený čas se musí promítnout do konkrétních změn práce, aby ho lidé pocítili. Právě v tom vidím jednu z nejdůležitějších rolí vedení firem.</p>
+        <p>Ta otázka propojuje technologii s věcmi, které lidé v publiku řeší osobně. Co se mám učit? Za co ponesu odpovědnost? Jak povedu tým? Co bude moje hodnota?</p>
+        <p>A z pohledu firmy: jak si uchová zkušenosti? A jak poznáme, že nám nový způsob práce skutečně prospívá?</p>
       </div>
     </div>
   </div>
@@ -437,6 +496,7 @@ h1,h2,h3{text-wrap:balance}
           <li><b>03</b> Zapojení lidí a řízení podle živých dat</li>
         </ul>
         <p class="ad-note">Od reakce k predikci. Aby firma nemusela jen hasit a lidé měli čas na to, co umí nejlíp.</p>
+        <p class="ad-note" style="margin-top:0">Enter je tým, se kterým vizi <a href="#company2030">Company 2030</a> převádím do praxe.</p>
         <a class="btn light" href="https://enter.ltd" target="_blank" rel="noopener">Web Enteru ↗</a>
       </article>
       <article class="bcard adapted" id="adapted">
@@ -569,23 +629,23 @@ h1,h2,h3{text-wrap:balance}
       <p>Pro zakladatele, manažery a lidi, kteří nesou odpovědnost za změnu nebo hledají další profesní směr.</p>
     </div>
     <div class="give-grid">
+      <article class="gcard key">
+        <span class="num">1</span><span class="t">Pro byznys, technologie, HR, leadership</span>
+        <h3>Company 2030. Jak navrhnout spolupráci lidí a AI.</h3>
+        <p><b>Co si publikum odnese:</b> konkrétní obraz fungování firmy, rozdělení práce, rozhodovacích pravomocí a odpovědnosti. A otázky pro návrh vlastní organizace.</p>
+        <p class="talk"><span>Zkušenost: Enter, Company 2030, výuka Agentic Company na VŠEM</span></p>
+      </article>
       <article class="gcard">
-        <span class="num">1</span><span class="t">Pro širší konference, podnikatele, školy</span>
-        <h3>Bez návodu. Jak jednat, když zkušenost nestačí.</h3>
-        <p><b>Co si publikum odnese:</b> jak si pojmenovat neznámé, najít pomoc, vyzkoušet další krok a podle výsledku upravit postup.</p>
+        <span class="num">2</span><span class="t">Pro širší konference, podnikatele, školy</span>
+        <h3>Bez návodu. Jak se učit, když se mění pravidla.</h3>
+        <p><b>Co si publikum odnese:</b> způsob, jak rozpoznat vlastní mezery, využít zkušenosti, které už má, a začít jednat.</p>
         <p class="talk"><span>Příběhy: surf s jednou rukou, ostrov u Sumatry, začít znovu po covidu</span></p>
       </article>
-      <article class="gcard key">
-        <span class="num">2</span><span class="t">Pro byznys, technologie, HR, leadership</span>
-        <h3>Co uděláme s časem, který nám vrátí AI?</h3>
-        <p><b>Co si publikum odnese:</b> jak rozhodovat o využití uvolněné kapacity a spojit technologickou změnu s konkrétním přínosem pro firmu i lidi.</p>
-        <p class="talk"><span>Zkušenost: Enter, výuka Agentic Company na VŠEM</span></p>
-      </article>
       <article class="gcard">
-        <span class="num">3</span><span class="t">Pro majitele a vedení firem</span>
-        <h3>Firma, která zvládne víc rozhodnutí bez zakladatele.</h3>
-        <p><b>Co si publikum odnese:</b> jak spolu souvisejí předávání odpovědnosti, dostupné informace, pravidla rozhodování a AI agenti.</p>
-        <p class="talk"><span>Zkušenost: vlastní hotel, Adapted, provoz ostrova, Kathmandu</span></p>
+        <span class="num">3</span><span class="t">Pro zakladatele, majitele a vedení firem</span>
+        <h3>Když firma získá vlastní paměť.</h3>
+        <p><b>Co si publikum odnese:</b> jak zachytit zkušenosti z práce a využívat je při dalších rozhodnutích. Co to znamená pro zakladatele, manažery a závislost firmy na jednotlivcích.</p>
+        <p class="talk"><span>Zkušenost: Enter, práce s vedením firem</span></p>
       </article>
     </div>
   </div>
@@ -619,11 +679,11 @@ h1,h2,h3{text-wrap:balance}
       <span class="chip"><i></i>Pro pořadatele a média</span>
       <h2 id="poradatele-h">Proč mě pozvat</h2>
     </div>
-    <div class="takeaway"><p>Dokážu propojit osobní zkušenost se změnou, vedení lidí a AI do debaty o tom, jak získat větší samostatnost v práci i v životě. A co pro to můžeme konkrétně udělat.</p></div>
+    <div class="takeaway"><p>Otevírám otázku, jakou roli bude mít člověk ve firmě, která dokáže stále víc práce zvládnout sama. A co se potřebujeme naučit už dnes.</p></div>
     <div class="org-grid">
       <div class="box">
         <h3>Bio do programu</h3>
-        <div class="bio" id="bio"><p>Milo Brzák propojuje zkušenost podnikatele, adaptive surfaře a zakladatele technologické firmy Enter.</p><p>Mluví o tom, jak se lidé učí, rozhodují a přebírají odpovědnost v měnících se podmínkách. Vychází ze zkušeností s podnikáním na Bali, provozem ostrova u Sumatry, prací v centrále Kathmandu a současným zaváděním AI do firem.</p><p>Publiku přináší osobní příběhy i praktické otázky pro vlastní práci. Co se potřebujeme naučit? Které podmínky můžeme změnit? Co můžeme předat lidem nebo technologiím? A na co chceme využít prostor, který tím získáme?</p><p>Vystupuje česky i anglicky.</p></div>
+        <div class="bio" id="bio"><p>Milo Brzák propojuje zkušenost podnikatele a adaptive surfaře s praktickou prací na firmách pro éru AI. Je zakladatelem Enteru a rozvíjí vizi Company 2030, ve které lidé a AI agenti společně vykonávají práci, rozhodují v jasně vymezených rolích a využívají zkušenosti k dalšímu zlepšování.</p><p>Ve vystoupeních otevírá otázku, jakou roli bude mít člověk v takové firmě a co se potřebujeme naučit už dnes. Vychází ze zkušeností ze sportu, vlastního podnikání, mezinárodního prostředí i současné práce s technologiemi.</p><p>Vystupuje česky i anglicky.</p></div>
         <div class="row"><button class="btn" id="copy-bio" type="button">Kopírovat bio</button><a class="btn light" href="img/portret.jpg" target="_blank" rel="noopener">Fotka v plné velikosti ↗</a></div>
         <span class="sr-only" id="bio-status" role="status" aria-live="polite"></span>
       </div>
