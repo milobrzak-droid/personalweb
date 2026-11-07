@@ -147,8 +147,11 @@ h1,h2,h3{text-wrap:balance}
 .ad-steps b{display:block;font-weight:700;font-size:22px;letter-spacing:-.03em;margin-bottom:6px}
 .ad-steps li.now b{color:var(--signal)}
 .ad-steps span{font-size:14px;line-height:1.45}
-.ad-photos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-top:14px}
+.ad-photos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-top:14px;align-items:stretch}
+.ad-photos > img{height:100%;min-height:220px}
 .ad-photos img{width:100%;height:220px;object-fit:cover;border-radius:18px}
+.ad-main{position:relative}.ad-main img{height:100%;min-height:220px}
+.ad-main figcaption{position:absolute;left:10px;bottom:10px;right:10px;background:rgba(255,255,255,.92);border-radius:12px;padding:8px 12px;font-size:13px;font-weight:500}
 .ad-cta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:24px}
 .ad-cta p{max-width:52ch}
 @media(max-width:1000px){.ad-steps{grid-template-columns:1fr 1fr}.ad-steps li.now{grid-column:1/-1}}
@@ -417,7 +420,7 @@ h1,h2,h3{text-wrap:balance}
         <li class="now"><b>Dnes</b><span>Stavíme Adapted znovu, tentokrát tak, aby nestál na jednom člověku.</span></li>
       </ol>
       <div class="ad-photos" id="ad-photos">
-        <img src="img/surf-katamaran-800.jpg" alt="Surf za katamaránem, záběr z dronu" width="800" height="447" loading="lazy">
+        <figure class="ad-main" style="margin:0"><img src="img/repre-ms-pruvod.jpg" alt="Česká reprezentace s vlajkou na zahajovacím průvodu mistrovství světa v adaptive surfingu v Kalifornii" width="960" height="640" loading="lazy"><figcaption>Česká reprezentace na mistrovství světa v adaptive surfingu, Kalifornie</figcaption></figure>
         <img src="img/surf-bali-800.jpg" alt="Surf na Bali" width="800" height="532" loading="lazy">
         <img src="img/riviera-bazen-800.jpg" alt="Riviera House na Bali" width="800" height="533" loading="lazy">
       </div>
