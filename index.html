@@ -367,7 +367,8 @@ h1,h2,h3{text-wrap:balance}
 .bcard.wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
 .ad-logo{width:110px;height:auto}
 .bcard.wide .ad-l{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
-.bcard.wide .ad-main img{aspect-ratio:4/5}
+.bcard.wide .ad-main{width:100%;min-width:0;align-self:center}
+.bcard.wide .ad-main img{display:block;width:100%;height:auto;min-height:0;aspect-ratio:4/5}
 @media(max-width:900px){.bcard.wide{grid-template-columns:1fr}.bcard.wide .ad-main img{aspect-ratio:3/2}}
 .mono-l{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
 .bcard h3{font-weight:800;font-size:clamp(28px,3vw,42px);line-height:1.04;letter-spacing:-.05em}
@@ -510,7 +511,7 @@ h1,h2,h3{text-wrap:balance}
         <p class="ad-note">We’re rebuilding Adapted now. <b>We’re looking for partners and people who want to get involved.</b></p>
         <a class="btn" href="#kontakt">Get involved with Adapted →</a>
       </div>
-        <figure class="ad-main" style="margin:0"><img src="/img/surf-adapted.jpg" alt="Milo Brzák surfing a wave below the cliffs in Bali" width="574" height="718" loading="lazy"><figcaption>Surfing with one arm, Bali</figcaption></figure>
+        <figure class="ad-main" style="margin:0"><img src="/img/surf-adapted.jpg" alt="Milo Brzák surfing a wave below the cliffs in Bali" width="574" height="718" loading="eager" decoding="async"><figcaption>Surfing with one arm, Bali</figcaption></figure>
       </article>
     </div>
   </div>
