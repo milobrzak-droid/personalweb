@@ -247,6 +247,11 @@ h1,h2,h3{text-wrap:balance}
 .foot a{text-decoration:none}.foot a:hover{color:var(--deep)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
+.jobs{max-width:860px;margin:0 auto 48px;text-align:center;padding:clamp(24px,4vw,44px);background:var(--card);border-radius:28px;position:relative}
+.jobs::before{content:"";position:absolute;left:50%;top:-14px;transform:translateX(-50%);width:28px;height:28px;border-radius:50%;background:var(--signal)}
+.jobs blockquote{margin:0;font-weight:600;font-size:clamp(22px,2.6vw,34px);line-height:1.2;letter-spacing:-.03em}
+.jobs .cz{margin-top:14px;color:var(--ink-2)}
+.jobs figcaption{margin-top:12px;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
 /* v1.2 · co mě zajímá, co stavím */
 .why,.build{padding-top:var(--sec)}
 .why .sec-head h2{max-width:22ch;margin-left:auto;margin-right:auto}
@@ -440,6 +445,11 @@ h1,h2,h3{text-wrap:balance}
       <h2 id="cesta-h">Šest prostředí, kde mi dostupný návod nestačil</h2>
       <p>V každém byli lidé se znalostmi a zkušenostmi. Musel jsem se od nich rychle učit, pochopit situaci a přispět vlastním řešením.</p>
     </div>
+    <figure class="jobs">
+      <blockquote lang="en">„You can’t connect the dots looking forward; you can only connect them looking backwards.“</blockquote>
+      <p class="cz">Tečky nespojíte dopředu, jen zpětně. Moje oblíbená věta. Dopředu to vypadalo jako řada odboček, zpětně je to jedna cesta.</p>
+      <figcaption>Steve Jobs, projev na Stanfordu, 2005</figcaption>
+    </figure>
     <ol class="steps">
       <li class="step">
         <span class="n"><span>01 · Start</span><span>Česko</span></span>
