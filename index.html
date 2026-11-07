@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milo Brzák</title>
+<meta name="description" content="Milo Brzák, zakladatel Enteru a pedagog oboru Agentic Company na VŠEM. Mluví o adaptaci, řízení změny a firmách v éře AI. Pozvání do podcastů a na konference.">
+<meta name="author" content="Miloslav Brzák">
+<meta property="og:title" content="Milo Brzák">
+<meta property="og:description" content="Nové prostředí. Vlastní cesta. Zakladatel Enteru.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://milobrzak.com">
+<meta name="theme-color" content="#17202E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2317202E'/%3E%3Cpath d='M5 21l4-6 3 4 4-8 3 5 2-2' fill='none' stroke='%239AA3B2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='22' cy='14' r='2.6' fill='%2341E39E'/%3E%3Cpath d='M22 14 L28 10' stroke='%2341E39E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Outfit = náhledová náhrada za Greycliff CF (Brand manuál 2.0). -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate:#17202E; --slate-2:#1E2939; --grid:rgba(230,233,237,.06);
+    --ink:#FFFFFF; --ink-2:#C9CED6; --ink-3:#9AA3B2;
+    --mint:#BBEED1; --signal:#41E39E;
+    --head:"Greycliff CF","Outfit",system-ui,sans-serif;
+    --body:"Geist",system-ui,sans-serif;
+    --mono:"Geist Mono",ui-monospace,monospace;
+    --g:clamp(20px,4vw,56px);
+    color-scheme:dark;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:var(--slate); color:var(--ink); font-family:var(--body);
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--signal);outline-offset:4px;border-radius:4px}
+
+  .stage{position:relative; min-height:100svh; display:grid; grid-template-rows:auto 1fr auto; padding:var(--g)}
+  /* technická mřížka 32 px, mizí do stran */
+  .stage::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:32px 32px;
+    -webkit-mask-image:radial-gradient(ellipse 85% 75% at 50% 55%,#000 30%,transparent 100%);
+            mask-image:radial-gradient(ellipse 85% 75% at 50% 55%,#000 30%,transparent 100%);
+  }
+
+  .top{position:relative; display:flex; justify-content:space-between; align-items:center; gap:16px;
+       font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3)}
+  .top .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:8px;
+            box-shadow:0 0 0 0 rgba(65,227,158,.6);animation:pulse 2.4s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(65,227,158,0)}100%{box-shadow:0 0 0 0 rgba(65,227,158,0)}}
+
+  .hero{position:relative; align-self:center; padding:6vh 0 2vh}
+  h1{
+    font-family:var(--head); font-weight:700; margin:0;
+    font-size:clamp(64px,13.5vw,212px); line-height:.86; letter-spacing:-.035em;
+  }
+  h1 .l{display:block; overflow:hidden; padding-bottom:.06em}
+  h1 .l>span{display:inline-block; transform:translateY(110%); animation:up 1.1s cubic-bezier(.2,.7,.1,1) forwards}
+  h1 .l:nth-child(2)>span{animation-delay:.1s}
+  @keyframes up{to{transform:none}}
+  .motto{
+    font-family:var(--head); font-weight:600; color:var(--mint);
+    font-size:clamp(22px,2.6vw,36px); line-height:1.15; letter-spacing:-.015em; margin:28px 0 0;
+    opacity:0; animation:fade .9s .55s ease forwards;
+  }
+  .lead{max-width:44ch; color:var(--ink-2); font-size:clamp(16px,1.25vw,19px); line-height:1.6; margin:16px 0 0;
+        opacity:0; animation:fade .9s .7s ease forwards}
+  @keyframes fade{to{opacity:1}}
+  .topics{margin:18px 0 0; color:var(--ink-2); font-size:15px; line-height:1.6; opacity:0; animation:fade .9s .85s ease forwards}
+  .topics span{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--signal); margin-bottom:4px}
+
+  /* linie: reakce → dnes → predikce */
+  .line{position:relative; margin:clamp(24px,5vh,56px) calc(var(--g) * -1) 0}
+  .line svg{display:block; width:100%; height:clamp(150px,22vh,230px); overflow:visible}
+  .past{fill:none; stroke:#7C8798; stroke-width:1.6; stroke-linejoin:round}
+  .band{fill:rgba(65,227,158,.13)}
+  .future{fill:none; stroke:var(--signal); stroke-width:2.4; stroke-linecap:round}
+  .now-rule{stroke:rgba(230,233,237,.28); stroke-dasharray:3 5}
+  .now-dot{fill:var(--slate); stroke:var(--signal); stroke-width:2.4}
+  .stop{fill:var(--slate); stroke:#9AA3B2; stroke-width:1.4; cursor:pointer; transition:r .2s, fill .2s}
+  .stop:hover,.stop:focus,.stop.on{fill:var(--mint); stroke:var(--mint)}
+  .stop:focus{outline:none}
+  .lab{font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; fill:var(--ink-3); pointer-events:none}
+  .lab.now{fill:var(--signal)}
+  .lab.fut{fill:var(--mint)}
+
+  .note{
+    position:absolute; left:0; top:0; max-width:260px; padding:10px 12px; border-radius:10px;
+    background:#0F1621; border:1px solid rgba(230,233,237,.14); color:var(--ink-2);
+    font-size:13px; line-height:1.45; pointer-events:none; opacity:0; transform:translateY(4px);
+    transition:opacity .2s, transform .2s; z-index:2;
+  }
+  .note b{display:block; font-family:var(--mono); font-weight:500; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--mint); margin-bottom:2px}
+  .note.on{opacity:1; transform:none}
+
+  .foot{position:relative; display:flex; flex-wrap:wrap; align-items:center; gap:14px 28px; margin-top:clamp(20px,4vh,40px)}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; height:48px; padding:0 20px; border-radius:10px;
+    background:var(--ink); color:var(--slate); font-weight:600; font-size:15px; text-decoration:none;
+    box-shadow:-4px 4px 0 var(--signal); transition:transform .12s, box-shadow .12s;
+  }
+  .btn:hover{transform:translate(1px,-1px); box-shadow:-6px 6px 0 var(--signal)}
+  .link{font-size:15px; color:var(--ink-2); text-decoration:none; border-bottom:1px solid rgba(201,206,214,.35); padding-bottom:2px}
+  .link:hover{color:var(--ink); border-color:var(--signal)}
+  .soon{margin-left:auto; font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3)}
+
+  @media (min-width:1000px){
+    .hero{padding:2vh 0 0}
+    .intro{display:grid; grid-template-columns:auto minmax(300px,500px); justify-content:space-between; align-items:end; gap:48px}
+    h1{font-size:clamp(120px,12.5vw,200px)}
+    .side{padding-bottom:.6em}
+    .motto{margin-top:0}
+    .line svg{height:clamp(140px,19vh,200px)}
+  }
+  @media (max-width:720px){
+    .soon{margin-left:0; width:100%}
+    .lab.hide-sm{display:none}
+    .btn .long{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important; transition:none!important}
+    h1 .l>span{transform:none} .motto,.lead,.topics{opacity:1}
+  }
+</style>
+</head>
+<body>
+<main class="stage">
+  <header class="top">
+    <span><span class="dot" aria-hidden="true"></span>milobrzak.com</span>
+    <span>CZ · 2026</span>
+  </header>
+
+  <section class="hero">
+    <div class="intro">
+    <h1><span class="l"><span>Milo</span></span><span class="l"><span>Brzák</span></span></h1>
+    <div class="side">
+    <p class="motto">Nové prostředí. Vlastní cesta.</p>
+    <p class="lead">Zakladatel Enteru. Pomáháme firmám, aby přestaly jen hasit a začaly předvídat. Cestou sem jsem surfoval s&nbsp;jednou rukou, deset let vedl hotel na Bali a řídil ostrov u&nbsp;Sumatry. Na VŠEM učím obor Agentic Company.</p>
+    <p class="topics"><span>Mluvím o</span> adaptaci · řízení změny · firmách, které se učí s&nbsp;AI · surfu s&nbsp;handicapem</p>
+    </div>
+    </div>
+
+    <figure class="line" aria-label="Cesta: Havířov, Kalifornie, Bali, ostrov Pinang, Nový Zéland, dnes Enter">
+      <svg id="chart" viewBox="0 0 1200 220" role="img" aria-hidden="true"></svg>
+      <div class="note" id="note" role="status"></div>
+    </figure>
+  </section>
+
+  <footer class="foot">
+    <a class="btn" href="mailto:milo@enterai.cz?subject=Pozv%C3%A1n%C3%AD%3A%20podcast%20%2F%20konference">Pozvat mě<span class="long"> do podcastu nebo na konferenci</span> <span aria-hidden="true">→</span></a>
+    <a class="link" href="https://enter.ltd" target="_blank" rel="noopener">Enter</a>
+    <a class="link" href="https://www.linkedin.com/in/milobrzak" target="_blank" rel="noopener">LinkedIn</a>
+    <span class="soon">Celý web připravuji</span>
+  </footer>
+</main>
+
+<script>
+(() => {
+  const svg = document.getElementById('chart');
+  const note = document.getElementById('note');
+  const NS = 'http://www.w3.org/2000/svg';
+  const H = 220, BASE = 1200;
+  const rect = svg.getBoundingClientRect();
+  const W = Math.max(520, Math.round(H * rect.width / Math.max(rect.height, 1)));
+  const sx = W / BASE, X = (v) => v * sx;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  const NOWX = X(820), NOWY = 132;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // zastávky na neklidné linii minulosti
+  const stops = [
+    { x: X(70),  y: 150, t: 'Havířov',     d: 'Vyrostl jsem na skateboardu a snowboardu. Pravou rukou hýbu od narození jen omezeně.' },
+    { x: X(230), y: 92,  t: 'Kalifornie',  d: 'Ve 23 letech Custom Boards: longboardy s díly umělců, výroba v pěti zemích.' },
+    { x: X(410), y: 168, t: 'Bali',        d: 'Deset let hotel Riviera House a surf každý den. Pětkrát mistrovství světa v adaptive surfingu.' },
+    { x: X(560), y: 70,  t: 'Pinang',      d: 'Devět měsíců jsem řídil ostrov u Sumatry. Dvě záchranné mise, obě dopadly dobře.' },
+    { x: X(690), y: 150, t: 'Nový Zéland', d: 'Quality Coordinator v Kathmandu. Retail a kvalitu jsem se učil od základů.' },
+  ];
+
+  const el = (n, a) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); return e; };
+
+  // budoucnost: hladká linie s pásmem
+  const fut = `M${NOWX} ${NOWY} C ${X(930)} 120, ${X(1040)} 92, ${W} 58`;
+  svg.append(el('path', { class: 'band', d: `M${NOWX} ${NOWY} C ${X(930)} 112, ${X(1040)} 72, ${W} 30 L ${W} 88 C ${X(1040)} 112, ${X(930)} 128, ${NOWX} ${NOWY} Z` }));
+  svg.append(el('line', { class: 'now-rule', x1: NOWX, y1: 6, x2: NOWX, y2: H - 6 }));
+
+  const past = el('path', { class: 'past' });
+  svg.append(past);
+  const future = el('path', { class: 'future', d: fut });
+  svg.append(future);
+
+  // neklidná minulost: zastávky + jemný šum mezi nimi
+  const pts = [{ x: 0, y: 128 }, ...stops, { x: NOWX, y: NOWY }];
+  function jag(t) {
+    let d = `M${pts[0].x} ${pts[0].y}`;
+    for (let i = 1; i < pts.length; i++) {
+      const a = pts[i - 1], b = pts[i];
+      const n = 4;
+      for (let k = 1; k < n; k++) {
+        const x = a.x + (b.x - a.x) * k / n;
+        const amp = 26 * Math.sin(k * 2.1 + i);
+        const wob = reduced ? 0 : 5 * Math.sin(t / 700 + i * 1.7 + k);
+        d += ` L${x.toFixed(1)} ${(a.y + (b.y - a.y) * k / n + amp + wob).toFixed(1)}`;
+      }
+      d += ` L${b.x} ${b.y}`;
+    }
+    return d;
+  }
+  past.setAttribute('d', jag(0));
+
+  // popisky
+  const labels = [];
+  stops.forEach((s, i) => {
+    const c = el('circle', { class: 'stop', cx: s.x, cy: s.y, r: 5.5, tabindex: 0, role: 'button', 'aria-label': s.t });
+    const up = s.y > 110;
+    const lab = el('text', { class: 'lab' + (i % 2 ? ' hide-sm' : ''), x: s.x, y: up ? s.y + 26 : s.y - 16, 'text-anchor': 'middle' });
+    lab.textContent = s.t;
+    svg.append(lab, c);
+    labels.push(c);
+    const show = () => {
+      labels.forEach(l => l.classList.toggle('on', l === c));
+      note.innerHTML = `<b>${s.t}</b>${s.d}`;
+      const box = svg.getBoundingClientRect();
+      const px = s.x / W * box.width, py = s.y / H * box.height;
+      const nx = Math.min(Math.max(px - 130, 8), box.width - 268);
+      note.style.transform = '';
+      note.style.left = nx + 'px';
+      note.style.top = (up ? py - 96 : py + 18) + 'px';
+      note.classList.add('on');
+    };
+    const hide = () => { c.classList.remove('on'); note.classList.remove('on'); };
+    c.addEventListener('mouseenter', show); c.addEventListener('focus', show);
+    c.addEventListener('mouseleave', hide); c.addEventListener('blur', hide);
+    c.addEventListener('click', show);
+  });
+
+  const nowDot = el('circle', { class: 'now-dot', cx: NOWX, cy: NOWY, r: 7 });
+  const nowLab = el('text', { class: 'lab now', x: NOWX, y: H - 12, 'text-anchor': 'middle' }); nowLab.textContent = 'Dnes · Enter';
+  const futLab = el('text', { class: 'lab fut', x: W - 8, y: 20, 'text-anchor': 'end' }); futLab.textContent = 'Od reakce k predikci';
+  svg.append(nowDot, nowLab, futLab);
+
+  // kreslení při načtení
+  if (!reduced) {
+    for (const p of [past, future]) {
+      const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L;
+      p.style.transition = `stroke-dashoffset ${p === past ? 1.8 : 1.1}s cubic-bezier(.4,.1,.2,1) ${p === past ? .5 : 2.2}s`;
+    }
+    requestAnimationFrame(() => requestAnimationFrame(() => { past.style.strokeDashoffset = 0; future.style.strokeDashoffset = 0; }));
+    // po dokreslení jemně dýchá
+    setTimeout(() => {
+      past.style.strokeDasharray = 'none'; past.style.transition = 'none';
+      const tick = (t) => { past.setAttribute('d', jag(t)); requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    }, 2400);
+  }
+  let rw = innerWidth; addEventListener('resize', () => { if (Math.abs(innerWidth - rw) > 80) location.reload(); });
+  document.addEventListener('click', (e) => { if (!e.target.classList.contains('stop')) { note.classList.remove('on'); labels.forEach(l => l.classList.remove('on')); } });
+})();
+</script>
+</body>
+</html>
