@@ -74,17 +74,16 @@ h1,h2,h3{text-wrap:balance}
 @media(max-width:860px){.nav{display:none}.head .btn{margin-left:auto}}
 
 /* 1 · úvod */
-.hero{padding-top:clamp(28px,4vw,52px)}
-.trio{display:grid;grid-template-columns:1fr;text-align:center;gap:20px;font-size:15px;font-weight:500;line-height:1.35}
-.trio div:nth-child(2){text-align:center}.trio div:nth-child(3){text-align:right}
-.trio .muted{color:var(--ink-3);font-weight:400}
-.name{font-weight:800;font-size:clamp(56px,14.2vw,196px);line-height:.95;letter-spacing:-.065em;text-align:center;margin:clamp(14px,2vw,26px) 0 clamp(18px,2.4vw,30px);white-space:nowrap}
-.frame{position:relative;background:var(--card);border-radius:clamp(18px,2vw,28px);padding:clamp(16px,3vw,40px)}
-.frame::before,.frame::after,.frame .s1,.frame .s2{content:"";position:absolute;width:14px;height:14px;border-radius:50%;border:1.5px solid #D4D8D3;background:var(--bg)}
-.frame::before{top:16px;left:16px}.frame::after{top:16px;right:16px}.frame .s1{bottom:16px;left:16px}.frame .s2{bottom:16px;right:16px}
-.frame img{width:100%;aspect-ratio:2.25/1;object-fit:cover;object-position:68% 30%;border-radius:999px}
-.frame .tag{position:absolute;right:clamp(28px,5vw,70px);bottom:clamp(28px,5vw,64px);background:var(--signal);color:var(--ink);border-radius:999px;padding:8px 14px;font:500 12px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase}
-@media(max-width:720px){.name{white-space:normal}.frame img{aspect-ratio:1.4/1;border-radius:200px}}
+.hero{padding-top:clamp(28px,5vw,72px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:center}
+.eyebrow{font:500 13px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
+.name{font-weight:800;font-size:clamp(52px,8.4vw,128px);line-height:.92;letter-spacing:-.06em;margin:16px 0 0}
+.hero-p{margin-top:22px;max-width:46ch;font-size:clamp(18px,1.6vw,21px);line-height:1.5;color:var(--ink-2)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.portrait{margin:0}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 40%;border-radius:clamp(20px,2.4vw,32px)}
+.portrait figcaption{margin-top:10px;font:500 12px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.portrait img{aspect-ratio:4/3}}
 
 /* 2 · hlavní sdělení */
 .about{padding-top:var(--sec);text-align:center}
@@ -266,11 +265,11 @@ h1,h2,h3{text-wrap:balance}
 .foot a{text-decoration:none}.foot a:hover{color:var(--deep)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
-.jobs{margin:0 auto 56px;padding:clamp(28px,5vw,64px);background:var(--deep);color:#fff;border-radius:32px;position:relative;overflow:hidden}
-.jobs .q-mark{position:absolute;right:clamp(16px,4vw,48px);top:-.18em;font:800 clamp(160px,22vw,300px)/1 var(--sans);color:var(--signal);opacity:.18;pointer-events:none}
+.jobs{margin:0 auto 56px;padding:clamp(24px,3.6vw,44px);background:var(--deep);color:#fff;border-radius:32px;position:relative;overflow:hidden}
+.jobs .q-mark{position:absolute;right:clamp(16px,4vw,48px);top:-.18em;font:800 clamp(110px,14vw,190px)/1 var(--sans);color:var(--signal);opacity:.18;pointer-events:none}
 .jobs .q-l{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:8px}
 .jobs .q-l i{width:6px;height:6px;border-radius:50%;background:var(--signal)}
-.jobs blockquote{margin:22px 0 0;max-width:20ch;font-weight:800;font-size:clamp(30px,4.6vw,60px);line-height:1.05;letter-spacing:-.05em;position:relative}
+.jobs blockquote{margin:18px 0 0;max-width:26ch;font-weight:800;font-size:clamp(24px,2.8vw,36px);line-height:1.05;letter-spacing:-.05em;position:relative}
 .jobs blockquote em{font-style:normal;color:var(--signal)}
 .jobs .cz{margin:20px 0 0;max-width:56ch;color:#D5EBDF;font-size:clamp(16px,1.4vw,18px)}
 .jobs figcaption{margin-top:16px;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint)}
@@ -295,7 +294,9 @@ h1,h2,h3{text-wrap:balance}
 .c30 h2{margin:18px 0 0;font-weight:800;font-size:clamp(22px,2.4vw,32px);line-height:1.2;letter-spacing:-.04em;max-width:24ch}
 .c30-text{display:grid;gap:14px;color:var(--ink-2);margin-top:22px}
 .c30-text p{margin:0}
-.c30-card .btn{margin-top:26px}
+.c30-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.c30-steps{margin-top:20px}
+.c30-steps li{background:var(--mist)}
 .loop{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin:0 auto}
 .loop svg{position:absolute;inset:0;width:100%;height:100%}
 .loop .ring{fill:none;stroke:var(--mint);stroke-width:18}
@@ -349,11 +350,15 @@ h1,h2,h3{text-wrap:balance}
 .q{max-width:24ch;margin:20px auto 0;font-weight:800;font-size:clamp(28px,3.8vw,52px);line-height:1.08;letter-spacing:-.05em}
 .q-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:28px auto 0;text-align:left;font-size:16px}
 @media(max-width:760px){.q-cols{grid-template-columns:1fr}}
-.build-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:14px;align-items:stretch}
+.build-grid{display:grid;grid-template-columns:1fr;gap:14px;align-items:stretch}
 .en-steps li{background:var(--mist)}
 .bcard.enter .btn{margin-top:auto}
 .bcard{background:var(--card);border-radius:clamp(24px,3vw,32px);padding:clamp(24px,3.5vw,44px);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .bcard.adapted{background:var(--mint)}
+.bcard.wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.bcard.wide .ad-l{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.bcard.wide .ad-main img{aspect-ratio:4/5}
+@media(max-width:900px){.bcard.wide{grid-template-columns:1fr}.bcard.wide .ad-main img{aspect-ratio:3/2}}
 .mono-l{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
 .bcard h3{font-weight:800;font-size:clamp(28px,3vw,42px);line-height:1.04;letter-spacing:-.05em}
 .bcard p{color:var(--ink-2)}
@@ -400,15 +405,16 @@ h1,h2,h3{text-wrap:balance}
 <main id="obsah">
 <!-- 1 · ÚVOD -->
 <section class="hero" id="top">
-  <div class="wrap">
-    <div class="trio">
-      <div>Founder of Enter · entrepreneur · surfer<br><span class="muted">teaches Agentic Company, Prague University of Economics and Management</span></div>
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="eyebrow">Founder of Enter. Entrepreneur. Surfer.</p>
+      <h1 class="name">Milo Brzák</h1>
+      <p class="hero-p">With my team, I build AI systems for companies. I’m interested in how people can make better decisions and how everyday work can depend less on individual people.</p>
+      <div class="ctas"><a class="btn" href="#company2030">What I’m building now</a><a class="btn light" href="#zapisky">Notes</a></div>
     </div>
-    <h1 class="name">Milo Brzák</h1>
-    <figure class="frame" style="margin:0">
-      <img src="/img/portret.jpg" srcset="/img/portret-800.jpg 800w, /img/portret.jpg 2200w" sizes="(max-width:1240px) 100vw, 1200px" alt="Milo Brzák in an old engine hall in Ostrava" width="2200" height="1238" fetchpriority="high">
-      <span class="s1"></span><span class="s2"></span>
-      <span class="tag">Ostrava · 2026</span>
+    <figure class="portrait">
+      <img src="/img/portret.jpg" srcset="/img/portret-800.jpg 800w, /img/portret.jpg 2200w" sizes="(max-width:900px) 100vw, 560px" alt="Milo Brzák in an old engine hall in Ostrava" width="2200" height="1238" fetchpriority="high">
+      <figcaption>An old engine hall, Ostrava, 2026</figcaption>
     </figure>
   </div>
 </section>
@@ -418,9 +424,8 @@ h1,h2,h3{text-wrap:balance}
   <div class="wrap">
         <h2 class="lead" id="lead"><span>No playbook.</span></h2>
     <p class="sublead">How to learn, decide and create in a world that keeps changing the rules.</p>
-    <p class="body">I’m the founder of Enter. With my team, I work on how companies will run when <strong>people and AI work together.</strong></p>
-    <p class="body">Before that, I ran a business in Bali, managed an island off Sumatra, worked for Kathmandu in New Zealand and founded Adapted. Surfing and living in different places are still a big part of who I am.</p>
-    <div class="ctas"><a class="btn" href="#company2030">What I’m building now</a><a class="btn light" href="#kontakt">Get in touch</a></div>
+        <p class="body">Before that, I ran a business in Bali, managed an island off Sumatra, worked for Kathmandu in New Zealand and founded Adapted. Surfing and living in different places are still a big part of who I am.</p>
+    
     
     
   </div>
@@ -436,10 +441,14 @@ h1,h2,h3{text-wrap:balance}
         <h2 id="c30-h">How will a company work when people and AI work together?</h2>
         <div class="c30-text">
           <p>I picture a company that learns from its own experience, keeps improving and hands clearly defined work to agents. People set the direction, create, build relationships and own the decisions.</p>
-          <p>At Enter, we work on turning that picture into everyday operations. We connect people, company data and systems into a loop of decisions, work and learning.</p>
-          <p>I also care about the human side of the change. What we need to learn, how we hand over responsibility and what we do with the room we gain.</p>
+          <p><strong>Enter</strong> is the team I put this into practice with. We work with owners and leadership teams, connecting people, company data and systems into a loop of decisions, work and learning. I’m responsible for the direction, and for making sure the change makes sense to the people in the company.</p>
         </div>
-        <a class="btn" href="https://company2030.com" target="_blank" rel="noopener">Explore Company 2030 →</a>
+        <ul class="ad-mini en-steps c30-steps">
+          <li><b>01</b> Operations and bottleneck audit, directly with leadership</li>
+          <li><b>02</b> Connecting to the systems the company already uses</li>
+          <li><b>03</b> Bringing people in and running on live data</li>
+        </ul>
+        <div class="c30-cta"><a class="btn" href="https://company2030.com" target="_blank" rel="noopener">Explore Company 2030 →</a><a class="btn light" href="https://enter.ltd" target="_blank" rel="noopener">Enter website ↗</a></div>
       </div>
       <div>
         <div class="loop" role="img" aria-label="Loop 2030: a loop of decisions, work, results and learning">
@@ -465,24 +474,13 @@ h1,h2,h3{text-wrap:balance}
   <div class="wrap">
     
     <div class="build-grid">
-      <article class="bcard enter">
-        <span class="mono-l">Enter · founder</span>
-        <h3>AI systems that give people room back</h3>
-        <p>At Enter, we connect existing systems, people and automated flows into one working whole. The system takes over routine work, so people can focus on judgment, quality and decisions. We work with owners and leadership teams.</p>
-        <ul class="ad-mini en-steps">
-          <li><b>01</b> Operations and bottleneck audit, directly with leadership</li>
-          <li><b>02</b> Connection to existing systems, with no downtime</li>
-          <li><b>03</b> Bringing people in and running on live data</li>
-        </ul>
-        <p class="ad-note">From reaction to prediction. So the company doesn’t just put out fires, and people have time for what they do best.</p>
-        <p class="ad-note" style="margin-top:0">Enter is the team I work with to turn <a href="#company2030">Company 2030</a> into practice.</p>
-        <a class="btn light" href="https://enter.ltd" target="_blank" rel="noopener">Enter website ↗</a>
-      </article>
-      <article class="bcard adapted" id="adapted">
+      
+      <article class="bcard adapted wide" id="adapted">
+        <div class="ad-l">
         <span class="mono-l">Adapted · founder</span>
         <h3>Sometimes the environment has to adapt to the person</h3>
         <p>I was born with torn nerves in my shoulder, and my right arm still doesn’t have full mobility. When I first went to the Adaptive Surfing World Championship, there was no community in Czechia. So we founded Adapted.</p>
-        <figure class="ad-main" style="margin:0"><img src="/img/repre-ms-pruvod.jpg" alt="The Czech team with the flag at the opening parade of the Adaptive Surfing World Championship in California" width="960" height="640" loading="lazy"><figcaption>The Czech team at the Adaptive Surfing World Championship, California</figcaption></figure>
+        
         <ul class="ad-mini">
           <li><b>2017</b> the first Czech adaptive surf team</li>
           <li><b>2018</b> the first Czech surf camp for people with disabilities, in Bali</li>
@@ -492,6 +490,8 @@ h1,h2,h3{text-wrap:balance}
         </ul>
         <p class="ad-note">We’re rebuilding Adapted now. <b>We’re looking for partners and people who want to get involved.</b></p>
         <a class="btn" href="#kontakt">Get involved with Adapted →</a>
+      </div>
+        <figure class="ad-main" style="margin:0"><img src="/img/repre-ms-pruvod.jpg" alt="The Czech team with the flag at the opening parade of the Adaptive Surfing World Championship in California" width="960" height="640" loading="lazy"><figcaption>The Czech team at the Adaptive Surfing World Championship, California</figcaption></figure>
       </article>
     </div>
   </div>
@@ -505,24 +505,13 @@ h1,h2,h3{text-wrap:balance}
       <h2 id="proc-h">I’m interested in what people can do when they learn to work in new conditions. And when they get to change those conditions themselves.</h2>
     </div>
     <div class="why-text">
-      <p>I carry this question from sport, business and life in different countries. Today I bring it into technology and into how companies work.</p>
-      <p>At Enter, I work on a company where people and AI agents work together, experience turns into better decisions, and daily operations handle more work on their own.</p>
-      <p><strong>Company 2030</strong> is the vision behind it. A company that keeps learning, gives people room to create and decide, and can grow without every next step making it more dependent on a few overloaded people.</p>
-      <p>I want to help us learn to build companies like that. And at the same time learn to live well in the world we create with them.</p>
+      <p>I carry this question from sport, business and life in different countries. Today I bring it into technology and into how companies work. I want to help us learn to build companies that keep learning and don’t rest on a few overloaded people. And at the same time learn to live well in the world we create with them.</p>
     </div>
-    <ol class="stances">
-      <li><span class="num">1</span><h3>The ability to learn opens new options.</h3><p>How to start in an unfamiliar place, admit the gaps and use what I already know.</p><small>Sport, business, new countries and workplaces</small></li>
-      <li><span class="num">2</span><h3>Changing the conditions can let a person do more.</h3><p>How to spot an obstacle in the environment, the equipment or the way work is organised, and change it.</p><small>Adaptive surfing, Adapted, working with technology</small></li>
-      <li><span class="num">3</span><h3>Independence requires responsibility.</h3><p>How to decide with incomplete information and hand decisions over to other people.</p><small>Own businesses, running an island, coordination at Kathmandu</small></li>
-      <li class="key"><span class="num">4</span><h3>The value of AI also depends on what we do with the capacity it frees up.</h3><p>How to connect automation with quality of work, company results and people’s lives.</p><small>Enter and teaching Agentic Company at VŠE</small></li>
-    </ol>
+    
     <div class="question">
       <span class="chip"><i></i>The question I’m working on</span>
       <p class="q">What will people do in a company that can handle more and more work on its own?</p>
-      <div class="q-cols">
-        <p>It connects technology with things people deal with personally. What should I learn? What will I be responsible for? How will I lead a team? What will my value be?</p>
-        <p>And from the company’s side: how does it keep its experience? And how do we know the new way of working actually does us good?</p>
-      </div>
+      
     </div>
   </div>
 </section>
@@ -602,7 +591,7 @@ h1,h2,h3{text-wrap:balance}
       </li>
       <li class="step now">
         <span class="n"><span>06 · Today</span><span>Enter · VŠE</span></span>
-        <img src="/img/portret-800.jpg" alt="" width="800" height="450" loading="lazy" style="object-position:68% 30%">
+        
         <h3>AI in companies, with people at the centre</h3>
         <p>I run Enter and teach Agentic Company at the Prague University of Economics and Management. It brings together everything I learned in the previous chapters.</p>
       </li>
@@ -626,15 +615,9 @@ h1,h2,h3{text-wrap:balance}
       </div>
       <div class="box kmd-text">
         <h3>What I worked on</h3>
-        <p>As Quality Coordinator, I was given one of the most complex problems with overseas supply. It concerned a hero product that carried a significant share of revenue across the portfolio.</p>
-        <ul class="did">
-          <li>I led the analysis of the problem and prepared the material for decisions.</li>
-          <li>I reported directly to the company’s leadership.</li>
-          <li>I coordinated the solution with teams in the US and Europe.</li>
-        </ul>
-        <h3 style="margin-top:24px">What I learned</h3>
-        <p>I learned retail, customer relationships and product quality from the ground up, from people who understood them better than I did. In a large company, decisions don’t come down to one person’s heroics, but to processes, data and the ability to see the whole system.</p>
-        <p class="learn-big">That’s exactly what I bring to companies with Enter today: so decisions don’t rest on one person alone.</p>
+        <p>As Quality Coordinator, I was straight away given one of the company’s most complex problems: overseas supply of a hero product. I led the analysis, reporting to leadership and coordination of teams in the US and Europe.</p>
+        <p class="learn-big">In a large company, what decides isn’t one person’s heroics, but processes, data and the ability to see the whole system.</p>
+        <a class="btn light" href="/notes/kathmandu-thrown-into-the-problem/">The full story in my notes →</a>
         <p class="src">Kathmandu is part of KMD Brands (Kathmandu, Rip Curl, Oboz), founded in 1987 in Christchurch. <a href="https://en.wikipedia.org/wiki/KMD_Brands" target="_blank" rel="noopener">Source</a></p>
       </div>
     </div>

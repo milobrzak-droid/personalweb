@@ -74,17 +74,16 @@ h1,h2,h3{text-wrap:balance}
 @media(max-width:860px){.nav{display:none}.head .btn{margin-left:auto}}
 
 /* 1 · úvod */
-.hero{padding-top:clamp(28px,4vw,52px)}
-.trio{display:grid;grid-template-columns:1fr;text-align:center;gap:20px;font-size:15px;font-weight:500;line-height:1.35}
-.trio div:nth-child(2){text-align:center}.trio div:nth-child(3){text-align:right}
-.trio .muted{color:var(--ink-3);font-weight:400}
-.name{font-weight:800;font-size:clamp(56px,14.2vw,196px);line-height:.95;letter-spacing:-.065em;text-align:center;margin:clamp(14px,2vw,26px) 0 clamp(18px,2.4vw,30px);white-space:nowrap}
-.frame{position:relative;background:var(--card);border-radius:clamp(18px,2vw,28px);padding:clamp(16px,3vw,40px)}
-.frame::before,.frame::after,.frame .s1,.frame .s2{content:"";position:absolute;width:14px;height:14px;border-radius:50%;border:1.5px solid #D4D8D3;background:var(--bg)}
-.frame::before{top:16px;left:16px}.frame::after{top:16px;right:16px}.frame .s1{bottom:16px;left:16px}.frame .s2{bottom:16px;right:16px}
-.frame img{width:100%;aspect-ratio:2.25/1;object-fit:cover;object-position:68% 30%;border-radius:999px}
-.frame .tag{position:absolute;right:clamp(28px,5vw,70px);bottom:clamp(28px,5vw,64px);background:var(--signal);color:var(--ink);border-radius:999px;padding:8px 14px;font:500 12px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase}
-@media(max-width:720px){.name{white-space:normal}.frame img{aspect-ratio:1.4/1;border-radius:200px}}
+.hero{padding-top:clamp(28px,5vw,72px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:center}
+.eyebrow{font:500 13px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
+.name{font-weight:800;font-size:clamp(52px,8.4vw,128px);line-height:.92;letter-spacing:-.06em;margin:16px 0 0}
+.hero-p{margin-top:22px;max-width:46ch;font-size:clamp(18px,1.6vw,21px);line-height:1.5;color:var(--ink-2)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.portrait{margin:0}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 40%;border-radius:clamp(20px,2.4vw,32px)}
+.portrait figcaption{margin-top:10px;font:500 12px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.portrait img{aspect-ratio:4/3}}
 
 /* 2 · hlavní sdělení */
 .about{padding-top:var(--sec);text-align:center}
@@ -266,11 +265,11 @@ h1,h2,h3{text-wrap:balance}
 .foot a{text-decoration:none}.foot a:hover{color:var(--deep)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
-.jobs{margin:0 auto 56px;padding:clamp(28px,5vw,64px);background:var(--deep);color:#fff;border-radius:32px;position:relative;overflow:hidden}
-.jobs .q-mark{position:absolute;right:clamp(16px,4vw,48px);top:-.18em;font:800 clamp(160px,22vw,300px)/1 var(--sans);color:var(--signal);opacity:.18;pointer-events:none}
+.jobs{margin:0 auto 56px;padding:clamp(24px,3.6vw,44px);background:var(--deep);color:#fff;border-radius:32px;position:relative;overflow:hidden}
+.jobs .q-mark{position:absolute;right:clamp(16px,4vw,48px);top:-.18em;font:800 clamp(110px,14vw,190px)/1 var(--sans);color:var(--signal);opacity:.18;pointer-events:none}
 .jobs .q-l{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:8px}
 .jobs .q-l i{width:6px;height:6px;border-radius:50%;background:var(--signal)}
-.jobs blockquote{margin:22px 0 0;max-width:20ch;font-weight:800;font-size:clamp(30px,4.6vw,60px);line-height:1.05;letter-spacing:-.05em;position:relative}
+.jobs blockquote{margin:18px 0 0;max-width:26ch;font-weight:800;font-size:clamp(24px,2.8vw,36px);line-height:1.05;letter-spacing:-.05em;position:relative}
 .jobs blockquote em{font-style:normal;color:var(--signal)}
 .jobs .cz{margin:20px 0 0;max-width:56ch;color:#D5EBDF;font-size:clamp(16px,1.4vw,18px)}
 .jobs figcaption{margin-top:16px;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint)}
@@ -295,7 +294,9 @@ h1,h2,h3{text-wrap:balance}
 .c30 h2{margin:18px 0 0;font-weight:800;font-size:clamp(22px,2.4vw,32px);line-height:1.2;letter-spacing:-.04em;max-width:24ch}
 .c30-text{display:grid;gap:14px;color:var(--ink-2);margin-top:22px}
 .c30-text p{margin:0}
-.c30-card .btn{margin-top:26px}
+.c30-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.c30-steps{margin-top:20px}
+.c30-steps li{background:var(--mist)}
 .loop{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin:0 auto}
 .loop svg{position:absolute;inset:0;width:100%;height:100%}
 .loop .ring{fill:none;stroke:var(--mint);stroke-width:18}
@@ -349,11 +350,15 @@ h1,h2,h3{text-wrap:balance}
 .q{max-width:24ch;margin:20px auto 0;font-weight:800;font-size:clamp(28px,3.8vw,52px);line-height:1.08;letter-spacing:-.05em}
 .q-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:28px auto 0;text-align:left;font-size:16px}
 @media(max-width:760px){.q-cols{grid-template-columns:1fr}}
-.build-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:14px;align-items:stretch}
+.build-grid{display:grid;grid-template-columns:1fr;gap:14px;align-items:stretch}
 .en-steps li{background:var(--mist)}
 .bcard.enter .btn{margin-top:auto}
 .bcard{background:var(--card);border-radius:clamp(24px,3vw,32px);padding:clamp(24px,3.5vw,44px);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .bcard.adapted{background:var(--mint)}
+.bcard.wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.bcard.wide .ad-l{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.bcard.wide .ad-main img{aspect-ratio:4/5}
+@media(max-width:900px){.bcard.wide{grid-template-columns:1fr}.bcard.wide .ad-main img{aspect-ratio:3/2}}
 .mono-l{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
 .bcard h3{font-weight:800;font-size:clamp(28px,3vw,42px);line-height:1.04;letter-spacing:-.05em}
 .bcard p{color:var(--ink-2)}
@@ -400,15 +405,16 @@ h1,h2,h3{text-wrap:balance}
 <main id="obsah">
 <!-- 1 · ÚVOD -->
 <section class="hero" id="top">
-  <div class="wrap">
-    <div class="trio">
-      <div>Zakladatel Enteru · podnikatel · surfař<br><span class="muted">pedagog Agentic Company, VŠEM</span></div>
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="eyebrow">Zakladatel Enteru. Podnikatel. Surfař.</p>
+      <h1 class="name">Milo Brzák</h1>
+      <p class="hero-p">S týmem stavím AI systémy pro firmy. Zajímá mě, jak mohou lidé lépe rozhodovat a jak může každodenní práce fungovat s menší závislostí na jednotlivcích.</p>
+      <div class="ctas"><a class="btn" href="#company2030">Co právě stavím</a><a class="btn light" href="#zapisky">Zápisky</a></div>
     </div>
-    <h1 class="name">Milo Brzák</h1>
-    <figure class="frame" style="margin:0">
-      <img src="/img/portret.jpg" srcset="/img/portret-800.jpg 800w, /img/portret.jpg 2200w" sizes="(max-width:1240px) 100vw, 1200px" alt="Milo Brzák ve staré strojovně v Ostravě" width="2200" height="1238" fetchpriority="high">
-      <span class="s1"></span><span class="s2"></span>
-      <span class="tag">Ostrava · 2026</span>
+    <figure class="portrait">
+      <img src="/img/portret.jpg" srcset="/img/portret-800.jpg 800w, /img/portret.jpg 2200w" sizes="(max-width:900px) 100vw, 560px" alt="Milo Brzák ve staré strojovně v Ostravě" width="2200" height="1238" fetchpriority="high">
+      <figcaption>Stará strojovna, Ostrava, 2026</figcaption>
     </figure>
   </div>
 </section>
@@ -418,9 +424,8 @@ h1,h2,h3{text-wrap:balance}
   <div class="wrap">
         <h2 class="lead" id="lead"><span>Bez návodu.</span></h2>
     <p class="sublead">Jak se učit, rozhodovat a tvořit ve světě, který mění pravidla.</p>
-    <p class="body">Jsem zakladatel Enteru. S týmem pracujeme na tom, jak budou fungovat firmy, ve kterých <strong>spolupracují lidé a AI.</strong></p>
-    <p class="body">Dřív jsem podnikal na Bali, řídil ostrov u Sumatry, pracoval v Kathmandu na Novém Zélandu a založil Adapted. Surf a život v různých prostředích jsou pořád důležitou součástí toho, kdo jsem.</p>
-    <div class="ctas"><a class="btn" href="#company2030">Co právě stavím</a><a class="btn light" href="#kontakt">Napište mi</a></div>
+        <p class="body">Dřív jsem podnikal na Bali, řídil ostrov u Sumatry, pracoval v Kathmandu na Novém Zélandu a založil Adapted. Surf a život v různých prostředích jsou pořád důležitou součástí toho, kdo jsem.</p>
+    
     
     
   </div>
@@ -436,10 +441,14 @@ h1,h2,h3{text-wrap:balance}
         <h2 id="c30-h">Jak bude fungovat firma, ve které pracují lidé a AI společně?</h2>
         <div class="c30-text">
           <p>Představuji si firmu, která dokáže využívat vlastní zkušenosti, průběžně se zlepšovat a svěřovat agentům jasně vymezenou práci. Lidé v ní určují směr, tvoří, rozvíjejí vztahy a odpovídají za rozhodnutí.</p>
-          <p>S Enterem pracujeme na tom, jak tuto představu převést do každodenního provozu. Propojujeme lidi, firemní data a systémy do smyčky rozhodování, práce a učení.</p>
-          <p>Zajímá mě přitom i lidská stránka té změny. Co se potřebujeme naučit, jak předávat odpovědnost a na co využijeme prostor, který získáme.</p>
+          <p><strong>Enter</strong> je tým, se kterým to převádím do praxe. Pracujeme s majiteli a vedením firem a propojujeme lidi, firemní data a systémy do smyčky rozhodování, práce a učení. Já odpovídám za směr a za to, aby změna dávala smysl lidem ve firmě.</p>
         </div>
-        <a class="btn" href="https://company2030.com" target="_blank" rel="noopener">Prozkoumat Company 2030 →</a>
+        <ul class="ad-mini en-steps c30-steps">
+          <li><b>01</b> Audit provozu a úzkých míst přímo s vedením</li>
+          <li><b>02</b> Napojení na systémy, které firma už používá</li>
+          <li><b>03</b> Zapojení lidí a řízení podle živých dat</li>
+        </ul>
+        <div class="c30-cta"><a class="btn" href="https://company2030.com" target="_blank" rel="noopener">Prozkoumat Company 2030 →</a><a class="btn light" href="https://enter.ltd" target="_blank" rel="noopener">Web Enteru ↗</a></div>
       </div>
       <div>
         <div class="loop" role="img" aria-label="Loop 2030: smyčka rozhodnutí, práce, výsledků a učení">
@@ -465,24 +474,13 @@ h1,h2,h3{text-wrap:balance}
   <div class="wrap">
     
     <div class="build-grid">
-      <article class="bcard enter">
-        <span class="mono-l">Enter · zakladatel</span>
-        <h3>AI systémy, které lidem vracejí prostor</h3>
-        <p>V Enteru propojujeme stávající systémy, lidi a automatizované toky do jednoho fungujícího celku. Rutinu přebírá systém a lidé se mohou věnovat úsudku, kvalitě a rozhodování. Pracujeme s majiteli a vedením firem.</p>
-        <ul class="ad-mini en-steps">
-          <li><b>01</b> Audit provozu a úzkých míst přímo s vedením</li>
-          <li><b>02</b> Napojení na stávající systémy, bez výpadku</li>
-          <li><b>03</b> Zapojení lidí a řízení podle živých dat</li>
-        </ul>
-        <p class="ad-note">Od reakce k predikci. Aby firma nemusela jen hasit a lidé měli čas na to, co umí nejlíp.</p>
-        <p class="ad-note" style="margin-top:0">Enter je tým, se kterým vizi <a href="#company2030">Company 2030</a> převádím do praxe.</p>
-        <a class="btn light" href="https://enter.ltd" target="_blank" rel="noopener">Web Enteru ↗</a>
-      </article>
-      <article class="bcard adapted" id="adapted">
+      
+      <article class="bcard adapted wide" id="adapted">
+        <div class="ad-l">
         <span class="mono-l">Adapted · zakladatel</span>
         <h3>Někdy se musí přizpůsobit prostředí člověku</h3>
         <p>Narodil jsem se s přetrženými nervy v rameni a pravou rukou nemám plnou hybnost dodnes. Když jsem poprvé jel na mistrovství světa v adaptive surfingu, v Česku žádná komunita neexistovala. Tak jsme založili Adapted.</p>
-        <figure class="ad-main" style="margin:0"><img src="/img/repre-ms-pruvod.jpg" alt="Česká reprezentace s vlajkou na zahajovacím průvodu mistrovství světa v adaptive surfingu v Kalifornii" width="960" height="640" loading="lazy"><figcaption>Česká reprezentace na mistrovství světa v adaptive surfingu, Kalifornie</figcaption></figure>
+        
         <ul class="ad-mini">
           <li><b>2017</b> první český adaptive surfový tým</li>
           <li><b>2018</b> první český surf kemp pro lidi s handicapem na Bali</li>
@@ -492,6 +490,8 @@ h1,h2,h3{text-wrap:balance}
         </ul>
         <p class="ad-note">Adapted teď stavíme znovu. <b>Hledáme partnery a lidi, kteří se zapojí.</b></p>
         <a class="btn" href="#kontakt">Zapojit se do Adapted →</a>
+      </div>
+        <figure class="ad-main" style="margin:0"><img src="/img/repre-ms-pruvod.jpg" alt="Česká reprezentace s vlajkou na zahajovacím průvodu mistrovství světa v adaptive surfingu v Kalifornii" width="960" height="640" loading="lazy"><figcaption>Česká reprezentace na mistrovství světa v adaptive surfingu, Kalifornie</figcaption></figure>
       </article>
     </div>
   </div>
@@ -505,24 +505,13 @@ h1,h2,h3{text-wrap:balance}
       <h2 id="proc-h">Zajímá mě, co lidé dokážou, když se naučí pracovat v nových podmínkách. A když mají možnost ty podmínky sami měnit.</h2>
     </div>
     <div class="why-text">
-      <p>Tuhle otázku si nesu ze sportu, podnikání i života v různých zemích. Dnes ji přenáším do technologií a do způsobu, jak fungují firmy.</p>
-      <p>S Enterem pracuji na podobě firmy, ve které lidé a AI agenti spolupracují, zkušenosti se proměňují v lepší rozhodování a každodenní provoz dokáže zvládnout více práce samostatně.</p>
-      <p><strong>Company 2030</strong> je vize, kterou tím sleduji. Firma, která se průběžně učí, dává lidem prostor tvořit a rozhodovat a dokáže růst bez toho, aby každý další krok znamenal větší závislost na několika přetížených lidech.</p>
-      <p>Chci přispět k tomu, abychom uměli takové firmy stavět. A zároveň se učili dobře žít ve světě, který tím vytváříme.</p>
+      <p>Tuhle otázku si nesu ze sportu, podnikání i života v různých zemích. Dnes ji přenáším do technologií a do způsobu, jak fungují firmy. Chci přispět k tomu, abychom uměli stavět firmy, které se průběžně učí a nestojí na několika přetížených lidech. A zároveň se učili dobře žít ve světě, který tím vytváříme.</p>
     </div>
-    <ol class="stances">
-      <li><span class="num">1</span><h3>Schopnost učit se otevírá další možnosti.</h3><p>Jak začít v neznámém prostředí, přiznat si mezery a využít to, co už umím.</p><small>Sport, podnikání, změny zemí a pracovních prostředí</small></li>
-      <li><span class="num">2</span><h3>Změna podmínek může člověku umožnit víc.</h3><p>Jak rozpoznat překážku v prostředí, vybavení nebo organizaci práce a upravit ji.</p><small>Adaptive surfing, Adapted, práce s technologiemi</small></li>
-      <li><span class="num">3</span><h3>Samostatnost vyžaduje odpovědnost.</h3><p>Jak rozhodovat s neúplnými informacemi a předávat rozhodování dalším lidem.</p><small>Vlastní podnikání, provoz ostrova, koordinace v Kathmandu</small></li>
-      <li class="key"><span class="num">4</span><h3>O přínosu AI rozhoduje i to, co uděláme s uvolněnou kapacitou.</h3><p>Jak propojit automatizaci s kvalitou práce, výsledky firmy a životem lidí.</p><small>Enter a výuka Agentic Company na VŠEM</small></li>
-    </ol>
+    
     <div class="question">
       <span class="chip"><i></i>Otázka, kterou teď řeším</span>
       <p class="q">Co bude dělat člověk ve firmě, která dokáže stále více práce zvládnout sama?</p>
-      <div class="q-cols">
-        <p>Ta otázka propojuje technologii s věcmi, které lidé v publiku řeší osobně. Co se mám učit? Za co ponesu odpovědnost? Jak povedu tým? Co bude moje hodnota?</p>
-        <p>A z pohledu firmy: jak si uchová zkušenosti? A jak poznáme, že nám nový způsob práce skutečně prospívá?</p>
-      </div>
+      
     </div>
   </div>
 </section>
@@ -602,7 +591,7 @@ h1,h2,h3{text-wrap:balance}
       </li>
       <li class="step now">
         <span class="n"><span>06 · Dnes</span><span>Enter · VŠEM</span></span>
-        <img src="/img/portret-800.jpg" alt="" width="800" height="450" loading="lazy" style="object-position:68% 30%">
+        
         <h3>AI ve firmách, s lidmi v centru</h3>
         <p>Vedu Enter a na VŠEM učím obor Agentic Company. Spojuju všechno, co jsem se naučil v předchozích kapitolách.</p>
       </li>
@@ -626,15 +615,9 @@ h1,h2,h3{text-wrap:balance}
       </div>
       <div class="box kmd-text">
         <h3>Co jsem tam řešil</h3>
-        <p>Jako Quality Coordinator jsem dostal na starost jeden z nejsložitějších problémů s dodávkami ze zahraničí. Týkal se hero produktu, na kterém stála podstatná část tržeb napříč portfoliem.</p>
-        <ul class="did">
-          <li>Vedl jsem analýzu problému a přípravu podkladů pro rozhodnutí.</li>
-          <li>Reportoval jsem přímo vedení firmy.</li>
-          <li>Koordinoval jsem řešení s týmy v USA a Evropě.</li>
-        </ul>
-        <h3 style="margin-top:24px">Co jsem pochopil</h3>
-        <p>Retail, vztah k zákazníkovi a kvalitu výrobku jsem se učil od základů, od lidí, kteří tomu rozuměli líp než já. Ve velké firmě nerozhoduje hrdinský výkon jednotlivce, ale procesy, data a schopnost vidět celý systém.</p>
-        <p class="learn-big">Přesně tohle dnes přenáším do firem s Enterem: aby rozhodnutí neležela jen na jednom člověku.</p>
+        <p>Jako Quality Coordinator jsem hned dostal jeden z nejsložitějších problémů firmy: dodávky hero produktu ze zahraničí. Vedl jsem analýzu, reporting vedení a koordinaci týmů v USA a Evropě.</p>
+        <p class="learn-big">Ve velké firmě nerozhoduje hrdinský výkon jednotlivce, ale procesy, data a schopnost vidět celý systém.</p>
+        <a class="btn light" href="/zapisky/kathmandu-hozeny-do-problemu/">Celý příběh v zápisku →</a>
         <p class="src">Kathmandu patří do skupiny KMD Brands (Kathmandu, Rip Curl, Oboz), založeno 1987 v Christchurchi. <a href="https://en.wikipedia.org/wiki/KMD_Brands" target="_blank" rel="noopener">Zdroj</a></p>
       </div>
     </div>
