@@ -95,9 +95,10 @@ h1,h2,h3{text-wrap:balance}
 .sec-head{text-align:center;margin-bottom:clamp(40px,5vw,64px)}
 .sec-head h2{margin-top:18px;font-weight:600;font-size:clamp(32px,4.4vw,56px);line-height:1.08;letter-spacing:-.035em}
 .sec-head p{max-width:52ch;margin:16px auto 0;color:var(--ink-2)}
-.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:end;list-style:none;padding:0;margin:0}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:end;list-style:none;padding:0;margin:0}
+.step .learn a{color:var(--ink);font-weight:500}
 .step{background:var(--card);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
-.step:nth-child(1){margin-top:160px}.step:nth-child(2){margin-top:120px}.step:nth-child(3){margin-top:80px}.step:nth-child(4){margin-top:40px}
+.step:nth-child(1),.step:nth-child(4){margin-top:110px}.step:nth-child(2),.step:nth-child(5){margin-top:55px}
 .step.now{background:var(--ink);color:#fff}
 .step .n{display:flex;justify-content:space-between;align-items:center;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
 .step.now .n{color:var(--signal)}
@@ -108,8 +109,29 @@ h1,h2,h3{text-wrap:balance}
 .step .learn{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-size:14px;font-weight:600;line-height:1.4;color:var(--deep)}
 .step.now .learn{border-color:rgba(255,255,255,.15);color:var(--signal)}
 .step .learn small{display:block;font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
-@media(max-width:1060px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(n){margin-top:0}.step.now{grid-column:1/-1}}
+@media(max-width:1060px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(n){margin-top:0}}
 @media(max-width:620px){.steps{grid-template-columns:1fr}}
+
+
+/* 3b · Kathmandu */
+.kmd{padding-top:var(--sec)}
+.kmd-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:14px;align-items:start}
+.kmd-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.kmd-photos img{width:100%;object-fit:cover;border-radius:22px}
+.kmd-photos .p1{grid-row:span 2;height:100%;aspect-ratio:auto;object-position:50% 25%}
+.kmd-photos .p2,.kmd-photos .p3{aspect-ratio:1}
+.stats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stats li{background:var(--mist);border-radius:16px;padding:16px}
+.stats b{display:block;font-weight:700;font-size:24px;letter-spacing:-.03em;color:var(--deep)}
+.stats span{font-size:13px;line-height:1.4;color:var(--ink-2)}
+.kmd-text p{color:var(--ink-2)}
+.did{margin:14px 0 0;padding-left:20px;color:var(--ink-2)}
+.did li{margin-bottom:6px}
+.did li::marker{color:var(--signal)}
+.learn-big{margin-top:18px!important;padding:16px 18px;border-radius:16px;background:var(--ink);color:#fff!important;font-weight:500}
+.src{margin-top:14px!important;font-size:12px;color:var(--ink-3)!important}
+.src a{color:var(--ink-3)}
+@media(max-width:900px){.kmd-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}}
 
 /* 4 · co předávám */
 .give{padding-top:var(--sec)}
@@ -185,7 +207,7 @@ h1,h2,h3{text-wrap:balance}
     <div class="trio">
       <div>Ahoj, jsem</div>
       <div>Zakladatel Enteru<br><span class="muted">pedagog Agentic Company, VŠEM</span></div>
-      <div>Z Česka do světa,<br><span class="muted">konference, podcasty, firmy</span></div>
+      <div>Z Česka do světa,<br><span class="muted">mluvím česky i anglicky</span></div>
     </div>
     <h1 class="name">Milo Brzák</h1>
     <figure class="frame" style="margin:0">
@@ -222,7 +244,7 @@ h1,h2,h3{text-wrap:balance}
 <section class="climb" id="cesta" aria-labelledby="cesta-h">
   <div class="wrap">
     <div class="sec-head">
-      <span class="chip"><i></i>Cesta nahoru · 5 kroků</span>
+      <span class="chip"><i></i>Cesta nahoru · 6 kroků</span>
       <h2 id="cesta-h">Každé prostředí mě naučilo jednu věc</h2>
       <p>Zvenku to vypadá jako řada extrémů. Ve skutečnosti je to jedna cesta, kde každý krok stál na tom předchozím.</p>
     </div>
@@ -234,34 +256,77 @@ h1,h2,h3{text-wrap:balance}
         <p class="learn"><small>Co jsem se naučil</small>Omezení mění techniku, ne cíl.</p>
       </li>
       <li class="step">
-        <span class="n"><span>02 · Oceán</span><span>Bali</span></span>
+        <span class="n"><span>02 · Byznys</span><span>Kalifornie · Praha</span></span>
+        <h3>Longboardy a čtvrtý člověk ve Slevomatu</h3>
+        <p>Ve 23 letech jsem založil Custom Boards s výrobou v pěti zemích. Pak jsem byl čtvrtým zaměstnancem Slevomatu, prvního českého slevového portálu. Rozjížděli jsme v Česku úplně nový byznys.</p>
+        <p class="learn"><small>Co jsem se naučil</small>Nový trh se nedá opsat. Musí se postavit.</p>
+      </li>
+      <li class="step">
+        <span class="n"><span>03 · Oceán</span><span>Bali</span></span>
         <img src="img/surf-bali-800.jpg" alt="" width="800" height="532" loading="lazy">
-        <h3>Surf s jednou rukou</h3>
-        <p>Odešel jsem z Evropy, abych mohl surfovat každý den. Pětkrát jsem startoval na mistrovství světa v adaptive surfingu.</p>
+        <h3>Surf s jednou rukou a vlastní hotel</h3>
+        <p>Odešel jsem z Evropy, abych mohl surfovat každý den. Pětkrát jsem startoval na mistrovství světa a deset let vedl hotel Riviera House.</p>
         <p class="learn"><small>Co jsem se naučil</small>Když návod neexistuje, napíšu si vlastní.</p>
       </li>
       <li class="step">
-        <span class="n"><span>03 · Provoz</span><span>Bali · Sumatra</span></span>
+        <span class="n"><span>04 · Ostrov</span><span>Sumatra</span></span>
         <img src="img/pinang-plaz-800.jpg" alt="" width="800" height="600" loading="lazy">
-        <h3>Hotel a ostrov</h3>
-        <p>Deset let jsem vedl hotel Riviera House. Pak devět měsíců ostrov Pinang, včetně dvou záchranných misí proti bouřce. Obě dopadly dobře.</p>
+        <h3>Ředitel ostrova Pinang</h3>
+        <p>Devět měsíců krizového řízení, logistiky a bezpečnosti na moři. Dvě záchranné mise proti bouřce do nemocnice přes 30 hodin daleko. Obě dopadly dobře.</p>
         <p class="learn"><small>Co jsem se naučil</small>Rozhodnout se je odpovědnost, ne pohodlí.</p>
       </li>
       <li class="step">
-        <span class="n"><span>04 · Pád</span><span>Covid</span></span>
-        <img src="img/riviera-noc-800.jpg" alt="" width="800" height="534" loading="lazy">
-        <h3>Ztratil jsem hotel i Adapted</h3>
-        <p>Covid během chvíle rozložil to, co jsem roky stavěl. Neziskovka Adapted stála jen na mně a bez sponzorů skončila.</p>
-        <p class="learn"><small>Co jsem se naučil</small>Nestavět věci na jednom člověku.</p>
+        <span class="n"><span>05 · Pád a korporát</span><span>Covid · Nový Zéland</span></span>
+        <img src="img/nz-arthurs-800.jpg" alt="" width="800" height="600" loading="lazy">
+        <h3>Ztratil jsem hotel. Pak přišel Kathmandu</h3>
+        <p>Covid mi vzal hotel i neziskovku Adapted. Začal jsem znovu, uvnitř jedné z největších outdoorových firem Austrálie a Nového Zélandu.</p>
+        <p class="learn"><small>Co jsem se naučil</small>Nestavět věci na jednom člověku. <a href="#kathmandu">Víc o Kathmandu ↓</a></p>
       </li>
       <li class="step now">
-        <span class="n"><span>05 · Dnes</span><span>Enter · VŠEM</span></span>
-        <img src="img/nz-arthurs-800.jpg" alt="" width="800" height="600" loading="lazy">
-        <h3>Z korporátu k firmám v éře AI</h3>
-        <p>V Kathmandu na Novém Zélandu jsem se naučil kvalitu a procesy ve velké firmě. Dnes vedu Enter a na VŠEM učím obor Agentic Company.</p>
+        <span class="n"><span>06 · Dnes</span><span>Enter · VŠEM</span></span>
+        <img src="img/portret-800.jpg" alt="" width="800" height="450" loading="lazy" style="object-position:68% 30%">
+        <h3>Firmy v éře AI</h3>
+        <p>Vedu Enter a na VŠEM učím obor Agentic Company. Předávám to, co jsem se naučil ve všech předchozích krocích.</p>
         <p class="learn"><small>Co předávám</small>Nejdřív lidé a proces, pak technologie.</p>
       </li>
     </ol>
+  </div>
+</section>
+
+<!-- 3b · KATHMANDU -->
+<section class="kmd" id="kathmandu" aria-labelledby="kmd-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Mezinárodní korporát · Nový Zéland</span>
+      <h2 id="kmd-h">Kathmandu: kvalita ve firmě, která obléká Austrálii a Nový Zéland</h2>
+      <p>Po covidu jsem přešel z vlastního byznysu do velké mezinárodní firmy. Byla to jiná škola: procesy, data, týmy na třech kontinentech.</p>
+    </div>
+    <div class="kmd-grid">
+      <div class="kmd-photos">
+        <img class="p1" src="img/kathmandu-gala.jpg" style="object-position:62% 25%" alt="Milo na Kathmandu Gala Awards Night, Christchurch 2023" width="880" height="1200" loading="lazy">
+        <img class="p2" src="img/nz-paragliding-800.jpg" alt="Paragliding nad útesy na Novém Zélandu" width="800" height="610" loading="lazy">
+        <img class="p3" src="img/nz-zatoka-1200.jpg" alt="Zátoka u Christchurche při západu slunce" width="1200" height="675" loading="lazy">
+      </div>
+      <div class="box kmd-text">
+        <h3>O firmě</h3>
+        <ul class="stats">
+          <li><b>1987</b><span>založeno v Christchurchi, Nový Zéland</span></li>
+          <li><b>3 značky</b><span>Kathmandu, Rip Curl a Oboz ve skupině KMD Brands</span></li>
+          <li><b>1+ mld. NZ$</b><span>roční tržby skupiny (rok 2026)</span></li>
+          <li><b>NZX · ASX</b><span>obchodovaná na burzách v Novém Zélandu a Austrálii</span></li>
+        </ul>
+        <h3 style="margin-top:28px">Co jsem tam dělal</h3>
+        <p>Jako Quality Coordinator v centrále v Christchurchi jsem řešil jeden z nejsložitějších problémů s dodávkami ze zahraničí. Týkal se hero produktu, na kterém stála podstatná část tržeb napříč portfoliem.</p>
+        <ul class="did">
+          <li>Vedl jsem celou analýzu problému a přípravu podkladů.</li>
+          <li>Reportoval jsem přímo vedení firmy.</li>
+          <li>Koordinoval jsem řešení s týmy v USA a Evropě.</li>
+          <li>Retail, vztah k zákazníkovi a kvalitu výrobku jsem se naučil od základů.</li>
+        </ul>
+        <p class="learn-big">Ve velké firmě rozhodují procesy, data a schopnost vidět celý systém. Přesně to dnes přenáším do firem s Enterem.</p>
+        <p class="src">Zdroje o firmě: <a href="https://en.wikipedia.org/wiki/KMD_Brands" target="_blank" rel="noopener">Wikipedia</a>, výroční zpráva KMD Brands FY26</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -306,7 +371,7 @@ h1,h2,h3{text-wrap:balance}
     <div class="org-grid">
       <div class="box">
         <h3>Krátké bio</h3>
-        <p class="bio" id="bio">Milo Brzák je zakladatel firmy Enter a pedagog oboru Agentic Company na VŠEM. Surfuje s jednou rukou a pětkrát startoval na mistrovství světa v adaptive surfingu. Deset let vedl vlastní hotel na Bali, devět měsíců řídil ostrov u Sumatry a na Novém Zélandu pracoval pro Kathmandu. Mluví o adaptaci, odpovědnosti a o tom, jak zavádět AI, aby sloužila lidem.</p>
+        <p class="bio" id="bio">Milo Brzák je zakladatel firmy Enter a pedagog oboru Agentic Company na VŠEM. Surfuje s jednou rukou a pětkrát startoval na mistrovství světa v adaptive surfingu. Deset let vedl vlastní hotel na Bali, devět měsíců řídil ostrov u Sumatry a pracoval jako čtvrtý zaměstnanec Slevomatu a na Novém Zélandu v centrále Kathmandu. Mluví česky i anglicky o adaptaci, odpovědnosti a o tom, jak zavádět AI, aby sloužila lidem.</p>
         <div class="row"><button class="btn" id="copy-bio" type="button">Kopírovat bio</button><a class="btn light" href="img/portret.jpg" target="_blank" rel="noopener">Fotka v plné velikosti ↗</a></div>
         <span class="sr-only" id="bio-status" role="status" aria-live="polite"></span>
       </div>
@@ -314,6 +379,7 @@ h1,h2,h3{text-wrap:balance}
         <h3>V kostce</h3>
         <ul class="facts">
           <li><span>Formáty</span><span>Keynote, panel, podcast, workshop</span></li>
+          <li><span>Jazyky</span><span>Čeština, angličtina</span></li>
           <li><span>Témata</span><span>Adaptace, odpovědnost, AI ve firmách</span></li>
           <li><span>Mistrovství světa</span><span>5× adaptive surfing</span></li>
           <li><span>Kontakt</span><span>milo@enterai.cz</span></li>
@@ -351,7 +417,7 @@ h1,h2,h3{text-wrap:balance}
 <section class="contact" id="kontakt" aria-labelledby="kontakt-h">
   <div class="wrap">
     <div class="cbox">
-      <span class="chip"><i></i>Konference · podcasty · média · firmy</span>
+      <span class="chip"><i></i>Konference · podcasty · média · firmy · CZ / EN</span>
       <h2 id="kontakt-h">Pozvěte mě<span>.</span></h2>
       <p>Napište datum, místo, formát a publikum. Ozvu se a domluvíme, co si má publikum odnést.</p>
       <div class="mailrow">
