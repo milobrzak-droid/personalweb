@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Milo Brzák · Bez návodu</title>
-<meta name="description" content="Milo Brzák surfuje s jednou rukou, řídil ostrov u Sumatry, deset let vedl hotel na Bali a řešil krizi kvality v korporátu na Novém Zélandu. Nic z toho nemělo návod. Dnes pomáhá firmám zvládnout AI. Pozvěte ho na konferenci nebo do podcastu.">
+<meta name="description" content="Milo Brzák se narodil s handicapem. S jednou rukou surfuje, řídil ostrov u Sumatry, deset let vedl hotel na Bali a řešil krizi kvality v korporátu na Novém Zélandu. Nic z toho nemělo návod. Dnes pomáhá firmám zvládnout AI. Pozvěte ho na konferenci nebo do podcastu.">
 <link rel="canonical" href="https://milobrzak.com/">
 <meta name="author" content="Miloslav Brzák">
 <meta name="theme-color" content="#F3F4F2">
@@ -126,6 +126,34 @@ h1,h2,h3{text-wrap:balance}
 @media(max-width:620px){.steps{grid-template-columns:1fr}}
 
 
+
+/* 3a · handicap a Adapted */
+.hc{padding-top:var(--sec)}
+.hc .sec-head h2{max-width:20ch;margin-left:auto;margin-right:auto}
+.hc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:stretch}
+.hc-list ul{margin:0;padding-left:20px;display:grid;gap:8px;font-size:18px;font-weight:500}
+.hc-list li::marker{color:var(--signal)}
+.hc-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-2)}
+.hc-photo{position:relative;border-radius:24px;overflow:hidden;min-height:340px}
+.hc-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hc-photo figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(255,255,255,.92);border-radius:14px;padding:12px 16px;font-weight:500;font-size:15px}
+.adapted{margin-top:14px;background:var(--mint);border-radius:clamp(24px,3vw,36px);padding:clamp(28px,5vw,64px)}
+.ad-chip{background:var(--card)}
+.ad-head h3{margin-top:18px;font-weight:700;font-size:clamp(32px,4.4vw,60px);line-height:1;letter-spacing:-.045em;max-width:16ch}
+.ad-head p{margin-top:16px;max-width:60ch;font-size:18px;color:var(--ink)}
+.ad-steps{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.ad-steps li{background:rgba(255,255,255,.7);border-radius:18px;padding:16px}
+.ad-steps li.now{background:var(--ink);color:#fff}
+.ad-steps b{display:block;font-weight:700;font-size:22px;letter-spacing:-.03em;margin-bottom:6px}
+.ad-steps li.now b{color:var(--signal)}
+.ad-steps span{font-size:14px;line-height:1.45}
+.ad-photos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-top:14px}
+.ad-photos img{width:100%;height:220px;object-fit:cover;border-radius:18px}
+.ad-cta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:24px}
+.ad-cta p{max-width:52ch}
+@media(max-width:1000px){.ad-steps{grid-template-columns:1fr 1fr}.ad-steps li.now{grid-column:1/-1}}
+@media(max-width:900px){.hc-grid{grid-template-columns:1fr}.ad-photos{grid-template-columns:1fr 1fr}.ad-photos img:first-child{grid-column:1/-1}}
+
 /* 3b · Kathmandu */
 .kmd{padding-top:var(--sec)}
 .kmd-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:14px;align-items:start}
@@ -225,6 +253,7 @@ h1,h2,h3{text-wrap:balance}
     <nav class="nav" aria-label="Hlavní">
       <a href="#o-mne">O mně</a>
       <a href="#cesta">Cesta</a>
+      <a href="#handicap">Handicap a Adapted</a>
       <a href="#predavam">Co předávám</a>
       <a href="#poslechnete">Poslechnout</a>
       <a href="#poradatele">Pro pořadatele</a>
@@ -256,18 +285,19 @@ h1,h2,h3{text-wrap:balance}
   <div class="wrap">
     <span class="chip"><i></i>O čem mluvím</span>
     <h2 class="lead" id="lead"><span>Bez návodu.</span></h2>
-    <p class="sublead">Přizpůsobit se dá naučit. Já to dělám celý život.</p>
-    <p class="body"><strong>Surfuju s jednou rukou. Byl jsem čtvrtým člověkem ve Slevomatu, deset let jsem vedl hotel na Bali, řídil ostrov u Sumatry a řešil krizi kvality v korporátu na druhém konci světa.</strong> Ani jedna z těch věcí neměla návod. Pokaždé jsem si ho musel napsat sám. Dnes pomáhám firmám zvládnout AI. Ta návod nemá taky.</p>
+    <p class="sublead">Přizpůsobit se dá naučit. Já se to učím celý život, s handicapem od narození.</p>
+    <p class="body"><strong>Surfuju s jednou rukou. Byl jsem čtvrtým člověkem ve Slevomatu, deset let jsem vedl hotel na Bali, řídil ostrov u Sumatry a řešil krizi kvality v korporátu na druhém konci světa.</strong> Ani jedna z těch věcí neměla návod. Pokaždé jsem si ho musel napsat sám, navíc s handicapem, o kterém se v byznysu pořád skoro nemluví. Dnes pomáhám firmám zvládnout AI. Ta návod nemá taky.</p>
     <div class="ctas"><a class="btn" href="#kontakt">Pozvat mě na pódium →</a><a class="btn light" href="#cesta">Přečíst můj návod</a></div>
     <ul class="proof" aria-label="V číslech">
+      <li><b>1 ruka</b><span>a podnikání na 4 kontinentech</span></li>
       <li><b>5×</b><span>mistrovství světa v adaptive surfingu</span></li>
       <li><b>4.</b><span>zaměstnanec Slevomatu</span></li>
       <li><b>10 let</b><span>vlastní hotel na Bali</span></li>
       <li><b>9 měsíců</b><span>ředitel ostrova u Sumatry</span></li>
-      <li><b>2</b><span>záchranné mise proti bouřce</span></li>
-    </ul>
+          </ul>
     <div class="seen" aria-label="Znáte mě z">
       <span class="seen-l">Znáte mě z</span>
+      <span>Česká televize</span>
       <a href="https://www.youtube.com/watch?v=k-73rY0GYuI" target="_blank" rel="noopener">DVTV</a>
       <a href="https://www.youtube.com/watch?v=2dcBtsASU58" target="_blank" rel="noopener">HRko</a>
       <span>Esquire</span>
@@ -346,6 +376,59 @@ h1,h2,h3{text-wrap:balance}
   </div>
 </section>
 
+<!-- 3a · HANDICAP A ADAPTED -->
+<section class="hc" id="handicap" aria-labelledby="hc-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Odkud to umím</span>
+      <h2 id="hc-h">Přizpůsobit se mě naučil handicap</h2>
+      <p>Narodil jsem se s přetrženými nervy v rameni a pravou rukou nemám plnou hybnost dodnes. Vyrůstal jsem v zemi, kde komunistický režim lidi s handicapem dlouho odsouval na okraj společnosti. To stigma se překonává, ale zmizelo zdaleka ne. Podnikat s handicapem je v Česku pořád tabu a skoro nikdo o tom nemluví. Já ano.</p>
+    </div>
+    <div class="hc-grid">
+      <div class="box hc-list">
+        <h3>S jednou rukou jsem</h3>
+        <ul>
+          <li>založil firmu na longboardy s výrobou v pěti zemích,</li>
+          <li>pětkrát startoval na mistrovství světa v adaptive surfingu,</li>
+          <li>deset let vedl vlastní hotel na Bali,</li>
+          <li>řídil ostrov u Sumatry a vedl dvě záchranné mise,</li>
+          <li>řešil krizi kvality v mezinárodní burzovní firmě,</li>
+          <li>a dnes vedu Enter a učím na vysoké škole.</li>
+        </ul>
+        <p class="hc-note">Neříkám, že vůle překoná každé omezení. Říkám, že omezení mění techniku, ne cíl. A že o tom potřebujeme mluvit nahlas.</p>
+      </div>
+      <figure class="hc-photo" style="margin:0">
+        <img src="img/surf-bali-800.jpg" srcset="img/surf-bali-800.jpg 800w, img/surf-bali.jpg 1080w" sizes="(max-width:900px) 100vw, 50vw" alt="Milo surfuje na Bali" width="1080" height="718" loading="lazy">
+        <figcaption>Pádluju jen jednou rukou. Techniku jsem si musel vymyslet sám.</figcaption>
+      </figure>
+    </div>
+
+    <div class="adapted" id="adapted">
+      <div class="ad-head">
+        <span class="chip ad-chip"><i></i>Adapted · můj zásadní projekt</span>
+        <h3>Adapted: z prvních závodů vlastní hnutí</h3>
+        <p>Když jsem poprvé jel na mistrovství světa v adaptive surfingu, v Česku žádná komunita neexistovala. Tak jsme ji založili. Adapted ukazuje lidem s handicapem, že extrémní sport a plný život jsou pro ně taky.</p>
+      </div>
+      <ol class="ad-steps">
+        <li><b>2017</b><span>Vzniká Adapted a první český adaptive surfový tým.</span></li>
+        <li><b>2018</b><span>První český surf kemp pro lidi s handicapem na Bali.</span></li>
+        <li><b>2019</b><span>Bali Adaptive Pro: první profesionální závod surfařů s handicapem v jihovýchodní Asii. 23 závodníků, 5 kategorií.</span></li>
+        <li><b>2020</b><span>Kempy paraglidingu, sjezdu na kolech, skialpu a lezení. Pak covid: přišli jsme o sponzory a Adapted stál jen na mně.</span></li>
+        <li class="now"><b>Dnes</b><span>Stavíme Adapted znovu, tentokrát tak, aby nestál na jednom člověku.</span></li>
+      </ol>
+      <div class="ad-photos" id="ad-photos">
+        <img src="img/surf-katamaran-800.jpg" alt="Surf za katamaránem, záběr z dronu" width="800" height="447" loading="lazy">
+        <img src="img/surf-bali-800.jpg" alt="Surf na Bali" width="800" height="532" loading="lazy">
+        <img src="img/riviera-bazen-800.jpg" alt="Riviera House na Bali" width="800" height="533" loading="lazy">
+      </div>
+      <div class="ad-cta">
+        <p><b>Hledáme partnery a lidi, kteří se zapojí.</b> V Česku i v zahraničí: firmy, sponzory, trenéry, dobrovolníky.</p>
+        <a class="btn" href="#kontakt">Zapojit se do Adapted →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 3b · KATHMANDU -->
 <section class="kmd" id="kathmandu" aria-labelledby="kmd-h">
   <div class="wrap">
@@ -395,7 +478,7 @@ h1,h2,h3{text-wrap:balance}
       <article class="gcard">
         <span class="num">1</span><span class="t">Adaptace</span>
         <h3>Zorientovat se tam, kde nejsou pravidla</h3>
-        <p>Jak se lidé a firmy učí v prostředí, kde přestal platit starý návod. Od surfu s jednou rukou po firmy, které se učí pracovat s AI.</p>
+        <p>Jak se lidé a firmy učí v prostředí, kde přestal platit starý návod. Já se to učím celý život, i s handicapem. Firmy se to teď učí s AI.</p>
         <p class="talk"><b>Přednáška: Bez návodu</b><span>Keynote · podcast · firmy a školy</span></p>
       </article>
       <article class="gcard">
@@ -407,9 +490,10 @@ h1,h2,h3{text-wrap:balance}
       <article class="gcard">
         <span class="num">3</span><span class="t">Lidé před technologií</span>
         <h3>AI, která lidem vrací čas</h3>
-        <p>Jak postavit firmu, kde AI agenti pracují pro lidi. Aby lidé trávili méně času u obrazovek a víc s lidmi a v přírodě.</p>
+        <p>Jak postavit firmu, kde AI agenti pracují pro lidi. Technologie má lidem vracet čas a sílu, ne je nahrazovat.</p>
         <p class="talk"><b>Přednáška: Agentic Company</b><span>Keynote · workshop · vedení firem</span></p>
       </article>
+
     </div>
   </div>
 </section>
@@ -442,11 +526,11 @@ h1,h2,h3{text-wrap:balance}
       <span class="chip"><i></i>Pro pořadatele a média</span>
       <h2 id="poradatele-h">Vše do programu na jednom místě</h2>
     </div>
-    <div class="takeaway"><span class="chip"><i></i>Co si publikum odnese</span><p>Jak se zorientovat, rozhodnout a vést lidi ve chvíli, kdy stará pravidla přestanou platit. Skutečné příběhy z oceánu, ostrova a korporátu. Žádné poučky ze slajdů.</p></div>
+    <div class="takeaway"><span class="chip"><i></i>Co si publikum odnese</span><p>Jak se zorientovat, rozhodnout a vést lidi ve chvíli, kdy stará pravidla přestanou platit. Od člověka, který se přizpůsobuje celý život, i s handicapem. Skutečné příběhy z oceánu, ostrova a korporátu. Žádné poučky ze slajdů.</p></div>
     <div class="org-grid">
       <div class="box">
         <h3>Krátké bio</h3>
-        <p class="bio" id="bio">Milo Brzák celý život vstupuje do prostředí bez návodu. Je zakladatel firmy Enter a pedagog oboru Agentic Company na VŠEM. Surfuje s jednou rukou a pětkrát startoval na mistrovství světa v adaptive surfingu. Deset let vedl vlastní hotel na Bali, devět měsíců řídil ostrov u Sumatry a pracoval jako čtvrtý zaměstnanec Slevomatu a na Novém Zélandu v centrále Kathmandu. Mluví česky i anglicky o adaptaci, odpovědnosti a o tom, jak zavádět AI, aby sloužila lidem.</p>
+        <p class="bio" id="bio">Milo Brzák celý život vstupuje do prostředí bez návodu, s handicapem od narození. Je zakladatel firmy Enter a pedagog oboru Agentic Company na VŠEM. Surfuje s jednou rukou a pětkrát startoval na mistrovství světa v adaptive surfingu. Deset let vedl vlastní hotel na Bali, devět měsíců řídil ostrov u Sumatry a pracoval jako čtvrtý zaměstnanec Slevomatu a na Novém Zélandu v centrále Kathmandu. Založil neziskovku Adapted pro lidi s handicapem. Mluví česky i anglicky o adaptaci, odpovědnosti, podnikání s handicapem a o tom, jak zavádět AI, aby sloužila lidem.</p>
         <div class="row"><button class="btn" id="copy-bio" type="button">Kopírovat bio</button><a class="btn light" href="img/portret.jpg" target="_blank" rel="noopener">Fotka v plné velikosti ↗</a></div>
         <span class="sr-only" id="bio-status" role="status" aria-live="polite"></span>
       </div>
@@ -455,7 +539,7 @@ h1,h2,h3{text-wrap:balance}
         <ul class="facts">
           <li><span>Formáty</span><span>Keynote, panel, podcast, workshop</span></li>
           <li><span>Jazyky</span><span>Čeština, angličtina</span></li>
-          <li><span>Témata</span><span>Adaptace, odpovědnost, AI ve firmách</span></li>
+          <li><span>Témata</span><span>Adaptace, odpovědnost, AI ve firmách, podnikání s handicapem</span></li>
           <li><span>Mistrovství světa</span><span>5× adaptive surfing</span></li>
           <li><span>Kontakt</span><span>milo@enterai.cz</span></li>
         </ul>
@@ -481,8 +565,6 @@ h1,h2,h3{text-wrap:balance}
   <div class="wrap">
     <div class="sec-head"><span class="chip"><i></i>Osobně</span><h2 id="osobne-h">Proč mi na tom záleží</h2></div>
     <div class="box">
-      <h3>Země, ze které pocházím</h3>
-      <p>Vyrůstal jsem v zemi, kde komunistický režim lidi s handicapem dlouho odsouval na okraj společnosti. To stigma se překonává, ale zmizelo zdaleka ne. Proto teď znovu stavíme Adapted a hledáme partnery v Česku i v zahraničí.</p>
       <h3>Bratr</h3>
       <p>Prošel jsem si sebevraždou svého bratra. Naučilo mě to být tady a teď a dělat věci, které dávají smysl. Pomohla mi vipassana, meditace a práce s dechem.</p>
       <p class="help">Pokud procházíte něčím těžkým, zavolejte na Linku první psychické pomoci 116 123, nonstop a zdarma.</p>
@@ -496,7 +578,7 @@ h1,h2,h3{text-wrap:balance}
     <div class="cbox">
       <span class="chip"><i></i>Konference · podcasty · média · firmy · CZ / EN</span>
       <h2 id="kontakt-h">Pozvěte mě<span>.</span></h2>
-      <p>Potřebujete pro své lidi někoho, kdo si prošel prostředím bez návodu a umí o tom mluvit? Napište datum, místo, formát a publikum.</p>
+      <p>Potřebujete pro své lidi někoho, kdo si prošel prostředími bez návodu, i s handicapem, a umí o tom mluvit otevřeně? Napište datum, místo, formát a publikum.</p>
       <div class="mailrow">
         <a class="mail" id="mail" href="mailto:milo@enterai.cz?subject=Pozv%C3%A1n%C3%AD">milo@enterai.cz</a>
         <button class="copy" id="copy" type="button">Kopírovat</button>
