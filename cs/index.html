@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Milo Brzák · Bez návodu</title>
+<meta name="description" content="Milo Brzák: zakladatel Enteru, podnikatel a surfař s handicapem. Pracuje na tom, jak budou fungovat firmy, ve kterých spolupracují lidé a AI. Bez návodu.">
+<link rel="alternate" hreflang="en" href="https://milobrzak.com/">
+<link rel="alternate" hreflang="cs" href="https://milobrzak.com/cs/">
+<link rel="alternate" hreflang="x-default" href="https://milobrzak.com/">
+<link rel="canonical" href="https://milobrzak.com/cs/">
+<meta name="author" content="Miloslav Brzák">
+<meta name="theme-color" content="#F3F4F2">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:url" content="https://milobrzak.com/cs/">
+<meta property="og:title" content="Milo Brzák · Bez návodu">
+<meta property="og:description" content="Jak se učit, rozhodovat a tvořit ve světě, který mění pravidla. Zakladatel Enteru, podnikatel, surfař.">
+<meta property="og:image" content="https://milobrzak.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://milobrzak.com/img/og.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Milo Brzák","alternateName":"Miloslav Brzák","url":"https://milobrzak.com/","image":"https://milobrzak.com/img/og.jpg",
+ "jobTitle":["Zakladatel, Enter","Pedagog oboru Agentic Company, VŠEM"],
+ "worksFor":{"@type":"Organization","name":"Enter","url":"https://enter.ltd"},
+ "affiliation":{"@type":"CollegeOrUniversity","name":"Vysoká škola ekonomie a managementu","alternateName":"VŠEM"},
+ "sameAs":["https://www.linkedin.com/in/milobrzak"],
+ "knowsAbout":["Company 2030","Spolupráce lidí a AI agentů","Adaptace","Agentic Company","Řízení změny","Krizové řízení","Adaptive surfing"]}
+</script>
+<style>
+/* Minimal: světle šedý papír, bílé karty, černé písmo, zelená jen jako akcent. Tok stránky stoupá nahoru: start → cesta → co předávám → pozvání. */
+:root{
+  --bg:#F3F4F2; --card:#FFFFFF; --ink:#0E1311; --ink-2:#3A403D; --ink-3:#6B716E; --line:#E2E5E1;
+  --mint:#BBEED1; --mist:#E7F7EE; --signal:#41E39E; --deep:#006740;
+  --sans:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,Menlo,monospace;
+  --max:1240px; --sec:clamp(96px,12vw,170px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+:focus-visible{outline:2px solid var(--deep);outline-offset:4px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.chip i{width:6px;height:6px;border-radius:50%;background:var(--signal);display:block}
+.btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 22px;border-radius:999px;background:var(--ink);color:#fff;font:500 15px/1 var(--sans);text-decoration:none;border:0;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--signal);color:var(--ink)}
+.btn.light{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.btn.light:hover{background:var(--mint)}
+.btn.sm{height:38px;padding:0 16px;font-size:13px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* hlavička */
+.head{position:sticky;top:0;z-index:20;background:rgba(243,244,242,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.head .wrap{display:flex;align-items:center;gap:24px;height:72px}
+.brand{text-decoration:none;color:var(--ink);display:inline-flex;align-items:center}
+.logo{height:26px;width:auto;display:block;overflow:visible}
+.logo .dot{transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.brand:hover .logo .dot{transform:translateY(-10px)}
+.brand b{color:var(--deep)}
+.nav{display:flex;gap:28px;margin:0 auto}
+.nav a{font-size:14px;font-weight:500;text-decoration:none;color:var(--ink-2)}
+.nav a:hover{color:var(--deep)}
+@media(max-width:860px){.nav{display:none}.head .btn{margin-left:auto}}
+
+/* 1 · úvod */
+.hero{padding-top:clamp(28px,4vw,52px)}
+.trio{display:grid;grid-template-columns:1fr;text-align:center;gap:20px;font-size:15px;font-weight:500;line-height:1.35}
+.trio div:nth-child(2){text-align:center}.trio div:nth-child(3){text-align:right}
+.trio .muted{color:var(--ink-3);font-weight:400}
+.name{font-weight:700;font-size:clamp(56px,14.2vw,196px);line-height:.95;letter-spacing:-.055em;text-align:center;margin:clamp(14px,2vw,26px) 0 clamp(18px,2.4vw,30px);white-space:nowrap}
+.frame{position:relative;background:var(--card);border-radius:clamp(18px,2vw,28px);padding:clamp(16px,3vw,40px)}
+.frame::before,.frame::after,.frame .s1,.frame .s2{content:"";position:absolute;width:14px;height:14px;border-radius:50%;border:1.5px solid #D4D8D3;background:var(--bg)}
+.frame::before{top:16px;left:16px}.frame::after{top:16px;right:16px}.frame .s1{bottom:16px;left:16px}.frame .s2{bottom:16px;right:16px}
+.frame img{width:100%;aspect-ratio:2.25/1;object-fit:cover;object-position:68% 30%;border-radius:999px}
+.frame .tag{position:absolute;right:clamp(28px,5vw,70px);bottom:clamp(28px,5vw,64px);background:var(--signal);color:var(--ink);border-radius:999px;padding:8px 14px;font:500 12px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+@media(max-width:720px){.name{white-space:normal}.frame img{aspect-ratio:1.4/1;border-radius:200px}}
+
+/* 2 · hlavní sdělení */
+.about{padding-top:var(--sec);text-align:center}
+.about .lead{max-width:22ch;margin:22px auto 0;font-weight:600;font-size:clamp(34px,5vw,64px);line-height:1.05;letter-spacing:-.04em}
+.about .lead span{background:linear-gradient(transparent 64%,var(--mint) 64%,var(--mint) 88%,transparent 88%)}
+.about .body{max-width:60ch;margin:26px auto 0;font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--ink-2)}
+.about .body strong{color:var(--ink);font-weight:600}
+.about .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:32px}
+.about .lead{font-size:clamp(56px,9vw,128px);letter-spacing:-.055em;max-width:none}
+.sublead{margin-top:26px;font-weight:500;font-size:clamp(18px,1.8vw,24px);color:var(--deep)}
+.proof{list-style:none;padding:0;margin:44px auto 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;max-width:1000px}
+.proof li{background:var(--card);border-radius:18px;padding:18px 14px;text-align:center}
+.proof b{display:block;font-weight:700;font-size:clamp(26px,2.6vw,34px);letter-spacing:-.04em}
+.proof span{display:block;margin-top:4px;font-size:13px;line-height:1.35;color:var(--ink-2)}
+@media(max-width:860px){.proof{grid-template-columns:1fr 1fr}.proof li:last-child{grid-column:1/-1}}
+.seen{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 34px;max-width:1000px;margin:36px auto 0;padding-top:28px;border-top:1px solid var(--line)}
+.seen-l{width:100%;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.seen{gap:22px 44px}
+.seen>a,.seen>span:not(.seen-l){display:inline-flex;align-items:center;height:44px;text-decoration:none;opacity:.5;transition:opacity .2s,transform .2s}
+.seen>a:hover{opacity:1;transform:translateY(-2px)}
+.seen img{display:block;width:auto;max-width:170px;filter:grayscale(1) contrast(1.2)}
+.seen img.mono{filter:brightness(0)}
+.seen .wm{font:italic 700 26px/1 Georgia,"Times New Roman",serif;letter-spacing:-.01em;color:#000}
+@media (max-width:720px){.seen{gap:18px 28px}.seen img{max-width:120px;transform:scale(.85)}}
+.takeaway{max-width:820px;margin:0 auto 18px;text-align:center}
+.takeaway p{margin-top:14px;font-weight:500;font-size:clamp(20px,2vw,26px);line-height:1.4;letter-spacing:-.02em}
+.tiles{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(120px,13vw,170px);gap:12px;margin-top:clamp(56px,7vw,90px);overflow-x:auto;padding:4px max(20px,calc((100vw - var(--max))/2 + 20px)) 14px;scrollbar-width:thin}
+.tiles img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px}
+
+/* 3 · cesta nahoru */
+.climb{padding-top:var(--sec)}
+.sec-head{text-align:center;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2{margin-top:18px;font-weight:600;font-size:clamp(32px,4.4vw,56px);line-height:1.08;letter-spacing:-.035em}
+.sec-head p{max-width:52ch;margin:16px auto 0;color:var(--ink-2)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:end;list-style:none;padding:0;margin:0}
+.step .learn a{color:var(--ink);font-weight:500}
+.step{background:var(--card);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.step:nth-child(1),.step:nth-child(4){margin-top:110px}.step:nth-child(2),.step:nth-child(5){margin-top:55px}
+.step.now{background:var(--ink);color:#fff}
+.step .n{display:flex;justify-content:space-between;align-items:center;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.step.now .n{color:var(--signal)}
+.step img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+.step h3{font-weight:600;font-size:20px;line-height:1.2;letter-spacing:-.02em}
+.step p{font-size:14px;line-height:1.55;color:var(--ink-2)}
+.step.now p{color:rgba(255,255,255,.8)}
+.step .learn{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-size:14px;font-weight:600;line-height:1.4;color:var(--deep)}
+.step.now .learn{border-color:rgba(255,255,255,.15);color:var(--signal)}
+.step .learn small{display:block;font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+@media(max-width:1060px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(n){margin-top:0}}
+@media(max-width:620px){.steps{grid-template-columns:1fr}}
+
+
+
+/* 3a · handicap a Adapted */
+.hc{padding-top:var(--sec)}
+.hc .sec-head h2{max-width:20ch;margin-left:auto;margin-right:auto}
+.hc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:stretch}
+.hc-list ul{margin:0;padding-left:20px;display:grid;gap:8px;font-size:18px;font-weight:500}
+.hc-list li::marker{color:var(--signal)}
+.hc-note{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-2)}
+.hc-photo{position:relative;border-radius:24px;overflow:hidden;min-height:340px}
+.hc-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hc-photo figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(255,255,255,.92);border-radius:14px;padding:12px 16px;font-weight:500;font-size:15px}
+.adapted{margin-top:14px;background:var(--mint);border-radius:clamp(24px,3vw,36px);padding:clamp(28px,5vw,64px)}
+.ad-chip{background:var(--card)}
+.ad-head h3{margin-top:18px;font-weight:700;font-size:clamp(32px,4.4vw,60px);line-height:1;letter-spacing:-.045em;max-width:16ch}
+.ad-head p{margin-top:16px;max-width:60ch;font-size:18px;color:var(--ink)}
+.ad-steps{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.ad-steps li{background:rgba(255,255,255,.7);border-radius:18px;padding:16px}
+.ad-steps li.now{background:var(--ink);color:#fff}
+.ad-steps b{display:block;font-weight:700;font-size:22px;letter-spacing:-.03em;margin-bottom:6px}
+.ad-steps li.now b{color:var(--signal)}
+.ad-steps span{font-size:14px;line-height:1.45}
+.ad-photos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-top:14px;align-items:stretch}
+.ad-photos > img{height:100%;min-height:220px}
+.ad-photos img{width:100%;height:220px;object-fit:cover;border-radius:18px}
+.ad-main{position:relative}.ad-main img{height:100%;min-height:220px}
+.ad-main figcaption{position:absolute;left:10px;bottom:10px;right:10px;background:rgba(255,255,255,.92);border-radius:12px;padding:8px 12px;font-size:13px;font-weight:500}
+.ad-cta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:24px}
+.ad-cta p{max-width:52ch}
+@media(max-width:1000px){.ad-steps{grid-template-columns:1fr 1fr}.ad-steps li.now{grid-column:1/-1}}
+@media(max-width:900px){.hc-grid{grid-template-columns:1fr}.ad-photos{grid-template-columns:1fr 1fr}.ad-photos img:first-child{grid-column:1/-1}}
+
+/* 3b · Kathmandu */
+.kmd{padding-top:var(--sec)}
+.kmd-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:14px;align-items:start}
+.kmd-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.kmd-photos img{width:100%;object-fit:cover;border-radius:22px}
+.kmd-photos .p1{grid-row:span 2;height:100%;aspect-ratio:auto;object-position:50% 25%}
+.kmd-photos .p2,.kmd-photos .p3{aspect-ratio:1}
+.stats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stats li{background:var(--mist);border-radius:16px;padding:16px}
+.stats b{display:block;font-weight:700;font-size:24px;letter-spacing:-.03em;color:var(--deep)}
+.stats span{font-size:13px;line-height:1.4;color:var(--ink-2)}
+.kmd-text p{color:var(--ink-2)}
+.did{margin:14px 0 0;padding-left:20px;color:var(--ink-2)}
+.did li{margin-bottom:6px}
+.did li::marker{color:var(--signal)}
+.learn-big{margin-top:18px!important;padding:16px 18px;border-radius:16px;background:var(--ink);color:#fff!important;font-weight:500}
+.src{margin-top:14px!important;font-size:12px;color:var(--ink-3)!important}
+.src a{color:var(--ink-3)}
+@media(max-width:900px){.kmd-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}}
+
+/* 4 · co předávám */
+.give{padding-top:var(--sec)}
+.give-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gcard{background:var(--card);border-radius:24px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px;border:1px solid transparent;transition:border-color .2s,transform .2s}
+.gcard:hover{border-color:var(--signal);transform:translateY(-3px)}
+.gcard .num{width:42px;height:42px;border-radius:50%;background:var(--mint);display:grid;place-items:center;font:600 16px/1 var(--sans)}
+.gcard h3{font-weight:600;font-size:clamp(24px,2.2vw,30px);line-height:1.1;letter-spacing:-.03em}
+.gcard .t{font:500 12px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
+.gcard p{color:var(--ink-2);font-size:15px}
+.gcard .talk{margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.gcard .talk b{display:block;font-weight:600;font-size:17px}
+.gcard .talk span{font-size:13px;color:var(--ink-3)}
+@media(max-width:960px){.give-grid{grid-template-columns:1fr}}
+
+
+/* 4b · video */
+.listen{padding-top:var(--sec)}
+.videos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vid{margin:0;background:var(--card);border-radius:clamp(18px,2vw,28px);padding:12px}
+.vid figcaption{padding:16px 8px 6px;display:grid;gap:6px}
+.vid figcaption b{font-weight:600;font-size:18px;line-height:1.3;letter-spacing:-.01em}
+.vid figcaption a{font-size:14px;color:var(--ink-3)}
+.vsrc-n{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
+@media(max-width:860px){.videos{grid-template-columns:1fr}}
+.video{margin:0;border-radius:clamp(14px,1.6vw,20px);overflow:hidden;background:var(--ink);aspect-ratio:16/9}
+.play{all:unset;position:relative;display:block;width:100%;height:100%;cursor:pointer}
+.play img{width:100%;height:100%;object-fit:cover}
+.pbtn{position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;background:var(--signal);color:var(--ink);display:grid;place-items:center;font-size:30px;padding-left:6px;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .2s}
+.play:hover .pbtn,.play:focus-visible .pbtn{transform:scale(1.08)}
+.video iframe{width:100%;height:100%;border:0;display:block}
+.vsrc{text-align:center;margin-top:14px;font-size:14px;color:var(--ink-3)}
+.vsrc a{color:var(--ink-2)}
+
+/* 5 · pro pořadatele */
+.org{padding-top:var(--sec)}
+.org-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px}
+.box{background:var(--card);border-radius:24px;padding:clamp(24px,3vw,36px)}
+.box h3{font-weight:600;font-size:22px;letter-spacing:-.02em;margin-bottom:12px}
+.bio{font-size:16px;color:var(--ink-2)}
+.box .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:15px}
+.facts li span:first-child{color:var(--ink-3)}
+.facts li span:last-child{font-weight:500;text-align:right}
+.press{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:28px;color:var(--ink-3);font:600 15px/1 var(--sans);letter-spacing:.02em;text-transform:uppercase}
+.press a{text-decoration:none}.press a:hover{color:var(--deep)}
+@media(max-width:900px){.org-grid{grid-template-columns:1fr}}
+
+/* 6 · osobně */
+.personal{padding-top:var(--sec)}
+.personal .box{max-width:820px;margin:0 auto}
+.personal p{color:var(--ink-2)}
+.personal p + h3{margin-top:24px}
+.help{margin-top:12px;font-size:14px;color:var(--ink-3)}
+
+/* 7 · kontakt */
+.contact{margin-top:var(--sec);padding-bottom:40px}
+.pod{margin-top:14px;background:var(--card);border-radius:24px;padding:4px clamp(18px,3vw,32px)}
+.pod summary{cursor:pointer;list-style:none;padding:18px 0;font:500 13px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);display:flex;justify-content:space-between;gap:12px}
+.pod summary::-webkit-details-marker{display:none}
+.pod summary span{transition:transform .2s}
+.pod[open] summary span{transform:rotate(90deg)}
+.pod-in{padding:6px 0 28px}
+.pod .box{background:var(--bg)}
+.pod-h{margin:28px 0 14px;font-weight:700;font-size:22px;letter-spacing:-.03em}
+.cbox{background:var(--ink);color:#fff;border-radius:clamp(24px,3vw,36px);padding:clamp(40px,7vw,96px) clamp(24px,5vw,72px);text-align:center}
+.cbox .chip{background:transparent;border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8)}
+.cbox h2{margin-top:22px;font-weight:700;font-size:clamp(48px,9vw,120px);line-height:.95;letter-spacing:-.05em}
+.cbox h2 span{color:var(--signal)}
+.cbox p{max-width:52ch;margin:20px auto 0;color:rgba(255,255,255,.75)}
+.mailrow{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:14px;margin-top:32px}
+.mail{font:600 clamp(22px,3vw,36px)/1.2 var(--sans);letter-spacing:-.02em;color:#fff;text-decoration:none;border-bottom:2px solid var(--signal)}
+.copy{height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font:500 14px/1 var(--sans);cursor:pointer}
+.copy:hover{background:var(--signal);color:var(--ink);border-color:var(--signal)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:24px;font-size:13px;color:var(--ink-3)}
+.foot a{text-decoration:none}.foot a:hover{color:var(--deep)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.jobs{margin:0 auto 56px;padding:clamp(28px,5vw,64px);background:var(--deep);color:#fff;border-radius:32px;position:relative;overflow:hidden}
+.jobs .q-mark{position:absolute;right:clamp(16px,4vw,48px);top:-.18em;font:700 clamp(160px,22vw,300px)/1 var(--sans);color:var(--signal);opacity:.18;pointer-events:none}
+.jobs .q-l{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:8px}
+.jobs .q-l i{width:6px;height:6px;border-radius:50%;background:var(--signal)}
+.jobs blockquote{margin:22px 0 0;max-width:20ch;font-weight:600;font-size:clamp(30px,4.6vw,60px);line-height:1.05;letter-spacing:-.04em;position:relative}
+.jobs blockquote em{font-style:normal;color:var(--signal)}
+.jobs .cz{margin:20px 0 0;max-width:56ch;color:#D5EBDF;font-size:clamp(16px,1.4vw,18px)}
+.jobs figcaption{margin-top:16px;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint)}
+.dots{position:relative;margin-top:clamp(36px,5vw,56px);padding-top:8px}
+.dots svg{position:absolute;left:0;top:0;width:100%;height:44px;overflow:visible}
+.dots path{fill:none;stroke:var(--signal);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:var(--len,2000);stroke-dashoffset:var(--len,2000);transition:stroke-dashoffset 2.4s cubic-bezier(.6,0,.2,1)}
+.jobs.on .dots path{stroke-dashoffset:0}
+.dots ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:8px;position:relative}
+.dots li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;font-size:13px;line-height:1.3;color:#D5EBDF}
+.dots li b{display:block;font:500 11px/1 var(--mono);letter-spacing:.06em;color:var(--mint)}
+.dots .d{width:18px;height:18px;border-radius:50%;background:var(--deep);border:2.5px solid var(--mint);margin-top:4px;transition:background .3s,border-color .3s,transform .3s}
+.jobs.on .dots .d{background:var(--signal);border-color:var(--signal)}
+.jobs.on .dots li:nth-child(6) .d{transition-delay:.1s}.jobs.on .dots li:nth-child(5) .d{transition-delay:.5s}.jobs.on .dots li:nth-child(4) .d{transition-delay:.9s}.jobs.on .dots li:nth-child(3) .d{transition-delay:1.3s}.jobs.on .dots li:nth-child(2) .d{transition-delay:1.7s}.jobs.on .dots li:nth-child(1) .d{transition-delay:2.1s}
+.dots li:last-child .d{transform:scale(1.35);background:var(--signal);border-color:#fff}
+@media (max-width:720px){.dots ol{grid-template-columns:repeat(3,1fr);row-gap:22px}.dots svg{display:none}.dots .d{background:var(--signal);border-color:var(--signal)}}
+@media (prefers-reduced-motion:reduce){.dots path,.dots .d{transition:none}}
+/* v1.2 · co mě zajímá, co stavím */
+.c30{padding-top:var(--sec)}
+.c30-card{background:var(--card);border-radius:clamp(24px,3vw,36px);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.c30-brand{font:700 clamp(44px,7vw,96px)/.92 var(--sans);letter-spacing:-.05em;margin:18px 0 0}
+.c30-brand span{color:var(--signal)}
+.c30 h2{margin:18px 0 0;font-weight:600;font-size:clamp(22px,2.4vw,32px);line-height:1.2;letter-spacing:-.03em;max-width:24ch}
+.c30-text{display:grid;gap:14px;color:var(--ink-2);margin-top:22px}
+.c30-text p{margin:0}
+.c30-card .btn{margin-top:26px}
+.loop{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin:0 auto}
+.loop svg{position:absolute;inset:0;width:100%;height:100%}
+.loop .ring{fill:none;stroke:var(--mint);stroke-width:18}
+.loop .arc{fill:none;stroke:var(--signal);stroke-width:18;stroke-linecap:round;stroke-dasharray:120 1000;animation:loopspin 9s linear infinite;transform-origin:50% 50%}
+@keyframes loopspin{to{transform:rotate(360deg)}}
+.loop .core{position:absolute;inset:27%;border-radius:50%;background:var(--deep);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px}
+.loop .core b{font:700 clamp(20px,2.4vw,30px)/1 var(--sans);letter-spacing:-.03em}
+.loop .core small{margin-top:8px;font:500 10px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint)}
+.loop .st{position:absolute;transform:translate(-50%,-50%);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:600 14px/1 var(--sans);white-space:nowrap;box-shadow:0 6px 18px rgba(14,19,17,.06)}
+.loop .st i{font:500 10px/1 var(--mono);font-style:normal;color:var(--deep);margin-right:6px}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.roles div{border-radius:18px;padding:14px 16px;background:var(--mist);font-size:14px;line-height:1.45;color:var(--ink-2)}
+.roles b{display:block;font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep);margin-bottom:6px}
+@media(max-width:900px){.c30-card{grid-template-columns:1fr}}
+@media(max-width:480px){.roles{grid-template-columns:1fr}.loop .st{font-size:12px;padding:7px 10px}}
+@media (prefers-reduced-motion:reduce){.loop .arc{animation:none}}
+.notes{padding-top:var(--sec)}
+.ngrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ncard{background:var(--card);border-radius:clamp(22px,2.6vw,30px);padding:14px 14px 24px;text-decoration:none;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s}
+.ncard:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,19,17,.08)}
+.ncard img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px}
+.ncard .nt,.ncard h3,.ncard p,.ncard .nr{padding:0 10px}
+.ncard .nt{font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep);margin-top:6px}
+.ncard h3{font-weight:700;font-size:21px;line-height:1.2;letter-spacing:-.03em}
+.ncard p{font-size:15px;line-height:1.5;color:var(--ink-2)}
+.ncard .nr{margin-top:auto;font-weight:600;font-size:14px;color:var(--deep)}
+@media(max-width:900px){.ngrid{grid-template-columns:1fr}}
+.lang{display:flex;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px;margin-left:auto}
+.lang a{font:500 12px/1 var(--mono);letter-spacing:.06em;text-decoration:none;color:var(--ink-3);padding:8px 10px;border-radius:999px}
+.lang a[aria-current]{background:var(--ink);color:#fff}
+.head .lang + .btn{margin-left:0}
+@media(max-width:860px){.head .lang{margin-left:auto}}
+.why,.build{padding-top:var(--sec)}
+.build.tight{padding-top:14px}
+.why .sec-head h2{font-size:clamp(28px,3.6vw,48px);max-width:30ch;margin-left:auto;margin-right:auto}
+.why-text{max-width:720px;margin:0 auto;display:grid;gap:16px;font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);text-align:center}
+.stances{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.stances li{background:var(--card);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.stances li.key{background:var(--ink);color:#fff}
+.stances .num{width:36px;height:36px;border-radius:50%;background:var(--mint);color:var(--ink);display:grid;place-items:center;font-weight:600}
+.stances li.key .num{background:var(--signal)}
+.stances h3{font-weight:600;font-size:19px;line-height:1.25;letter-spacing:-.02em}
+.stances p{font-size:14px;line-height:1.55;color:var(--ink-2)}
+.stances li.key p{color:rgba(255,255,255,.8)}
+.stances small{margin-top:auto;padding-top:10px;border-top:1px solid var(--line);font:500 11px/1.4 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--deep)}
+.stances li.key small{border-color:rgba(255,255,255,.15);color:var(--signal)}
+@media(max-width:1000px){.stances{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.stances{grid-template-columns:1fr}}
+.question{margin-top:14px;background:var(--mint);border-radius:clamp(24px,3vw,36px);padding:clamp(28px,5vw,64px);text-align:center}
+.question .chip{background:var(--card)}
+.q{max-width:24ch;margin:20px auto 0;font-weight:700;font-size:clamp(28px,3.8vw,52px);line-height:1.08;letter-spacing:-.04em}
+.q-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:28px auto 0;text-align:left;font-size:16px}
+@media(max-width:760px){.q-cols{grid-template-columns:1fr}}
+.build-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:14px;align-items:stretch}
+.en-steps li{background:var(--mist)}
+.bcard.enter .btn{margin-top:auto}
+.bcard{background:var(--card);border-radius:clamp(24px,3vw,32px);padding:clamp(24px,3.5vw,44px);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.bcard.adapted{background:var(--mint)}
+.mono-l{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
+.bcard h3{font-weight:700;font-size:clamp(28px,3vw,42px);line-height:1.04;letter-spacing:-.04em}
+.bcard p{color:var(--ink-2)}
+.bcard.adapted p{color:var(--ink)}
+.bcard .ad-main{position:relative;width:100%}
+.bcard .ad-main img{width:100%;border-radius:18px;aspect-ratio:3/2;object-fit:cover}
+.bcard .ad-main figcaption{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(255,255,255,.92);border-radius:12px;padding:8px 12px;font-size:13px;font-weight:500}
+.ad-mini{list-style:none;padding:0;margin:0;display:grid;gap:8px;width:100%}
+.ad-mini li{background:rgba(255,255,255,.65);border-radius:12px;padding:10px 14px;font-size:14px}
+.ad-mini b{display:inline-block;min-width:58px}
+.ad-note{font-weight:500}
+@media(max-width:900px){.build-grid{grid-template-columns:1fr}}
+.gcard.key{background:var(--ink);color:#fff}
+.gcard.key p{color:rgba(255,255,255,.82)}
+.gcard.key .t{color:var(--signal)}
+.gcard.key .num{background:var(--signal)}
+.gcard.key .talk{border-color:rgba(255,255,255,.15)}
+.gcard.key .talk span{color:rgba(255,255,255,.65)}
+.lines{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.lines li{padding-bottom:12px;border-bottom:1px solid var(--line)}
+.lines b{display:block;font-weight:600;font-size:16px;line-height:1.35}
+.lines span{font:500 11px/1.4 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--deep)}
+.bio p + p{margin-top:10px}
+</style>
+</head>
+<body>
+<a class="sr-only" href="#obsah">Přeskočit na obsah</a>
+<header class="head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Milo, na začátek stránky"><svg class="logo" viewBox="-4 -8 262 112" aria-hidden="true"><g fill="currentColor"><path d="M0 100V0h25l23 57L71 0h25v100H74V42L56 88H40L22 42v58z"/><rect x="110" y="32" width="22" height="68"/><rect x="146" y="0" width="22" height="100"/><circle cx="216" cy="66" r="24.5" fill="none" stroke="currentColor" stroke-width="22"/></g><circle class="dot" cx="121" cy="9" r="12" fill="#41E39E"/></svg></a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#company2030">Co stavím</a>
+      <a href="#proc">Co mě zajímá</a>
+      <a href="#zapisky">Zápisky</a>
+      <a href="#cesta">Kapitoly</a>
+      <a href="#rozhovory">Rozhovory</a>
+      <a href="#osobne">Osobně</a>
+    </nav>
+    <div class="lang" aria-label="Jazyk"><a href="/" hreflang="en" lang="en">EN</a><a href="/cs/" hreflang="cs" aria-current="true">CZ</a></div>
+    <a class="btn sm" href="#kontakt">Napište mi</a>
+  </div>
+</header>
+
+<main id="obsah">
+<!-- 1 · ÚVOD -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="trio">
+      <div>Zakladatel Enteru · podnikatel · surfař<br><span class="muted">pedagog Agentic Company, VŠEM</span></div>
+    </div>
+    <h1 class="name">Milo Brzák</h1>
+    <figure class="frame" style="margin:0">
+      <img src="/img/portret.jpg" srcset="/img/portret-800.jpg 800w, /img/portret.jpg 2200w" sizes="(max-width:1240px) 100vw, 1200px" alt="Milo Brzák ve staré strojovně v Ostravě" width="2200" height="1238" fetchpriority="high">
+      <span class="s1"></span><span class="s2"></span>
+      <span class="tag">Ostrava · 2026</span>
+    </figure>
+  </div>
+</section>
+
+<!-- 2 · HLAVNÍ SDĚLENÍ -->
+<section class="about" id="o-mne" aria-labelledby="lead">
+  <div class="wrap">
+        <h2 class="lead" id="lead"><span>Bez návodu.</span></h2>
+    <p class="sublead">Jak se učit, rozhodovat a tvořit ve světě, který mění pravidla.</p>
+    <p class="body">Jsem zakladatel Enteru. S týmem pracujeme na tom, jak budou fungovat firmy, ve kterých <strong>spolupracují lidé a AI.</strong></p>
+    <p class="body">Dřív jsem podnikal na Bali, řídil ostrov u Sumatry, pracoval v Kathmandu na Novém Zélandu a založil Adapted. Surf a život v různých prostředích jsou pořád důležitou součástí toho, kdo jsem.</p>
+    <div class="ctas"><a class="btn" href="#company2030">Co právě stavím</a><a class="btn light" href="#kontakt">Napište mi</a></div>
+    
+    
+  </div>
+</section>
+
+<!-- 2b · COMPANY 2030 -->
+<section class="c30" id="company2030" aria-labelledby="c30-h">
+  <div class="wrap">
+    <div class="c30-card">
+      <div>
+        <span class="chip"><i></i>Co právě stavím</span>
+        <p class="c30-brand">Company <span>2030</span></p>
+        <h2 id="c30-h">Jak bude fungovat firma, ve které pracují lidé a AI společně?</h2>
+        <div class="c30-text">
+          <p>Představuji si firmu, která dokáže využívat vlastní zkušenosti, průběžně se zlepšovat a svěřovat agentům jasně vymezenou práci. Lidé v ní určují směr, tvoří, rozvíjejí vztahy a odpovídají za rozhodnutí.</p>
+          <p>S Enterem pracujeme na tom, jak tuto představu převést do každodenního provozu. Propojujeme lidi, firemní data a systémy do smyčky rozhodování, práce a učení.</p>
+          <p>Zajímá mě přitom i lidská stránka té změny. Co se potřebujeme naučit, jak předávat odpovědnost a na co využijeme prostor, který získáme.</p>
+        </div>
+        <a class="btn" href="https://company2030.com" target="_blank" rel="noopener">Prozkoumat Company 2030 →</a>
+      </div>
+      <div>
+        <div class="loop" role="img" aria-label="Loop 2030: smyčka rozhodnutí, práce, výsledků a učení">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="38" transform="scale(1)" style="stroke-width:4.5"/><circle class="arc" cx="50" cy="50" r="38" style="stroke-width:4.5;stroke-dasharray:28 211"/></svg>
+          <div class="core"><b>Loop</b><small>princip, jak firma funguje</small></div>
+          <span class="st" style="left:50%;top:12%"><i>01</i>Rozhodnutí</span>
+          <span class="st" style="left:88%;top:50%"><i>02</i>Práce</span>
+          <span class="st" style="left:50%;top:88%"><i>03</i>Výsledky</span>
+          <span class="st" style="left:12%;top:50%"><i>04</i>Učení</span>
+        </div>
+        <div class="roles">
+          <div><b>Lidé</b>Určují cíle, posuzují situace a nesou odpovědnost.</div>
+          <div><b>AI agenti</b>Vykonávají svěřené úkoly nad firemními systémy a daty.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4 · CO STAVÍM -->
+<section class="build tight" id="stavim" aria-label="Enter a Adapted">
+  <div class="wrap">
+    
+    <div class="build-grid">
+      <article class="bcard enter">
+        <span class="mono-l">Enter · zakladatel</span>
+        <h3>AI systémy, které lidem vracejí prostor</h3>
+        <p>V Enteru propojujeme stávající systémy, lidi a automatizované toky do jednoho fungujícího celku. Rutinu přebírá systém a lidé se mohou věnovat úsudku, kvalitě a rozhodování. Pracujeme s majiteli a vedením firem.</p>
+        <ul class="ad-mini en-steps">
+          <li><b>01</b> Audit provozu a úzkých míst přímo s vedením</li>
+          <li><b>02</b> Napojení na stávající systémy, bez výpadku</li>
+          <li><b>03</b> Zapojení lidí a řízení podle živých dat</li>
+        </ul>
+        <p class="ad-note">Od reakce k predikci. Aby firma nemusela jen hasit a lidé měli čas na to, co umí nejlíp.</p>
+        <p class="ad-note" style="margin-top:0">Enter je tým, se kterým vizi <a href="#company2030">Company 2030</a> převádím do praxe.</p>
+        <a class="btn light" href="https://enter.ltd" target="_blank" rel="noopener">Web Enteru ↗</a>
+      </article>
+      <article class="bcard adapted" id="adapted">
+        <span class="mono-l">Adapted · zakladatel</span>
+        <h3>Někdy se musí přizpůsobit prostředí člověku</h3>
+        <p>Narodil jsem se s přetrženými nervy v rameni a pravou rukou nemám plnou hybnost dodnes. Když jsem poprvé jel na mistrovství světa v adaptive surfingu, v Česku žádná komunita neexistovala. Tak jsme založili Adapted.</p>
+        <figure class="ad-main" style="margin:0"><img src="/img/repre-ms-pruvod.jpg" alt="Česká reprezentace s vlajkou na zahajovacím průvodu mistrovství světa v adaptive surfingu v Kalifornii" width="960" height="640" loading="lazy"><figcaption>Česká reprezentace na mistrovství světa v adaptive surfingu, Kalifornie</figcaption></figure>
+        <ul class="ad-mini">
+          <li><b>2017</b> první český adaptive surfový tým</li>
+          <li><b>2018</b> první český surf kemp pro lidi s handicapem na Bali</li>
+          <li><b>2019</b> Bali Adaptive Pro: první profesionální závod surfařů s handicapem v jihovýchodní Asii</li>
+          <li><b>Covid</b> přišli jsme o sponzory, projekt stál jen na mně</li>
+          <li><b>Dnes</b> stavíme Adapted znovu, aby nestál na jednom člověku</li>
+        </ul>
+        <p class="ad-note">Adapted teď stavíme znovu. <b>Hledáme partnery a lidi, kteří se zapojí.</b></p>
+        <a class="btn" href="#kontakt">Zapojit se do Adapted →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · CO MĚ ZAJÍMÁ A PROČ -->
+<section class="why" id="proc" aria-labelledby="proc-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Co mě zajímá a proč</span>
+      <h2 id="proc-h">Zajímá mě, co lidé dokážou, když se naučí pracovat v nových podmínkách. A když mají možnost ty podmínky sami měnit.</h2>
+    </div>
+    <div class="why-text">
+      <p>Tuhle otázku si nesu ze sportu, podnikání i života v různých zemích. Dnes ji přenáším do technologií a do způsobu, jak fungují firmy.</p>
+      <p>S Enterem pracuji na podobě firmy, ve které lidé a AI agenti spolupracují, zkušenosti se proměňují v lepší rozhodování a každodenní provoz dokáže zvládnout více práce samostatně.</p>
+      <p><strong>Company 2030</strong> je vize, kterou tím sleduji. Firma, která se průběžně učí, dává lidem prostor tvořit a rozhodovat a dokáže růst bez toho, aby každý další krok znamenal větší závislost na několika přetížených lidech.</p>
+      <p>Chci přispět k tomu, abychom uměli takové firmy stavět. A zároveň se učili dobře žít ve světě, který tím vytváříme.</p>
+    </div>
+    <ol class="stances">
+      <li><span class="num">1</span><h3>Schopnost učit se otevírá další možnosti.</h3><p>Jak začít v neznámém prostředí, přiznat si mezery a využít to, co už umím.</p><small>Sport, podnikání, změny zemí a pracovních prostředí</small></li>
+      <li><span class="num">2</span><h3>Změna podmínek může člověku umožnit víc.</h3><p>Jak rozpoznat překážku v prostředí, vybavení nebo organizaci práce a upravit ji.</p><small>Adaptive surfing, Adapted, práce s technologiemi</small></li>
+      <li><span class="num">3</span><h3>Samostatnost vyžaduje odpovědnost.</h3><p>Jak rozhodovat s neúplnými informacemi a předávat rozhodování dalším lidem.</p><small>Vlastní podnikání, provoz ostrova, koordinace v Kathmandu</small></li>
+      <li class="key"><span class="num">4</span><h3>O přínosu AI rozhoduje i to, co uděláme s uvolněnou kapacitou.</h3><p>Jak propojit automatizaci s kvalitou práce, výsledky firmy a životem lidí.</p><small>Enter a výuka Agentic Company na VŠEM</small></li>
+    </ol>
+    <div class="question">
+      <span class="chip"><i></i>Otázka, kterou teď řeším</span>
+      <p class="q">Co bude dělat člověk ve firmě, která dokáže stále více práce zvládnout sama?</p>
+      <div class="q-cols">
+        <p>Ta otázka propojuje technologii s věcmi, které lidé v publiku řeší osobně. Co se mám učit? Za co ponesu odpovědnost? Jak povedu tým? Co bude moje hodnota?</p>
+        <p>A z pohledu firmy: jak si uchová zkušenosti? A jak poznáme, že nám nový způsob práce skutečně prospívá?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4b · ZÁPISKY -->
+<section class="notes" id="zapisky" aria-labelledby="zapisky-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Zápisky · Bez návodu</span>
+      <h2 id="zapisky-h">Co stavím, co si myslím a co mě změnilo</h2>
+    </div>
+    <div class="ngrid">
+      <a class="ncard" href="/zapisky/od-reakce-k-predikci/"><img src="/img/portret-800.jpg" alt="" loading="lazy"><span class="nt">Co stavím · Enter</span><h3>Firma neroste rychleji, než stíhají rozhodovat její lidé</h3><p>Proč škálování podle mě začíná u předvídání, ne u dalších lidí, kteří budou hasit.</p><span class="nr">Číst →</span></a>
+      <a class="ncard" href="/zapisky/kathmandu-hozeny-do-problemu/"><img src="/img/kmd-office.jpg" alt="" loading="lazy"><span class="nt">Co mě změnilo · Kathmandu</span><h3>Hozený rovnou do problému. Co mě naučil americký tým v Kathmandu</h3><p>Po letech vlastního podnikání jsem začínal znovu, uvnitř globální firmy na druhém konci světa.</p><span class="nr">Číst →</span></a>
+      <a class="ncard" href="/zapisky/adapted-znovu/"><img src="/img/repre-ms-pruvod.jpg" alt="" loading="lazy"><span class="nt">Co mě změnilo · Adapted</span><h3>Co mi vzal covid a proč Adapted stavíme jinak</h3><p>Vždycky může přijít něco, co neovlivníte. Můžete ale stavět tak, aby vás to nezlomilo.</p><span class="nr">Číst →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · KAPITOLY -->
+<section class="climb" id="cesta" aria-labelledby="cesta-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Vybrané kapitoly</span>
+      <h2 id="cesta-h">Šest prostředí, kde mi dostupný návod nestačil</h2>
+      <p>V každém byli lidé se znalostmi a zkušenostmi. Musel jsem se od nich rychle učit, pochopit situaci a přispět vlastním řešením.</p>
+    </div>
+    <figure class="jobs" id="jobs">
+      <span class="q-mark" aria-hidden="true">“</span>
+      <span class="q-l"><i></i>Moje oblíbená věta</span>
+      <blockquote lang="en">You can’t connect the dots looking forward; you can only connect them <em>looking backwards.</em></blockquote>
+      <p class="cz">Tečky nespojíte dopředu, jen zpětně. Dopředu to vypadalo jako řada odboček, zpětně je to jedna cesta.</p>
+      <figcaption>Steve Jobs, projev na Stanfordu, 2005</figcaption>
+      <div class="dots" aria-label="Šest kapitol mé cesty">
+        <svg aria-hidden="true" preserveAspectRatio="none"><path/></svg>
+        <ol>
+          <li><span class="d"></span><span><b>01</b>Česko</span></li>
+          <li><span class="d"></span><span><b>02</b>Kalifornie · Praha</span></li>
+          <li><span class="d"></span><span><b>03</b>Bali</span></li>
+          <li><span class="d"></span><span><b>04</b>Sumatra</span></li>
+          <li><span class="d"></span><span><b>05</b>Nový Zéland</span></li>
+          <li><span class="d"></span><span><b>06</b>Enter · VŠEM</span></li>
+        </ol>
+      </div>
+    </figure>
+    <ol class="steps">
+      <li class="step">
+        <span class="n"><span>01 · Start</span><span>Česko</span></span>
+        <h3>Ruka, kterou jsem musel rozhýbat</h3>
+        <p>Ruku jsem rozpohyboval díky Vojtově metodě a skvělým rodičům. Vyrůstal jsem v zemi, kde lidi s handicapem dlouho odsouval režim na okraj společnosti.</p>
+        <p class="learn"><small>Co jsem pochopil</small>Omezení mění techniku, ne cíl.</p>
+      </li>
+      <li class="step">
+        <span class="n"><span>02 · Byznys</span><span>Kalifornie · Praha</span></span>
+        <h3>Longboardy a čtvrtý člověk ve Slevomatu</h3>
+        <p>Ve 23 letech jsem založil Custom Boards s výrobou v pěti zemích. Pak jsem byl čtvrtým zaměstnancem Slevomatu, prvního českého slevového portálu. Rozjížděli jsme v Česku úplně nový byznys.</p>
+      </li>
+      <li class="step">
+        <span class="n"><span>03 · Oceán</span><span>Bali</span></span>
+        <img src="/img/surf-bali-800.jpg" alt="" width="800" height="532" loading="lazy">
+        <h3>Surf s jednou rukou a vlastní hotel</h3>
+        <p>Odešel jsem z Evropy, abych mohl surfovat každý den. Pětkrát jsem startoval na mistrovství světa a deset let vedl hotel Riviera House.</p>
+      </li>
+      <li class="step">
+        <span class="n"><span>04 · Ostrov</span><span>Sumatra</span></span>
+        <img src="/img/pinang-plaz-800.jpg" alt="" width="800" height="600" loading="lazy">
+        <h3>Ředitel ostrova Pinang</h3>
+        <p>Devět měsíců krizového řízení, logistiky a bezpečnosti na moři. Dvakrát jsem rozhodoval, jestli vyslat loď proti bouřce s člověkem do nemocnice přes 30 hodin daleko. Obě evakuace dopadly dobře.</p>
+        <p class="learn"><small>Co jsem pochopil</small>Rozhodnout se s neúplnými informacemi je odpovědnost, ne pohodlí.</p>
+      </li>
+      <li class="step">
+        <span class="n"><span>05 · Znovu od začátku</span><span>Covid · Nový Zéland</span></span>
+        <img src="/img/nz-arthurs-800.jpg" alt="" width="800" height="600" loading="lazy">
+        <h3>Ztratil jsem hotel. Pak přišel Kathmandu</h3>
+        <p>Covid mi vzal hotel i Adapted. Rozhodl jsem se začít znovu, uvnitř velké mezinárodní firmy na druhém konci světa.</p>
+        <p class="learn"><a href="#kathmandu">Jak to bylo v Kathmandu ↓</a></p>
+      </li>
+      <li class="step now">
+        <span class="n"><span>06 · Dnes</span><span>Enter · VŠEM</span></span>
+        <img src="/img/portret-800.jpg" alt="" width="800" height="450" loading="lazy" style="object-position:68% 30%">
+        <h3>AI ve firmách, s lidmi v centru</h3>
+        <p>Vedu Enter a na VŠEM učím obor Agentic Company. Spojuju všechno, co jsem se naučil v předchozích kapitolách.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5b · KATHMANDU -->
+<section class="kmd" id="kathmandu" aria-labelledby="kmd-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Kapitola 05 zblízka · Nový Zéland</span>
+      <h2 id="kmd-h">Z vlastního hotelu do centrály mezinárodní firmy</h2>
+      <p>Po covidu jsem se rozhodl začít znovu. V centrále Kathmandu v Christchurchi, jedné z největších outdoorových firem Austrálie a Nového Zélandu.</p>
+    </div>
+    <div class="kmd-grid">
+      <div class="kmd-photos">
+        <img class="p1" src="/img/kmd-office.jpg" style="object-position:30% 50%" alt="Zasedačka v centrále KMD Brands v Christchurchi, 2023" width="1400" height="1050" loading="lazy">
+        <img class="p2" src="/img/nz-paragliding-800.jpg" alt="Paragliding nad útesy na Novém Zélandu" width="800" height="610" loading="lazy">
+        <img class="p3" src="/img/nz-zatoka-1200.jpg" alt="Zátoka u Christchurche při západu slunce" width="1200" height="675" loading="lazy">
+      </div>
+      <div class="box kmd-text">
+        <h3>Co jsem tam řešil</h3>
+        <p>Jako Quality Coordinator jsem dostal na starost jeden z nejsložitějších problémů s dodávkami ze zahraničí. Týkal se hero produktu, na kterém stála podstatná část tržeb napříč portfoliem.</p>
+        <ul class="did">
+          <li>Vedl jsem analýzu problému a přípravu podkladů pro rozhodnutí.</li>
+          <li>Reportoval jsem přímo vedení firmy.</li>
+          <li>Koordinoval jsem řešení s týmy v USA a Evropě.</li>
+        </ul>
+        <h3 style="margin-top:24px">Co jsem pochopil</h3>
+        <p>Retail, vztah k zákazníkovi a kvalitu výrobku jsem se učil od základů, od lidí, kteří tomu rozuměli líp než já. Ve velké firmě nerozhoduje hrdinský výkon jednotlivce, ale procesy, data a schopnost vidět celý systém.</p>
+        <p class="learn-big">Přesně tohle dnes přenáším do firem s Enterem: aby rozhodnutí neležela jen na jednom člověku.</p>
+        <p class="src">Kathmandu patří do skupiny KMD Brands (Kathmandu, Rip Curl, Oboz), založeno 1987 v Christchurchi. <a href="https://en.wikipedia.org/wiki/KMD_Brands" target="_blank" rel="noopener">Zdroj</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 7 · ROZHOVORY -->
+<section class="listen" id="rozhovory" aria-labelledby="poslech-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Rozhovory</span>
+      <h2 id="poslech-h">Kde jsem o tom mluvil</h2>
+      <p>Jak firmy zvládají transformaci s AI a jak se dá naučit surfovat bez zdravé ruky.</p>
+    </div>
+    <div class="videos">
+      <figure class="vid">
+        <div class="video"><button class="play" type="button" data-id="2dcBtsASU58" data-title="Rozhovor HRko s Miloslavem Brzákem" aria-label="Přehrát rozhovor HRko na YouTube"><img src="/img/hrko-podcast.jpg" alt="Náhled rozhovoru HRko" width="1280" height="720" loading="lazy"><span class="pbtn" aria-hidden="true">▶</span></button></div>
+        <figcaption><span class="vsrc-n">HRko · podcast</span><b>Nahradí AI 30 % zaměstnanců? Realita transformace firem</b><a href="https://www.youtube.com/watch?v=2dcBtsASU58" target="_blank" rel="noopener">Otevřít na YouTube ↗</a></figcaption>
+      </figure>
+      <figure class="vid">
+        <div class="video"><button class="play" type="button" data-id="k-73rY0GYuI" data-title="Rozhovor DVTV s Milo Brzákem" aria-label="Přehrát rozhovor DVTV na YouTube"><img src="/img/dvtv-rozhovor.jpg" alt="Náhled rozhovoru DVTV" width="1280" height="720" loading="lazy"><span class="pbtn" aria-hidden="true">▶</span></button></div>
+        <figcaption><span class="vsrc-n">DVTV · rozhovor</span><b>Učí hendikepované surfovat na Bali: Je to jen o hlavě, najít cestu a překonat strach</b><a href="https://www.youtube.com/watch?v=k-73rY0GYuI" target="_blank" rel="noopener">Otevřít na YouTube ↗</a></figcaption>
+      </figure>
+    </div>
+    <div class="seen" aria-label="Další rozhovory a články">
+      <span class="seen-l">Další rozhovory a články</span>
+      <span><img src="/img/logos/ct.svg" alt="Česká televize" style="height:26px"></span>
+      <a href="https://www.youtube.com/watch?v=k-73rY0GYuI" target="_blank" rel="noopener"><img class="mono" src="/img/logos/dvtv.svg" alt="DVTV" style="height:22px"></a>
+      <a href="https://www.youtube.com/watch?v=2dcBtsASU58" target="_blank" rel="noopener"><img class="mono" src="/img/logos/hrko.svg" alt="HRko" style="height:38px"></a>
+      <span class="wm">Esquire</span>
+      <a href="https://www.nn.cz/blog/milo-brzak-vlnach-surfu-padech-ktere-ho-nuti-jit-dal.html" target="_blank" rel="noopener"><img src="/img/logos/nn.svg" alt="NN" style="height:30px"></a>
+      <a href="https://www.emontana.cz/mila-brzak-surf-paraglide-rozhovor/" target="_blank" rel="noopener"><img class="mono" src="/img/logos/emontana.png" alt="eMontana" style="height:26px"></a>
+      <a href="https://www.freeride.cz/surf/mila-brzak-prvni-adaptive-surfar-reprezentujici-cr-na-mistrovstvi-sveta" target="_blank" rel="noopener"><img class="mono" src="/img/logos/freeride.svg" alt="Freeride" style="height:32px"></a>
+      <a href="https://www.wavescape.co.za/archive/the-changing-face-of-adaptive-surfing" target="_blank" rel="noopener"><img class="mono" src="/img/logos/wavescape.svg" alt="Wavescape" style="height:30px"></a>
+      <a href="https://thebeatbali.com/?p=160068" target="_blank" rel="noopener"><img class="mono" src="/img/logos/beat.png" alt="The Beat Bali" style="height:20px"></a>
+      <a href="https://www.mvso.cz/aktuality/od-longboardove-firme-k-firme-enter" target="_blank" rel="noopener"><img src="/img/logos/mvso.png" alt="Moravská vysoká škola Olomouc" style="height:46px"></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 9 · OSOBNĚ -->
+<section class="personal" id="osobne" aria-labelledby="osobne-h">
+  <div class="wrap">
+    <div class="sec-head"><span class="chip"><i></i>Osobně</span><h2 id="osobne-h">Co mi dává smysl</h2></div>
+    <div class="box">
+      <h3>Bratr</h3>
+      <p>Prošel jsem si sebevraždou svého bratra. Naučilo mě to být tady a teď a dělat věci, které dávají smysl. Pomohla mi vipassana, meditace a práce s dechem.</p>
+      <p class="help">Pokud procházíte něčím těžkým, zavolejte na Linku první psychické pomoci 116 123, nonstop a zdarma.</p>
+      <h3>Svoboda a příroda</h3>
+      <p>Oceán a paragliding mi připomínají, že člověk je mnohem menší než příroda. Mým snem je uletět na paraglidu 100 kilometrů.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · KONTAKT -->
+<section class="contact" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="wrap">
+    <div class="cbox">
+      <h2 id="kontakt-h">Napište mi<span>.</span></h2>
+      <p>Pokud vás zajímá něco z toho, na čem pracuji, rád se propojím. Kvůli společnému projektu, rozhovoru nebo setkání.</p>
+      <div class="mailrow">
+        <a class="mail" id="mail" href="mailto:milo@enterai.cz">milo@enterai.cz</a>
+        <button class="copy" id="copy" type="button">Kopírovat</button>
+      </div>
+      <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+    </div>
+    <details class="pod" id="poradatele">
+      <summary>Podklady pro média a pořadatele <span aria-hidden="true">→</span></summary>
+      <div class="pod-in">
+        <div class="org-grid">
+      <div class="box">
+        <h3>Bio do programu</h3>
+        <div class="bio" id="bio"><p>Milo Brzák propojuje zkušenost podnikatele a adaptive surfaře s praktickou prací na firmách pro éru AI. Je zakladatelem Enteru a rozvíjí vizi Company 2030, ve které lidé a AI agenti společně vykonávají práci, rozhodují v jasně vymezených rolích a využívají zkušenosti k dalšímu zlepšování.</p><p>Ve vystoupeních otevírá otázku, jakou roli bude mít člověk v takové firmě a co se potřebujeme naučit už dnes. Vychází ze zkušeností ze sportu, vlastního podnikání, mezinárodního prostředí i současné práce s technologiemi.</p><p>Vystupuje česky i anglicky.</p></div>
+        <div class="row"><button class="btn" id="copy-bio" type="button">Kopírovat bio</button><a class="btn light" href="/img/portret.jpg" target="_blank" rel="noopener">Fotka v plné velikosti ↗</a></div>
+        <span class="sr-only" id="bio-status" role="status" aria-live="polite"></span>
+      </div>
+      <div class="box">
+        <h3>Témata pro média</h3>
+        <ul class="lines">
+          <li><b>Zavádění AI je také rozhodování o tom, jakou práci chceme lidem ponechat.</b><span>Ekonomika, technologie, HR</span></li>
+          <li><b>Schopnost znovu začínat má hodnotu i uprostřed kariéry.</b><span>Profesní identita, učení</span></li>
+          <li><b>Někdy se musí přizpůsobit prostředí člověku.</b><span>Přístupnost, handicap, Adapted</span></li>
+          <li><b>Zakladatel musí umět předávat rozhodování, pokud chce prostor pro další tvorbu.</b><span>Podnikání, leadership</span></li>
+        </ul>
+        <ul class="facts" style="margin-top:20px">
+          <li><span>Formáty</span><span>Keynote, panel, podcast, workshop</span></li>
+          <li><span>Jazyky</span><span>Čeština, angličtina</span></li>
+          <li><span>Kontakt</span><span>milo@enterai.cz</span></li>
+        </ul>
+      </div>
+    </div>
+        <h3 class="pod-h">Témata vystoupení</h3>
+        <div class="give-grid">
+      <article class="gcard key">
+        <span class="num">1</span><span class="t">Pro byznys, technologie, HR, leadership</span>
+        <h3>Company 2030. Jak navrhnout spolupráci lidí a AI.</h3>
+        <p><b>Co si publikum odnese:</b> konkrétní obraz fungování firmy, rozdělení práce, rozhodovacích pravomocí a odpovědnosti. A otázky pro návrh vlastní organizace.</p>
+        <p class="talk"><span>Zkušenost: Enter, Company 2030, výuka Agentic Company na VŠEM</span></p>
+      </article>
+      <article class="gcard">
+        <span class="num">2</span><span class="t">Pro širší konference, podnikatele, školy</span>
+        <h3>Bez návodu. Jak se učit, když se mění pravidla.</h3>
+        <p><b>Co si publikum odnese:</b> způsob, jak rozpoznat vlastní mezery, využít zkušenosti, které už má, a začít jednat.</p>
+        <p class="talk"><span>Příběhy: surf s jednou rukou, ostrov u Sumatry, začít znovu po covidu</span></p>
+      </article>
+      <article class="gcard">
+        <span class="num">3</span><span class="t">Pro zakladatele, majitele a vedení firem</span>
+        <h3>Když firma získá vlastní paměť.</h3>
+        <p><b>Co si publikum odnese:</b> jak zachytit zkušenosti z práce a využívat je při dalších rozhodnutích. Co to znamená pro zakladatele, manažery a závislost firmy na jednotlivcích.</p>
+        <p class="talk"><span>Zkušenost: Enter, práce s vedením firem</span></p>
+      </article>
+    </div>
+      </div>
+    </details>
+    <footer class="foot">
+      <span>© 2026 Miloslav Brzák</span>
+      <span><a href="https://www.linkedin.com/in/milobrzak" target="_blank" rel="me noopener">LinkedIn ↗</a> · <a href="https://enter.ltd" target="_blank" rel="noopener">Enter ↗</a></span>
+    </footer>
+  </div>
+</section>
+</main>
+
+<script>
+(() => {
+  const copy = (btn, text, status, label) => async () => {
+    try { await navigator.clipboard.writeText(text); btn.textContent = 'Zkopírováno'; status.textContent = 'Zkopírováno do schránky'; }
+    catch (e) { btn.textContent = 'Označte a zkopírujte'; }
+    setTimeout(() => { btn.textContent = label; status.textContent = ''; }, 2200);
+  };
+  const b = document.getElementById('copy');
+  b.addEventListener('click', copy(b, 'milo@enterai.cz', document.getElementById('copy-status'), 'Kopírovat'));
+  const bb = document.getElementById('copy-bio');
+  bb.addEventListener('click', copy(bb, document.getElementById('bio').innerText, document.getElementById('bio-status'), 'Kopírovat bio'));
+  const pod = document.getElementById('poradatele');
+  const openPod = () => { if (location.hash === '#poradatele' || location.hash === '#bio') pod.open = true; };
+  openPod(); addEventListener('hashchange', openPod);
+  document.querySelectorAll('.play').forEach((pl) => pl.addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + pl.dataset.id + '?autoplay=1&rel=0';
+    f.title = pl.dataset.title;
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    pl.parentElement.replaceChildren(f);
+  }));
+})();
+</script>
+
+<script>
+(function(){var f=document.getElementById('jobs');if(!f)return;var box=f.querySelector('.dots'),svg=box.querySelector('svg'),p=svg.querySelector('path');
+function draw(){var r=box.getBoundingClientRect(),ds=box.querySelectorAll('.d');if(!ds.length)return;var pts=[].map.call(ds,function(d){var q=d.getBoundingClientRect();return [q.left+q.width/2-r.left,q.top+q.height/2-r.top]}).reverse();
+svg.setAttribute('viewBox','0 0 '+r.width+' 44');var d='M'+pts[0][0]+' '+pts[0][1];for(var i=1;i<pts.length;i++){var a=pts[i-1],b=pts[i],m=(a[0]+b[0])/2,o=(i%2?-16:16);d+=' Q'+m+' '+(a[1]+o)+' '+b[0]+' '+b[1]}p.setAttribute('d',d);var L=Math.ceil(p.getTotalLength());p.style.setProperty('--len',L)}
+draw();addEventListener('resize',draw);
+if('IntersectionObserver' in window){new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){f.classList.add('on');o.disconnect()}})},{threshold:.45}).observe(f)}else f.classList.add('on');})();
+</script>
+</body>
+</html>

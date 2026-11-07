@@ -1,18 +1,21 @@
 <!doctype html>
-<html lang="cs">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Milo Brzák · Bez návodu</title>
-<meta name="description" content="Milo Brzák: zakladatel Enteru, podnikatel a surfař s handicapem. Pracuje na tom, jak budou fungovat firmy, ve kterých spolupracují lidé a AI. Bez návodu.">
+<title>Milo Brzák · No playbook</title>
+<meta name="description" content="Milo Brzák: founder of Enter, entrepreneur and adaptive surfer. Working on how companies will run when people and AI work together. No playbook.">
+<link rel="alternate" hreflang="en" href="https://milobrzak.com/">
+<link rel="alternate" hreflang="cs" href="https://milobrzak.com/cs/">
+<link rel="alternate" hreflang="x-default" href="https://milobrzak.com/">
 <link rel="canonical" href="https://milobrzak.com/">
 <meta name="author" content="Miloslav Brzák">
 <meta name="theme-color" content="#F3F4F2">
 <meta property="og:type" content="profile">
-<meta property="og:locale" content="cs_CZ">
+<meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://milobrzak.com/">
-<meta property="og:title" content="Milo Brzák · Bez návodu">
-<meta property="og:description" content="Jak se učit, rozhodovat a tvořit ve světě, který mění pravidla. Zakladatel Enteru, podnikatel, surfař.">
+<meta property="og:title" content="Milo Brzák · No playbook">
+<meta property="og:description" content="How to learn, decide and create in a world that keeps changing the rules. Founder of Enter, entrepreneur, surfer.">
 <meta property="og:image" content="https://milobrzak.com/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -24,11 +27,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Milo Brzák","alternateName":"Miloslav Brzák","url":"https://milobrzak.com/","image":"https://milobrzak.com/img/og.jpg",
- "jobTitle":["Zakladatel, Enter","Pedagog oboru Agentic Company, VŠEM"],
+ "jobTitle":["Founder, Enter","Lecturer, Agentic Company, Prague University of Economics and Management"],
  "worksFor":{"@type":"Organization","name":"Enter","url":"https://enter.ltd"},
  "affiliation":{"@type":"CollegeOrUniversity","name":"Vysoká škola ekonomie a managementu","alternateName":"VŠEM"},
  "sameAs":["https://www.linkedin.com/in/milobrzak"],
- "knowsAbout":["Company 2030","Spolupráce lidí a AI agentů","Adaptace","Agentic Company","Řízení změny","Krizové řízení","Adaptive surfing"]}
+ "knowsAbout":["Company 2030","Human and AI agent collaboration","Adaptation","Agentic Company","Change management","Crisis management","Adaptive surfing"]}
 </script>
 <style>
 /* Minimal: světle šedý papír, bílé karty, černé písmo, zelená jen jako akcent. Tok stránky stoupá nahoru: start → cesta → co předávám → pozvání. */
@@ -320,6 +323,11 @@ h1,h2,h3{text-wrap:balance}
 .ncard p{font-size:15px;line-height:1.5;color:var(--ink-2)}
 .ncard .nr{margin-top:auto;font-weight:600;font-size:14px;color:var(--deep)}
 @media(max-width:900px){.ngrid{grid-template-columns:1fr}}
+.lang{display:flex;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px;margin-left:auto}
+.lang a{font:500 12px/1 var(--mono);letter-spacing:.06em;text-decoration:none;color:var(--ink-3);padding:8px 10px;border-radius:999px}
+.lang a[aria-current]{background:var(--ink);color:#fff}
+.head .lang + .btn{margin-left:0}
+@media(max-width:860px){.head .lang{margin-left:auto}}
 .why,.build{padding-top:var(--sec)}
 .build.tight{padding-top:14px}
 .why .sec-head h2{font-size:clamp(28px,3.6vw,48px);max-width:30ch;margin-left:auto;margin-right:auto}
@@ -372,19 +380,20 @@ h1,h2,h3{text-wrap:balance}
 </style>
 </head>
 <body>
-<a class="sr-only" href="#obsah">Přeskočit na obsah</a>
+<a class="sr-only" href="#obsah">Skip to content</a>
 <header class="head">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Milo, na začátek stránky"><svg class="logo" viewBox="-4 -8 262 112" aria-hidden="true"><g fill="currentColor"><path d="M0 100V0h25l23 57L71 0h25v100H74V42L56 88H40L22 42v58z"/><rect x="110" y="32" width="22" height="68"/><rect x="146" y="0" width="22" height="100"/><circle cx="216" cy="66" r="24.5" fill="none" stroke="currentColor" stroke-width="22"/></g><circle class="dot" cx="121" cy="9" r="12" fill="#41E39E"/></svg></a>
-    <nav class="nav" aria-label="Hlavní">
-      <a href="#company2030">Co stavím</a>
-      <a href="#proc">Co mě zajímá</a>
-      <a href="#zapisky">Zápisky</a>
-      <a href="#cesta">Kapitoly</a>
-      <a href="#rozhovory">Rozhovory</a>
-      <a href="#osobne">Osobně</a>
+    <a class="brand" href="#top" aria-label="Milo, back to top"><svg class="logo" viewBox="-4 -8 262 112" aria-hidden="true"><g fill="currentColor"><path d="M0 100V0h25l23 57L71 0h25v100H74V42L56 88H40L22 42v58z"/><rect x="110" y="32" width="22" height="68"/><rect x="146" y="0" width="22" height="100"/><circle cx="216" cy="66" r="24.5" fill="none" stroke="currentColor" stroke-width="22"/></g><circle class="dot" cx="121" cy="9" r="12" fill="#41E39E"/></svg></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#company2030">What I build</a>
+      <a href="#proc">What drives me</a>
+      <a href="#zapisky">Notes</a>
+      <a href="#cesta">Chapters</a>
+      <a href="#rozhovory">Interviews</a>
+      <a href="#osobne">Personal</a>
     </nav>
-    <a class="btn sm" href="#kontakt">Napište mi</a>
+    <div class="lang" aria-label="Language"><a href="/" hreflang="en" aria-current="true">EN</a><a href="/cs/" hreflang="cs" lang="cs">CZ</a></div>
+    <a class="btn sm" href="#kontakt">Get in touch</a>
   </div>
 </header>
 
@@ -393,11 +402,11 @@ h1,h2,h3{text-wrap:balance}
 <section class="hero" id="top">
   <div class="wrap">
     <div class="trio">
-      <div>Zakladatel Enteru · podnikatel · surfař<br><span class="muted">pedagog Agentic Company, VŠEM</span></div>
+      <div>Founder of Enter · entrepreneur · surfer<br><span class="muted">teaches Agentic Company, Prague University of Economics and Management</span></div>
     </div>
     <h1 class="name">Milo Brzák</h1>
     <figure class="frame" style="margin:0">
-      <img src="img/portret.jpg" srcset="img/portret-800.jpg 800w, img/portret.jpg 2200w" sizes="(max-width:1240px) 100vw, 1200px" alt="Milo Brzák ve staré strojovně v Ostravě" width="2200" height="1238" fetchpriority="high">
+      <img src="/img/portret.jpg" srcset="/img/portret-800.jpg 800w, /img/portret.jpg 2200w" sizes="(max-width:1240px) 100vw, 1200px" alt="Milo Brzák in an old engine hall in Ostrava" width="2200" height="1238" fetchpriority="high">
       <span class="s1"></span><span class="s2"></span>
       <span class="tag">Ostrava · 2026</span>
     </figure>
@@ -407,11 +416,11 @@ h1,h2,h3{text-wrap:balance}
 <!-- 2 · HLAVNÍ SDĚLENÍ -->
 <section class="about" id="o-mne" aria-labelledby="lead">
   <div class="wrap">
-        <h2 class="lead" id="lead"><span>Bez návodu.</span></h2>
-    <p class="sublead">Jak se učit, rozhodovat a tvořit ve světě, který mění pravidla.</p>
-    <p class="body">Jsem zakladatel Enteru. S týmem pracujeme na tom, jak budou fungovat firmy, ve kterých <strong>spolupracují lidé a AI.</strong></p>
-    <p class="body">Dřív jsem podnikal na Bali, řídil ostrov u Sumatry, pracoval v Kathmandu na Novém Zélandu a založil Adapted. Surf a život v různých prostředích jsou pořád důležitou součástí toho, kdo jsem.</p>
-    <div class="ctas"><a class="btn" href="#company2030">Co právě stavím</a><a class="btn light" href="#kontakt">Napište mi</a></div>
+        <h2 class="lead" id="lead"><span>No playbook.</span></h2>
+    <p class="sublead">How to learn, decide and create in a world that keeps changing the rules.</p>
+    <p class="body">I’m the founder of Enter. With my team, I work on how companies will run when <strong>people and AI work together.</strong></p>
+    <p class="body">Before that, I ran a business in Bali, managed an island off Sumatra, worked for Kathmandu in New Zealand and founded Adapted. Surfing and living in different places are still a big part of who I am.</p>
+    <div class="ctas"><a class="btn" href="#company2030">What I’m building now</a><a class="btn light" href="#kontakt">Get in touch</a></div>
     
     
   </div>
@@ -422,28 +431,28 @@ h1,h2,h3{text-wrap:balance}
   <div class="wrap">
     <div class="c30-card">
       <div>
-        <span class="chip"><i></i>Co právě stavím</span>
+        <span class="chip"><i></i>What I’m building now</span>
         <p class="c30-brand">Company <span>2030</span></p>
-        <h2 id="c30-h">Jak bude fungovat firma, ve které pracují lidé a AI společně?</h2>
+        <h2 id="c30-h">How will a company work when people and AI work together?</h2>
         <div class="c30-text">
-          <p>Představuji si firmu, která dokáže využívat vlastní zkušenosti, průběžně se zlepšovat a svěřovat agentům jasně vymezenou práci. Lidé v ní určují směr, tvoří, rozvíjejí vztahy a odpovídají za rozhodnutí.</p>
-          <p>S Enterem pracujeme na tom, jak tuto představu převést do každodenního provozu. Propojujeme lidi, firemní data a systémy do smyčky rozhodování, práce a učení.</p>
-          <p>Zajímá mě přitom i lidská stránka té změny. Co se potřebujeme naučit, jak předávat odpovědnost a na co využijeme prostor, který získáme.</p>
+          <p>I picture a company that learns from its own experience, keeps improving and hands clearly defined work to agents. People set the direction, create, build relationships and own the decisions.</p>
+          <p>At Enter, we work on turning that picture into everyday operations. We connect people, company data and systems into a loop of decisions, work and learning.</p>
+          <p>I also care about the human side of the change. What we need to learn, how we hand over responsibility and what we do with the room we gain.</p>
         </div>
-        <a class="btn" href="https://company2030.com" target="_blank" rel="noopener">Prozkoumat Company 2030 →</a>
+        <a class="btn" href="https://company2030.com" target="_blank" rel="noopener">Explore Company 2030 →</a>
       </div>
       <div>
-        <div class="loop" role="img" aria-label="Loop 2030: smyčka rozhodnutí, práce, výsledků a učení">
+        <div class="loop" role="img" aria-label="Loop 2030: a loop of decisions, work, results and learning">
           <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring" cx="50" cy="50" r="38" transform="scale(1)" style="stroke-width:4.5"/><circle class="arc" cx="50" cy="50" r="38" style="stroke-width:4.5;stroke-dasharray:28 211"/></svg>
-          <div class="core"><b>Loop</b><small>princip, jak firma funguje</small></div>
-          <span class="st" style="left:50%;top:12%"><i>01</i>Rozhodnutí</span>
-          <span class="st" style="left:88%;top:50%"><i>02</i>Práce</span>
-          <span class="st" style="left:50%;top:88%"><i>03</i>Výsledky</span>
-          <span class="st" style="left:12%;top:50%"><i>04</i>Učení</span>
+          <div class="core"><b>Loop</b><small>how the company runs</small></div>
+          <span class="st" style="left:50%;top:12%"><i>01</i>Decisions</span>
+          <span class="st" style="left:88%;top:50%"><i>02</i>Work</span>
+          <span class="st" style="left:50%;top:88%"><i>03</i>Results</span>
+          <span class="st" style="left:12%;top:50%"><i>04</i>Learning</span>
         </div>
         <div class="roles">
-          <div><b>Lidé</b>Určují cíle, posuzují situace a nesou odpovědnost.</div>
-          <div><b>AI agenti</b>Vykonávají svěřené úkoly nad firemními systémy a daty.</div>
+          <div><b>People</b>Set goals, judge situations and carry responsibility.</div>
+          <div><b>AI agents</b>Carry out delegated tasks across company systems and data.</div>
         </div>
       </div>
     </div>
@@ -452,37 +461,37 @@ h1,h2,h3{text-wrap:balance}
 
 
 <!-- 4 · CO STAVÍM -->
-<section class="build tight" id="stavim" aria-label="Enter a Adapted">
+<section class="build tight" id="stavim" aria-label="Enter and Adapted">
   <div class="wrap">
     
     <div class="build-grid">
       <article class="bcard enter">
-        <span class="mono-l">Enter · zakladatel</span>
-        <h3>AI systémy, které lidem vracejí prostor</h3>
-        <p>V Enteru propojujeme stávající systémy, lidi a automatizované toky do jednoho fungujícího celku. Rutinu přebírá systém a lidé se mohou věnovat úsudku, kvalitě a rozhodování. Pracujeme s majiteli a vedením firem.</p>
+        <span class="mono-l">Enter · founder</span>
+        <h3>AI systems that give people room back</h3>
+        <p>At Enter, we connect existing systems, people and automated flows into one working whole. The system takes over routine work, so people can focus on judgment, quality and decisions. We work with owners and leadership teams.</p>
         <ul class="ad-mini en-steps">
-          <li><b>01</b> Audit provozu a úzkých míst přímo s vedením</li>
-          <li><b>02</b> Napojení na stávající systémy, bez výpadku</li>
-          <li><b>03</b> Zapojení lidí a řízení podle živých dat</li>
+          <li><b>01</b> Operations and bottleneck audit, directly with leadership</li>
+          <li><b>02</b> Connection to existing systems, with no downtime</li>
+          <li><b>03</b> Bringing people in and running on live data</li>
         </ul>
-        <p class="ad-note">Od reakce k predikci. Aby firma nemusela jen hasit a lidé měli čas na to, co umí nejlíp.</p>
-        <p class="ad-note" style="margin-top:0">Enter je tým, se kterým vizi <a href="#company2030">Company 2030</a> převádím do praxe.</p>
-        <a class="btn light" href="https://enter.ltd" target="_blank" rel="noopener">Web Enteru ↗</a>
+        <p class="ad-note">From reaction to prediction. So the company doesn’t just put out fires, and people have time for what they do best.</p>
+        <p class="ad-note" style="margin-top:0">Enter is the team I work with to turn <a href="#company2030">Company 2030</a> into practice.</p>
+        <a class="btn light" href="https://enter.ltd" target="_blank" rel="noopener">Enter website ↗</a>
       </article>
       <article class="bcard adapted" id="adapted">
-        <span class="mono-l">Adapted · zakladatel</span>
-        <h3>Někdy se musí přizpůsobit prostředí člověku</h3>
-        <p>Narodil jsem se s přetrženými nervy v rameni a pravou rukou nemám plnou hybnost dodnes. Když jsem poprvé jel na mistrovství světa v adaptive surfingu, v Česku žádná komunita neexistovala. Tak jsme založili Adapted.</p>
-        <figure class="ad-main" style="margin:0"><img src="img/repre-ms-pruvod.jpg" alt="Česká reprezentace s vlajkou na zahajovacím průvodu mistrovství světa v adaptive surfingu v Kalifornii" width="960" height="640" loading="lazy"><figcaption>Česká reprezentace na mistrovství světa v adaptive surfingu, Kalifornie</figcaption></figure>
+        <span class="mono-l">Adapted · founder</span>
+        <h3>Sometimes the environment has to adapt to the person</h3>
+        <p>I was born with torn nerves in my shoulder, and my right arm still doesn’t have full mobility. When I first went to the Adaptive Surfing World Championship, there was no community in Czechia. So we founded Adapted.</p>
+        <figure class="ad-main" style="margin:0"><img src="/img/repre-ms-pruvod.jpg" alt="The Czech team with the flag at the opening parade of the Adaptive Surfing World Championship in California" width="960" height="640" loading="lazy"><figcaption>The Czech team at the Adaptive Surfing World Championship, California</figcaption></figure>
         <ul class="ad-mini">
-          <li><b>2017</b> první český adaptive surfový tým</li>
-          <li><b>2018</b> první český surf kemp pro lidi s handicapem na Bali</li>
-          <li><b>2019</b> Bali Adaptive Pro: první profesionální závod surfařů s handicapem v jihovýchodní Asii</li>
-          <li><b>Covid</b> přišli jsme o sponzory, projekt stál jen na mně</li>
-          <li><b>Dnes</b> stavíme Adapted znovu, aby nestál na jednom člověku</li>
+          <li><b>2017</b> the first Czech adaptive surf team</li>
+          <li><b>2018</b> the first Czech surf camp for people with disabilities, in Bali</li>
+          <li><b>2019</b> Bali Adaptive Pro: the first professional adaptive surfing contest in Southeast Asia</li>
+          <li><b>Covid</b> we lost our sponsors, and the project rested on me alone</li>
+          <li><b>Today</b> we’re rebuilding Adapted so it doesn’t rest on one person</li>
         </ul>
-        <p class="ad-note">Adapted teď stavíme znovu. <b>Hledáme partnery a lidi, kteří se zapojí.</b></p>
-        <a class="btn" href="#kontakt">Zapojit se do Adapted →</a>
+        <p class="ad-note">We’re rebuilding Adapted now. <b>We’re looking for partners and people who want to get involved.</b></p>
+        <a class="btn" href="#kontakt">Get involved with Adapted →</a>
       </article>
     </div>
   </div>
@@ -492,27 +501,27 @@ h1,h2,h3{text-wrap:balance}
 <section class="why" id="proc" aria-labelledby="proc-h">
   <div class="wrap">
     <div class="sec-head">
-      <span class="chip"><i></i>Co mě zajímá a proč</span>
-      <h2 id="proc-h">Zajímá mě, co lidé dokážou, když se naučí pracovat v nových podmínkách. A když mají možnost ty podmínky sami měnit.</h2>
+      <span class="chip"><i></i>What drives me and why</span>
+      <h2 id="proc-h">I’m interested in what people can do when they learn to work in new conditions. And when they get to change those conditions themselves.</h2>
     </div>
     <div class="why-text">
-      <p>Tuhle otázku si nesu ze sportu, podnikání i života v různých zemích. Dnes ji přenáším do technologií a do způsobu, jak fungují firmy.</p>
-      <p>S Enterem pracuji na podobě firmy, ve které lidé a AI agenti spolupracují, zkušenosti se proměňují v lepší rozhodování a každodenní provoz dokáže zvládnout více práce samostatně.</p>
-      <p><strong>Company 2030</strong> je vize, kterou tím sleduji. Firma, která se průběžně učí, dává lidem prostor tvořit a rozhodovat a dokáže růst bez toho, aby každý další krok znamenal větší závislost na několika přetížených lidech.</p>
-      <p>Chci přispět k tomu, abychom uměli takové firmy stavět. A zároveň se učili dobře žít ve světě, který tím vytváříme.</p>
+      <p>I carry this question from sport, business and life in different countries. Today I bring it into technology and into how companies work.</p>
+      <p>At Enter, I work on a company where people and AI agents work together, experience turns into better decisions, and daily operations handle more work on their own.</p>
+      <p><strong>Company 2030</strong> is the vision behind it. A company that keeps learning, gives people room to create and decide, and can grow without every next step making it more dependent on a few overloaded people.</p>
+      <p>I want to help us learn to build companies like that. And at the same time learn to live well in the world we create with them.</p>
     </div>
     <ol class="stances">
-      <li><span class="num">1</span><h3>Schopnost učit se otevírá další možnosti.</h3><p>Jak začít v neznámém prostředí, přiznat si mezery a využít to, co už umím.</p><small>Sport, podnikání, změny zemí a pracovních prostředí</small></li>
-      <li><span class="num">2</span><h3>Změna podmínek může člověku umožnit víc.</h3><p>Jak rozpoznat překážku v prostředí, vybavení nebo organizaci práce a upravit ji.</p><small>Adaptive surfing, Adapted, práce s technologiemi</small></li>
-      <li><span class="num">3</span><h3>Samostatnost vyžaduje odpovědnost.</h3><p>Jak rozhodovat s neúplnými informacemi a předávat rozhodování dalším lidem.</p><small>Vlastní podnikání, provoz ostrova, koordinace v Kathmandu</small></li>
-      <li class="key"><span class="num">4</span><h3>O přínosu AI rozhoduje i to, co uděláme s uvolněnou kapacitou.</h3><p>Jak propojit automatizaci s kvalitou práce, výsledky firmy a životem lidí.</p><small>Enter a výuka Agentic Company na VŠEM</small></li>
+      <li><span class="num">1</span><h3>The ability to learn opens new options.</h3><p>How to start in an unfamiliar place, admit the gaps and use what I already know.</p><small>Sport, business, new countries and workplaces</small></li>
+      <li><span class="num">2</span><h3>Changing the conditions can let a person do more.</h3><p>How to spot an obstacle in the environment, the equipment or the way work is organised, and change it.</p><small>Adaptive surfing, Adapted, working with technology</small></li>
+      <li><span class="num">3</span><h3>Independence requires responsibility.</h3><p>How to decide with incomplete information and hand decisions over to other people.</p><small>Own businesses, running an island, coordination at Kathmandu</small></li>
+      <li class="key"><span class="num">4</span><h3>The value of AI also depends on what we do with the capacity it frees up.</h3><p>How to connect automation with quality of work, company results and people’s lives.</p><small>Enter and teaching Agentic Company at VŠE</small></li>
     </ol>
     <div class="question">
-      <span class="chip"><i></i>Otázka, kterou teď řeším</span>
-      <p class="q">Co bude dělat člověk ve firmě, která dokáže stále více práce zvládnout sama?</p>
+      <span class="chip"><i></i>The question I’m working on</span>
+      <p class="q">What will people do in a company that can handle more and more work on its own?</p>
       <div class="q-cols">
-        <p>Ta otázka propojuje technologii s věcmi, které lidé v publiku řeší osobně. Co se mám učit? Za co ponesu odpovědnost? Jak povedu tým? Co bude moje hodnota?</p>
-        <p>A z pohledu firmy: jak si uchová zkušenosti? A jak poznáme, že nám nový způsob práce skutečně prospívá?</p>
+        <p>It connects technology with things people deal with personally. What should I learn? What will I be responsible for? How will I lead a team? What will my value be?</p>
+        <p>And from the company’s side: how does it keep its experience? And how do we know the new way of working actually does us good?</p>
       </div>
     </div>
   </div>
@@ -522,13 +531,13 @@ h1,h2,h3{text-wrap:balance}
 <section class="notes" id="zapisky" aria-labelledby="zapisky-h">
   <div class="wrap">
     <div class="sec-head">
-      <span class="chip"><i></i>Zápisky · Bez návodu</span>
-      <h2 id="zapisky-h">Co stavím, co si myslím a co mě změnilo</h2>
+      <span class="chip"><i></i>Notes · No playbook</span>
+      <h2 id="zapisky-h">What I build, what I think and what changed me</h2>
     </div>
     <div class="ngrid">
-      <a class="ncard" href="/zapisky/od-reakce-k-predikci/"><img src="img/portret-800.jpg" alt="" loading="lazy"><span class="nt">Co stavím · Enter</span><h3>Firma neroste rychleji, než stíhají rozhodovat její lidé</h3><p>Proč škálování podle mě začíná u předvídání, ne u dalších lidí, kteří budou hasit.</p><span class="nr">Číst →</span></a>
-      <a class="ncard" href="/zapisky/kathmandu-hozeny-do-problemu/"><img src="img/kmd-office.jpg" alt="" loading="lazy"><span class="nt">Co mě změnilo · Kathmandu</span><h3>Hozený rovnou do problému. Co mě naučil americký tým v Kathmandu</h3><p>Po letech vlastního podnikání jsem začínal znovu, uvnitř globální firmy na druhém konci světa.</p><span class="nr">Číst →</span></a>
-      <a class="ncard" href="/zapisky/adapted-znovu/"><img src="img/repre-ms-pruvod.jpg" alt="" loading="lazy"><span class="nt">Co mě změnilo · Adapted</span><h3>Co mi vzal covid a proč Adapted stavíme jinak</h3><p>Vždycky může přijít něco, co neovlivníte. Můžete ale stavět tak, aby vás to nezlomilo.</p><span class="nr">Číst →</span></a>
+      <a class="ncard" href="/notes/from-reaction-to-prediction/"><img src="/img/portret-800.jpg" alt="" loading="lazy"><span class="nt">What I build · Enter</span><h3>A company can’t grow faster than its people can decide</h3><p>Why I think scaling starts with prediction, not with more people putting out fires.</p><span class="nr">Read →</span></a>
+      <a class="ncard" href="/notes/kathmandu-thrown-into-the-problem/"><img src="/img/kmd-office.jpg" alt="" loading="lazy"><span class="nt">What changed me · Kathmandu</span><h3>Thrown straight into the problem. What an American team at Kathmandu taught me</h3><p>After years of running my own businesses, I started again inside a global company on the other side of the world.</p><span class="nr">Read →</span></a>
+      <a class="ncard" href="/notes/adapted-again/"><img src="/img/repre-ms-pruvod.jpg" alt="" loading="lazy"><span class="nt">What changed me · Adapted</span><h3>What covid took from me, and why we’re building Adapted differently</h3><p>Something you can’t control can always come. But you can build so it doesn’t break you.</p><span class="nr">Read →</span></a>
     </div>
   </div>
 </section>
@@ -537,65 +546,65 @@ h1,h2,h3{text-wrap:balance}
 <section class="climb" id="cesta" aria-labelledby="cesta-h">
   <div class="wrap">
     <div class="sec-head">
-      <span class="chip"><i></i>Vybrané kapitoly</span>
-      <h2 id="cesta-h">Šest prostředí, kde mi dostupný návod nestačil</h2>
-      <p>V každém byli lidé se znalostmi a zkušenostmi. Musel jsem se od nich rychle učit, pochopit situaci a přispět vlastním řešením.</p>
+      <span class="chip"><i></i>Selected chapters</span>
+      <h2 id="cesta-h">Six places where no existing playbook was enough</h2>
+      <p>Each had people with more knowledge and experience. I had to learn from them fast, understand the situation and add my own solution.</p>
     </div>
     <figure class="jobs" id="jobs">
       <span class="q-mark" aria-hidden="true">“</span>
-      <span class="q-l"><i></i>Moje oblíbená věta</span>
-      <blockquote lang="en">You can’t connect the dots looking forward; you can only connect them <em>looking backwards.</em></blockquote>
-      <p class="cz">Tečky nespojíte dopředu, jen zpětně. Dopředu to vypadalo jako řada odboček, zpětně je to jedna cesta.</p>
-      <figcaption>Steve Jobs, projev na Stanfordu, 2005</figcaption>
-      <div class="dots" aria-label="Šest kapitol mé cesty">
+      <span class="q-l"><i></i>My favourite line</span>
+      <blockquote>You can’t connect the dots looking forward; you can only connect them <em>looking backwards.</em></blockquote>
+      <p class="cz">Looking forward, it looked like a series of detours. Looking back, it’s one path.</p>
+      <figcaption>Steve Jobs, Stanford commencement speech, 2005</figcaption>
+      <div class="dots" aria-label="Six chapters of my path">
         <svg aria-hidden="true" preserveAspectRatio="none"><path/></svg>
         <ol>
-          <li><span class="d"></span><span><b>01</b>Česko</span></li>
-          <li><span class="d"></span><span><b>02</b>Kalifornie · Praha</span></li>
+          <li><span class="d"></span><span><b>01</b>Czechia</span></li>
+          <li><span class="d"></span><span><b>02</b>California · Prague</span></li>
           <li><span class="d"></span><span><b>03</b>Bali</span></li>
           <li><span class="d"></span><span><b>04</b>Sumatra</span></li>
-          <li><span class="d"></span><span><b>05</b>Nový Zéland</span></li>
-          <li><span class="d"></span><span><b>06</b>Enter · VŠEM</span></li>
+          <li><span class="d"></span><span><b>05</b>New Zealand</span></li>
+          <li><span class="d"></span><span><b>06</b>Enter · VŠE</span></li>
         </ol>
       </div>
     </figure>
     <ol class="steps">
       <li class="step">
-        <span class="n"><span>01 · Start</span><span>Česko</span></span>
-        <h3>Ruka, kterou jsem musel rozhýbat</h3>
-        <p>Ruku jsem rozpohyboval díky Vojtově metodě a skvělým rodičům. Vyrůstal jsem v zemi, kde lidi s handicapem dlouho odsouval režim na okraj společnosti.</p>
-        <p class="learn"><small>Co jsem pochopil</small>Omezení mění techniku, ne cíl.</p>
+        <span class="n"><span>01 · Start</span><span>Czechia</span></span>
+        <h3>An arm I had to get moving</h3>
+        <p>I got my arm moving thanks to the Vojta method and great parents. I grew up in a country where the regime long pushed people with disabilities to the margins of society.</p>
+        <p class="learn"><small>What I learned</small>A limitation changes the technique, not the goal.</p>
       </li>
       <li class="step">
-        <span class="n"><span>02 · Byznys</span><span>Kalifornie · Praha</span></span>
-        <h3>Longboardy a čtvrtý člověk ve Slevomatu</h3>
-        <p>Ve 23 letech jsem založil Custom Boards s výrobou v pěti zemích. Pak jsem byl čtvrtým zaměstnancem Slevomatu, prvního českého slevového portálu. Rozjížděli jsme v Česku úplně nový byznys.</p>
+        <span class="n"><span>02 · Business</span><span>California · Prague</span></span>
+        <h3>Longboards and employee number four at Slevomat</h3>
+        <p>At 23, I founded Custom Boards, with production in five countries. Then I became the fourth employee of Slevomat, the first Czech daily-deals site. We were starting a completely new business in Czechia.</p>
       </li>
       <li class="step">
-        <span class="n"><span>03 · Oceán</span><span>Bali</span></span>
-        <img src="img/surf-bali-800.jpg" alt="" width="800" height="532" loading="lazy">
-        <h3>Surf s jednou rukou a vlastní hotel</h3>
-        <p>Odešel jsem z Evropy, abych mohl surfovat každý den. Pětkrát jsem startoval na mistrovství světa a deset let vedl hotel Riviera House.</p>
+        <span class="n"><span>03 · Ocean</span><span>Bali</span></span>
+        <img src="/img/surf-bali-800.jpg" alt="" width="800" height="532" loading="lazy">
+        <h3>Surfing with one arm, and my own hotel</h3>
+        <p>I left Europe so I could surf every day. I competed at the World Championship five times and ran the Riviera House hotel for ten years.</p>
       </li>
       <li class="step">
-        <span class="n"><span>04 · Ostrov</span><span>Sumatra</span></span>
-        <img src="img/pinang-plaz-800.jpg" alt="" width="800" height="600" loading="lazy">
-        <h3>Ředitel ostrova Pinang</h3>
-        <p>Devět měsíců krizového řízení, logistiky a bezpečnosti na moři. Dvakrát jsem rozhodoval, jestli vyslat loď proti bouřce s člověkem do nemocnice přes 30 hodin daleko. Obě evakuace dopadly dobře.</p>
-        <p class="learn"><small>Co jsem pochopil</small>Rozhodnout se s neúplnými informacemi je odpovědnost, ne pohodlí.</p>
+        <span class="n"><span>04 · Island</span><span>Sumatra</span></span>
+        <img src="/img/pinang-plaz-800.jpg" alt="" width="800" height="600" loading="lazy">
+        <h3>Island manager, Pinang</h3>
+        <p>Nine months of crisis management, logistics and safety at sea. Twice I had to decide whether to send a boat out into a storm to take someone to a hospital more than 30 hours away. Both evacuations ended well.</p>
+        <p class="learn"><small>What I learned</small>Deciding with incomplete information is a responsibility, not a comfort.</p>
       </li>
       <li class="step">
-        <span class="n"><span>05 · Znovu od začátku</span><span>Covid · Nový Zéland</span></span>
-        <img src="img/nz-arthurs-800.jpg" alt="" width="800" height="600" loading="lazy">
-        <h3>Ztratil jsem hotel. Pak přišel Kathmandu</h3>
-        <p>Covid mi vzal hotel i Adapted. Rozhodl jsem se začít znovu, uvnitř velké mezinárodní firmy na druhém konci světa.</p>
-        <p class="learn"><a href="#kathmandu">Jak to bylo v Kathmandu ↓</a></p>
+        <span class="n"><span>05 · Starting over</span><span>Covid · New Zealand</span></span>
+        <img src="/img/nz-arthurs-800.jpg" alt="" width="800" height="600" loading="lazy">
+        <h3>I lost the hotel. Then came Kathmandu</h3>
+        <p>Covid took both the hotel and Adapted. I decided to start again, inside a large international company on the other side of the world.</p>
+        <p class="learn"><a href="#kathmandu">What happened at Kathmandu ↓</a></p>
       </li>
       <li class="step now">
-        <span class="n"><span>06 · Dnes</span><span>Enter · VŠEM</span></span>
-        <img src="img/portret-800.jpg" alt="" width="800" height="450" loading="lazy" style="object-position:68% 30%">
-        <h3>AI ve firmách, s lidmi v centru</h3>
-        <p>Vedu Enter a na VŠEM učím obor Agentic Company. Spojuju všechno, co jsem se naučil v předchozích kapitolách.</p>
+        <span class="n"><span>06 · Today</span><span>Enter · VŠE</span></span>
+        <img src="/img/portret-800.jpg" alt="" width="800" height="450" loading="lazy" style="object-position:68% 30%">
+        <h3>AI in companies, with people at the centre</h3>
+        <p>I run Enter and teach Agentic Company at the Prague University of Economics and Management. It brings together everything I learned in the previous chapters.</p>
       </li>
     </ol>
   </div>
@@ -605,28 +614,28 @@ h1,h2,h3{text-wrap:balance}
 <section class="kmd" id="kathmandu" aria-labelledby="kmd-h">
   <div class="wrap">
     <div class="sec-head">
-      <span class="chip"><i></i>Kapitola 05 zblízka · Nový Zéland</span>
-      <h2 id="kmd-h">Z vlastního hotelu do centrály mezinárodní firmy</h2>
-      <p>Po covidu jsem se rozhodl začít znovu. V centrále Kathmandu v Christchurchi, jedné z největších outdoorových firem Austrálie a Nového Zélandu.</p>
+      <span class="chip"><i></i>Chapter 05 up close · New Zealand</span>
+      <h2 id="kmd-h">From my own hotel to the headquarters of an international company</h2>
+      <p>After covid, I decided to start again. At the Kathmandu headquarters in Christchurch, one of the largest outdoor companies in Australia and New Zealand.</p>
     </div>
     <div class="kmd-grid">
       <div class="kmd-photos">
-        <img class="p1" src="img/kmd-office.jpg" style="object-position:30% 50%" alt="Zasedačka v centrále KMD Brands v Christchurchi, 2023" width="1400" height="1050" loading="lazy">
-        <img class="p2" src="img/nz-paragliding-800.jpg" alt="Paragliding nad útesy na Novém Zélandu" width="800" height="610" loading="lazy">
-        <img class="p3" src="img/nz-zatoka-1200.jpg" alt="Zátoka u Christchurche při západu slunce" width="1200" height="675" loading="lazy">
+        <img class="p1" src="/img/kmd-office.jpg" style="object-position:30% 50%" alt="Meeting room at KMD Brands headquarters in Christchurch, 2023" width="1400" height="1050" loading="lazy">
+        <img class="p2" src="/img/nz-paragliding-800.jpg" alt="Paragliding over the cliffs in New Zealand" width="800" height="610" loading="lazy">
+        <img class="p3" src="/img/nz-zatoka-1200.jpg" alt="A bay near Christchurch at sunset" width="1200" height="675" loading="lazy">
       </div>
       <div class="box kmd-text">
-        <h3>Co jsem tam řešil</h3>
-        <p>Jako Quality Coordinator jsem dostal na starost jeden z nejsložitějších problémů s dodávkami ze zahraničí. Týkal se hero produktu, na kterém stála podstatná část tržeb napříč portfoliem.</p>
+        <h3>What I worked on</h3>
+        <p>As Quality Coordinator, I was given one of the most complex problems with overseas supply. It concerned a hero product that carried a significant share of revenue across the portfolio.</p>
         <ul class="did">
-          <li>Vedl jsem analýzu problému a přípravu podkladů pro rozhodnutí.</li>
-          <li>Reportoval jsem přímo vedení firmy.</li>
-          <li>Koordinoval jsem řešení s týmy v USA a Evropě.</li>
+          <li>I led the analysis of the problem and prepared the material for decisions.</li>
+          <li>I reported directly to the company’s leadership.</li>
+          <li>I coordinated the solution with teams in the US and Europe.</li>
         </ul>
-        <h3 style="margin-top:24px">Co jsem pochopil</h3>
-        <p>Retail, vztah k zákazníkovi a kvalitu výrobku jsem se učil od základů, od lidí, kteří tomu rozuměli líp než já. Ve velké firmě nerozhoduje hrdinský výkon jednotlivce, ale procesy, data a schopnost vidět celý systém.</p>
-        <p class="learn-big">Přesně tohle dnes přenáším do firem s Enterem: aby rozhodnutí neležela jen na jednom člověku.</p>
-        <p class="src">Kathmandu patří do skupiny KMD Brands (Kathmandu, Rip Curl, Oboz), založeno 1987 v Christchurchi. <a href="https://en.wikipedia.org/wiki/KMD_Brands" target="_blank" rel="noopener">Zdroj</a></p>
+        <h3 style="margin-top:24px">What I learned</h3>
+        <p>I learned retail, customer relationships and product quality from the ground up, from people who understood them better than I did. In a large company, decisions don’t come down to one person’s heroics, but to processes, data and the ability to see the whole system.</p>
+        <p class="learn-big">That’s exactly what I bring to companies with Enter today: so decisions don’t rest on one person alone.</p>
+        <p class="src">Kathmandu is part of KMD Brands (Kathmandu, Rip Curl, Oboz), founded in 1987 in Christchurch. <a href="https://en.wikipedia.org/wiki/KMD_Brands" target="_blank" rel="noopener">Source</a></p>
       </div>
     </div>
   </div>
@@ -637,32 +646,32 @@ h1,h2,h3{text-wrap:balance}
 <section class="listen" id="rozhovory" aria-labelledby="poslech-h">
   <div class="wrap">
     <div class="sec-head">
-      <span class="chip"><i></i>Rozhovory</span>
-      <h2 id="poslech-h">Kde jsem o tom mluvil</h2>
-      <p>Jak firmy zvládají transformaci s AI a jak se dá naučit surfovat bez zdravé ruky.</p>
+      <span class="chip"><i></i>Interviews</span>
+      <h2 id="poslech-h">Where I’ve talked about it</h2>
+      <p>How companies handle the AI transformation, and how you can learn to surf without a healthy arm.</p>
     </div>
     <div class="videos">
       <figure class="vid">
-        <div class="video"><button class="play" type="button" data-id="2dcBtsASU58" data-title="Rozhovor HRko s Miloslavem Brzákem" aria-label="Přehrát rozhovor HRko na YouTube"><img src="img/hrko-podcast.jpg" alt="Náhled rozhovoru HRko" width="1280" height="720" loading="lazy"><span class="pbtn" aria-hidden="true">▶</span></button></div>
-        <figcaption><span class="vsrc-n">HRko · podcast</span><b>Nahradí AI 30 % zaměstnanců? Realita transformace firem</b><a href="https://www.youtube.com/watch?v=2dcBtsASU58" target="_blank" rel="noopener">Otevřít na YouTube ↗</a></figcaption>
+        <div class="video"><button class="play" type="button" data-id="2dcBtsASU58" data-title="HRko interview with Miloslav Brzák" aria-label="Play the HRko interview on YouTube"><img src="/img/hrko-podcast.jpg" alt="HRko interview preview" width="1280" height="720" loading="lazy"><span class="pbtn" aria-hidden="true">▶</span></button></div>
+        <figcaption><span class="vsrc-n">HRko · podcast (in Czech)</span><b>Will AI replace 30% of employees? The reality of company transformation</b><a href="https://www.youtube.com/watch?v=2dcBtsASU58" target="_blank" rel="noopener">Open on YouTube ↗</a></figcaption>
       </figure>
       <figure class="vid">
-        <div class="video"><button class="play" type="button" data-id="k-73rY0GYuI" data-title="Rozhovor DVTV s Milo Brzákem" aria-label="Přehrát rozhovor DVTV na YouTube"><img src="img/dvtv-rozhovor.jpg" alt="Náhled rozhovoru DVTV" width="1280" height="720" loading="lazy"><span class="pbtn" aria-hidden="true">▶</span></button></div>
-        <figcaption><span class="vsrc-n">DVTV · rozhovor</span><b>Učí hendikepované surfovat na Bali: Je to jen o hlavě, najít cestu a překonat strach</b><a href="https://www.youtube.com/watch?v=k-73rY0GYuI" target="_blank" rel="noopener">Otevřít na YouTube ↗</a></figcaption>
+        <div class="video"><button class="play" type="button" data-id="k-73rY0GYuI" data-title="DVTV interview with Milo Brzák" aria-label="Play the DVTV interview on YouTube"><img src="/img/dvtv-rozhovor.jpg" alt="DVTV interview preview" width="1280" height="720" loading="lazy"><span class="pbtn" aria-hidden="true">▶</span></button></div>
+        <figcaption><span class="vsrc-n">DVTV · interview (in Czech)</span><b>Teaching people with disabilities to surf in Bali: it’s all in the head, finding a way and overcoming fear</b><a href="https://www.youtube.com/watch?v=k-73rY0GYuI" target="_blank" rel="noopener">Open on YouTube ↗</a></figcaption>
       </figure>
     </div>
-    <div class="seen" aria-label="Další rozhovory a články">
-      <span class="seen-l">Další rozhovory a články</span>
-      <span><img src="img/logos/ct.svg" alt="Česká televize" style="height:26px"></span>
-      <a href="https://www.youtube.com/watch?v=k-73rY0GYuI" target="_blank" rel="noopener"><img class="mono" src="img/logos/dvtv.svg" alt="DVTV" style="height:22px"></a>
-      <a href="https://www.youtube.com/watch?v=2dcBtsASU58" target="_blank" rel="noopener"><img class="mono" src="img/logos/hrko.svg" alt="HRko" style="height:38px"></a>
+    <div class="seen" aria-label="More interviews and articles">
+      <span class="seen-l">More interviews and articles</span>
+      <span><img src="/img/logos/ct.svg" alt="Česká televize" style="height:26px"></span>
+      <a href="https://www.youtube.com/watch?v=k-73rY0GYuI" target="_blank" rel="noopener"><img class="mono" src="/img/logos/dvtv.svg" alt="DVTV" style="height:22px"></a>
+      <a href="https://www.youtube.com/watch?v=2dcBtsASU58" target="_blank" rel="noopener"><img class="mono" src="/img/logos/hrko.svg" alt="HRko" style="height:38px"></a>
       <span class="wm">Esquire</span>
-      <a href="https://www.nn.cz/blog/milo-brzak-vlnach-surfu-padech-ktere-ho-nuti-jit-dal.html" target="_blank" rel="noopener"><img src="img/logos/nn.svg" alt="NN" style="height:30px"></a>
-      <a href="https://www.emontana.cz/mila-brzak-surf-paraglide-rozhovor/" target="_blank" rel="noopener"><img class="mono" src="img/logos/emontana.png" alt="eMontana" style="height:26px"></a>
-      <a href="https://www.freeride.cz/surf/mila-brzak-prvni-adaptive-surfar-reprezentujici-cr-na-mistrovstvi-sveta" target="_blank" rel="noopener"><img class="mono" src="img/logos/freeride.svg" alt="Freeride" style="height:32px"></a>
-      <a href="https://www.wavescape.co.za/archive/the-changing-face-of-adaptive-surfing" target="_blank" rel="noopener"><img class="mono" src="img/logos/wavescape.svg" alt="Wavescape" style="height:30px"></a>
-      <a href="https://thebeatbali.com/?p=160068" target="_blank" rel="noopener"><img class="mono" src="img/logos/beat.png" alt="The Beat Bali" style="height:20px"></a>
-      <a href="https://www.mvso.cz/aktuality/od-longboardove-firme-k-firme-enter" target="_blank" rel="noopener"><img src="img/logos/mvso.png" alt="Moravská vysoká škola Olomouc" style="height:46px"></a>
+      <a href="https://www.nn.cz/blog/milo-brzak-vlnach-surfu-padech-ktere-ho-nuti-jit-dal.html" target="_blank" rel="noopener"><img src="/img/logos/nn.svg" alt="NN" style="height:30px"></a>
+      <a href="https://www.emontana.cz/mila-brzak-surf-paraglide-rozhovor/" target="_blank" rel="noopener"><img class="mono" src="/img/logos/emontana.png" alt="eMontana" style="height:26px"></a>
+      <a href="https://www.freeride.cz/surf/mila-brzak-prvni-adaptive-surfar-reprezentujici-cr-na-mistrovstvi-sveta" target="_blank" rel="noopener"><img class="mono" src="/img/logos/freeride.svg" alt="Freeride" style="height:32px"></a>
+      <a href="https://www.wavescape.co.za/archive/the-changing-face-of-adaptive-surfing" target="_blank" rel="noopener"><img class="mono" src="/img/logos/wavescape.svg" alt="Wavescape" style="height:30px"></a>
+      <a href="https://thebeatbali.com/?p=160068" target="_blank" rel="noopener"><img class="mono" src="/img/logos/beat.png" alt="The Beat Bali" style="height:20px"></a>
+      <a href="https://www.mvso.cz/aktuality/od-longboardove-firme-k-firme-enter" target="_blank" rel="noopener"><img src="/img/logos/mvso.png" alt="Moravian Business College Olomouc" style="height:46px"></a>
     </div>
   </div>
 </section>
@@ -671,13 +680,13 @@ h1,h2,h3{text-wrap:balance}
 <!-- 9 · OSOBNĚ -->
 <section class="personal" id="osobne" aria-labelledby="osobne-h">
   <div class="wrap">
-    <div class="sec-head"><span class="chip"><i></i>Osobně</span><h2 id="osobne-h">Co mi dává smysl</h2></div>
+    <div class="sec-head"><span class="chip"><i></i>Personal</span><h2 id="osobne-h">What matters to me</h2></div>
     <div class="box">
-      <h3>Bratr</h3>
-      <p>Prošel jsem si sebevraždou svého bratra. Naučilo mě to být tady a teď a dělat věci, které dávají smysl. Pomohla mi vipassana, meditace a práce s dechem.</p>
-      <p class="help">Pokud procházíte něčím těžkým, zavolejte na Linku první psychické pomoci 116 123, nonstop a zdarma.</p>
-      <h3>Svoboda a příroda</h3>
-      <p>Oceán a paragliding mi připomínají, že člověk je mnohem menší než příroda. Mým snem je uletět na paraglidu 100 kilometrů.</p>
+      <h3>My brother</h3>
+      <p>I went through my brother’s suicide. It taught me to be here and now and to do things that matter. Vipassana, meditation and breathwork helped me.</p>
+      <p class="help">If you’re going through something hard, please reach out to a local crisis line. In Czechia, call 116 123, free and around the clock.</p>
+      <h3>Freedom and nature</h3>
+      <p>The ocean and paragliding remind me that people are much smaller than nature. My dream is to fly 100 kilometres on a paraglider.</p>
     </div>
   </div>
 </section>
@@ -686,58 +695,58 @@ h1,h2,h3{text-wrap:balance}
 <section class="contact" id="kontakt" aria-labelledby="kontakt-h">
   <div class="wrap">
     <div class="cbox">
-      <h2 id="kontakt-h">Napište mi<span>.</span></h2>
-      <p>Pokud vás zajímá něco z toho, na čem pracuji, rád se propojím. Kvůli společnému projektu, rozhovoru nebo setkání.</p>
+      <h2 id="kontakt-h">Get in touch<span>.</span></h2>
+      <p>If anything I’m working on interests you, I’d be glad to connect. For a joint project, an interview or just a meeting.</p>
       <div class="mailrow">
         <a class="mail" id="mail" href="mailto:milo@enterai.cz">milo@enterai.cz</a>
-        <button class="copy" id="copy" type="button">Kopírovat</button>
+        <button class="copy" id="copy" type="button">Copy</button>
       </div>
       <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
     </div>
     <details class="pod" id="poradatele">
-      <summary>Podklady pro média a pořadatele <span aria-hidden="true">→</span></summary>
+      <summary>Materials for media and organisers <span aria-hidden="true">→</span></summary>
       <div class="pod-in">
         <div class="org-grid">
       <div class="box">
-        <h3>Bio do programu</h3>
-        <div class="bio" id="bio"><p>Milo Brzák propojuje zkušenost podnikatele a adaptive surfaře s praktickou prací na firmách pro éru AI. Je zakladatelem Enteru a rozvíjí vizi Company 2030, ve které lidé a AI agenti společně vykonávají práci, rozhodují v jasně vymezených rolích a využívají zkušenosti k dalšímu zlepšování.</p><p>Ve vystoupeních otevírá otázku, jakou roli bude mít člověk v takové firmě a co se potřebujeme naučit už dnes. Vychází ze zkušeností ze sportu, vlastního podnikání, mezinárodního prostředí i současné práce s technologiemi.</p><p>Vystupuje česky i anglicky.</p></div>
-        <div class="row"><button class="btn" id="copy-bio" type="button">Kopírovat bio</button><a class="btn light" href="img/portret.jpg" target="_blank" rel="noopener">Fotka v plné velikosti ↗</a></div>
+        <h3>Programme bio</h3>
+        <div class="bio" id="bio"><p>Milo Brzák combines the experience of an entrepreneur and adaptive surfer with hands-on work on companies for the AI era. He is the founder of Enter and develops the Company 2030 vision, in which people and AI agents do the work together, make decisions in clearly defined roles and use experience to keep improving.</p><p>In his talks, he asks what role people will have in such a company and what we need to learn today. He draws on sport, his own businesses, international work and his current work with technology.</p><p>He speaks English and Czech.</p></div>
+        <div class="row"><button class="btn" id="copy-bio" type="button">Copy bio</button><a class="btn light" href="/img/portret.jpg" target="_blank" rel="noopener">Full-size photo ↗</a></div>
         <span class="sr-only" id="bio-status" role="status" aria-live="polite"></span>
       </div>
       <div class="box">
-        <h3>Témata pro média</h3>
+        <h3>Topics for media</h3>
         <ul class="lines">
-          <li><b>Zavádění AI je také rozhodování o tom, jakou práci chceme lidem ponechat.</b><span>Ekonomika, technologie, HR</span></li>
-          <li><b>Schopnost znovu začínat má hodnotu i uprostřed kariéry.</b><span>Profesní identita, učení</span></li>
-          <li><b>Někdy se musí přizpůsobit prostředí člověku.</b><span>Přístupnost, handicap, Adapted</span></li>
-          <li><b>Zakladatel musí umět předávat rozhodování, pokud chce prostor pro další tvorbu.</b><span>Podnikání, leadership</span></li>
+          <li><b>Adopting AI is also deciding which work we want to leave to people.</b><span>Economy, technology, HR</span></li>
+          <li><b>Starting over has value, even mid-career.</b><span>Professional identity, learning</span></li>
+          <li><b>Sometimes the environment has to adapt to the person.</b><span>Accessibility, disability, Adapted</span></li>
+          <li><b>A founder has to hand over decisions to make room for building what’s next.</b><span>Business, leadership</span></li>
         </ul>
         <ul class="facts" style="margin-top:20px">
-          <li><span>Formáty</span><span>Keynote, panel, podcast, workshop</span></li>
-          <li><span>Jazyky</span><span>Čeština, angličtina</span></li>
-          <li><span>Kontakt</span><span>milo@enterai.cz</span></li>
+          <li><span>Formats</span><span>Keynote, panel, podcast, workshop</span></li>
+          <li><span>Languages</span><span>English, Czech</span></li>
+          <li><span>Contact</span><span>milo@enterai.cz</span></li>
         </ul>
       </div>
     </div>
-        <h3 class="pod-h">Témata vystoupení</h3>
+        <h3 class="pod-h">Talk topics</h3>
         <div class="give-grid">
       <article class="gcard key">
-        <span class="num">1</span><span class="t">Pro byznys, technologie, HR, leadership</span>
-        <h3>Company 2030. Jak navrhnout spolupráci lidí a AI.</h3>
-        <p><b>Co si publikum odnese:</b> konkrétní obraz fungování firmy, rozdělení práce, rozhodovacích pravomocí a odpovědnosti. A otázky pro návrh vlastní organizace.</p>
-        <p class="talk"><span>Zkušenost: Enter, Company 2030, výuka Agentic Company na VŠEM</span></p>
+        <span class="num">1</span><span class="t">For business, technology, HR, leadership</span>
+        <h3>Company 2030. How to design collaboration between people and AI.</h3>
+        <p><b>What the audience takes away:</b> a concrete picture of how a company runs: the split of work, decision rights and responsibility. And questions for designing their own organisation.</p>
+        <p class="talk"><span>Background: Enter, Company 2030, teaching Agentic Company at VŠE</span></p>
       </article>
       <article class="gcard">
-        <span class="num">2</span><span class="t">Pro širší konference, podnikatele, školy</span>
-        <h3>Bez návodu. Jak se učit, když se mění pravidla.</h3>
-        <p><b>Co si publikum odnese:</b> způsob, jak rozpoznat vlastní mezery, využít zkušenosti, které už má, a začít jednat.</p>
-        <p class="talk"><span>Příběhy: surf s jednou rukou, ostrov u Sumatry, začít znovu po covidu</span></p>
+        <span class="num">2</span><span class="t">For general conferences, entrepreneurs, schools</span>
+        <h3>No playbook. How to learn when the rules change.</h3>
+        <p><b>What the audience takes away:</b> a way to spot their own gaps, use the experience they already have and start acting.</p>
+        <p class="talk"><span>Stories: surfing with one arm, an island off Sumatra, starting over after covid</span></p>
       </article>
       <article class="gcard">
-        <span class="num">3</span><span class="t">Pro zakladatele, majitele a vedení firem</span>
-        <h3>Když firma získá vlastní paměť.</h3>
-        <p><b>Co si publikum odnese:</b> jak zachytit zkušenosti z práce a využívat je při dalších rozhodnutích. Co to znamená pro zakladatele, manažery a závislost firmy na jednotlivcích.</p>
-        <p class="talk"><span>Zkušenost: Enter, práce s vedením firem</span></p>
+        <span class="num">3</span><span class="t">For founders, owners and leadership teams</span>
+        <h3>When a company gets its own memory.</h3>
+        <p><b>What the audience takes away:</b> how to capture experience from work and use it in future decisions. What it means for founders, managers and a company’s dependence on individuals.</p>
+        <p class="talk"><span>Background: Enter, work with leadership teams</span></p>
       </article>
     </div>
       </div>
@@ -753,14 +762,14 @@ h1,h2,h3{text-wrap:balance}
 <script>
 (() => {
   const copy = (btn, text, status, label) => async () => {
-    try { await navigator.clipboard.writeText(text); btn.textContent = 'Zkopírováno'; status.textContent = 'Zkopírováno do schránky'; }
-    catch (e) { btn.textContent = 'Označte a zkopírujte'; }
+    try { await navigator.clipboard.writeText(text); btn.textContent = 'Copied'; status.textContent = 'Copied to clipboard'; }
+    catch (e) { btn.textContent = 'Select and copy'; }
     setTimeout(() => { btn.textContent = label; status.textContent = ''; }, 2200);
   };
   const b = document.getElementById('copy');
-  b.addEventListener('click', copy(b, 'milo@enterai.cz', document.getElementById('copy-status'), 'Kopírovat'));
+  b.addEventListener('click', copy(b, 'milo@enterai.cz', document.getElementById('copy-status'), 'Copy'));
   const bb = document.getElementById('copy-bio');
-  bb.addEventListener('click', copy(bb, document.getElementById('bio').innerText, document.getElementById('bio-status'), 'Kopírovat bio'));
+  bb.addEventListener('click', copy(bb, document.getElementById('bio').innerText, document.getElementById('bio-status'), 'Copy bio'));
   const pod = document.getElementById('poradatele');
   const openPod = () => { if (location.hash === '#poradatele' || location.hash === '#bio') pod.open = true; };
   openPod(); addEventListener('hashchange', openPod);
