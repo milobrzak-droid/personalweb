@@ -323,7 +323,7 @@ h1,h2,h3{text-wrap:balance}
 @media(max-width:480px){.roles{grid-template-columns:1fr}.loop .st{font-size:12px;padding:7px 10px}}
 @media (prefers-reduced-motion:reduce){.loop .arc{animation:none}}
 .notes{padding-top:var(--sec)}
-.ngrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ngrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .ncard{background:var(--card);border-radius:clamp(22px,2.6vw,30px);padding:14px 14px 24px;text-decoration:none;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s}
 .ncard:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,19,17,.08)}
 .ncard img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px}
@@ -365,6 +365,7 @@ h1,h2,h3{text-wrap:balance}
 .bcard{background:var(--card);border-radius:clamp(24px,3vw,32px);padding:clamp(24px,3.5vw,44px);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .bcard.adapted{background:var(--mint)}
 .bcard.wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.ad-logo{width:110px;height:auto}
 .bcard.wide .ad-l{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .bcard.wide .ad-main img{aspect-ratio:4/5}
 @media(max-width:900px){.bcard.wide{grid-template-columns:1fr}.bcard.wide .ad-main img{aspect-ratio:3/2}}
@@ -495,7 +496,7 @@ h1,h2,h3{text-wrap:balance}
       
       <article class="bcard adapted wide" id="adapted">
         <div class="ad-l">
-        <span class="mono-l">Adapted · zakladatel</span>
+        <img class="ad-logo" src="/img/logos/adapted.png" alt="Adapted" width="500" height="404"><span class="mono-l">Zakladatel</span>
         <h3>Někdy se musí přizpůsobit prostředí člověku</h3>
         <p>Narodil jsem se s přetrženými nervy v rameni a pravou rukou nemám plnou hybnost dodnes. Když jsem poprvé jel na mistrovství světa v adaptive surfingu, v Česku žádná komunita neexistovala. Tak jsme založili Adapted.</p>
         
@@ -542,7 +543,8 @@ h1,h2,h3{text-wrap:balance}
       <h2 id="zapisky-h">Co stavím, co si myslím a co mě změnilo</h2>
     </div>
     <div class="ngrid">
-      <a class="ncard" href="/zapisky/od-reakce-k-predikci/"><img src="/img/portret-800.jpg" alt="" loading="lazy"><span class="nt">Co stavím · Enter</span><h3>Firma neroste rychleji, než stíhají rozhodovat její lidé</h3><p>Proč škálování podle mě začíná u předvídání, ne u dalších lidí, kteří budou hasit.</p><span class="nr">Číst →</span></a>
+      <a class="ncard" href="/zapisky/od-reakce-k-predikci/"><img src="/img/chicago-selfie.jpg" style="object-position:50% 64%" alt="" loading="lazy"><span class="nt">Co stavím · Enter</span><h3>Firma neroste rychleji, než stíhají rozhodovat její lidé</h3><p>Proč škálování podle mě začíná u předvídání, ne u dalších lidí, kteří budou hasit.</p><span class="nr">Číst →</span></a>
+      <a class="ncard" href="/zapisky/pinang-reditel-ostrova/"><img src="/img/pinang-ostrov-letecky-800.jpg" alt="" loading="lazy"><span class="nt">Co mě změnilo · Pinang</span><h3>Devět měsíců jako ředitel ostrova. Co mě naučil Pinang</h3><p>Začalo to jako zvědavost a sen o životě surfaře na Sumatře. Skončilo to školou řízení bez víkendů a bez volna.</p><span class="nr">Číst →</span></a>
       <a class="ncard" href="/zapisky/kathmandu-hozeny-do-problemu/"><img src="/img/kmd-office.jpg" alt="" loading="lazy"><span class="nt">Co mě změnilo · Kathmandu</span><h3>Hozený rovnou do problému. Co mě naučil americký tým v Kathmandu</h3><p>Po letech vlastního podnikání jsem začínal znovu, uvnitř globální firmy na druhém konci světa.</p><span class="nr">Číst →</span></a>
       <a class="ncard" href="/zapisky/adapted-znovu/"><img src="/img/repre-ms-pruvod.jpg" alt="" loading="lazy"><span class="nt">Co mě změnilo · Adapted</span><h3>Co mi vzal covid a proč Adapted stavíme jinak</h3><p>Vždycky může přijít něco, co neovlivníte. Můžete ale stavět tak, aby vás to nezlomilo.</p><span class="nr">Číst →</span></a>
     </div>

@@ -323,7 +323,7 @@ h1,h2,h3{text-wrap:balance}
 @media(max-width:480px){.roles{grid-template-columns:1fr}.loop .st{font-size:12px;padding:7px 10px}}
 @media (prefers-reduced-motion:reduce){.loop .arc{animation:none}}
 .notes{padding-top:var(--sec)}
-.ngrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ngrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .ncard{background:var(--card);border-radius:clamp(22px,2.6vw,30px);padding:14px 14px 24px;text-decoration:none;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s}
 .ncard:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(14,19,17,.08)}
 .ncard img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px}
@@ -365,6 +365,7 @@ h1,h2,h3{text-wrap:balance}
 .bcard{background:var(--card);border-radius:clamp(24px,3vw,32px);padding:clamp(24px,3.5vw,44px);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .bcard.adapted{background:var(--mint)}
 .bcard.wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.ad-logo{width:110px;height:auto}
 .bcard.wide .ad-l{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .bcard.wide .ad-main img{aspect-ratio:4/5}
 @media(max-width:900px){.bcard.wide{grid-template-columns:1fr}.bcard.wide .ad-main img{aspect-ratio:3/2}}
@@ -495,7 +496,7 @@ h1,h2,h3{text-wrap:balance}
       
       <article class="bcard adapted wide" id="adapted">
         <div class="ad-l">
-        <span class="mono-l">Adapted · founder</span>
+        <img class="ad-logo" src="/img/logos/adapted.png" alt="Adapted" width="500" height="404"><span class="mono-l">Founder</span>
         <h3>Sometimes the environment has to adapt to the person</h3>
         <p>I was born with torn nerves in my shoulder, and my right arm still doesn’t have full mobility. When I first went to the Adaptive Surfing World Championship, there was no community in Czechia. So we founded Adapted.</p>
         
@@ -542,7 +543,8 @@ h1,h2,h3{text-wrap:balance}
       <h2 id="zapisky-h">What I build, what I think and what changed me</h2>
     </div>
     <div class="ngrid">
-      <a class="ncard" href="/notes/from-reaction-to-prediction/"><img src="/img/portret-800.jpg" alt="" loading="lazy"><span class="nt">What I build · Enter</span><h3>A company can’t grow faster than its people can decide</h3><p>Why I think scaling starts with prediction, not with more people putting out fires.</p><span class="nr">Read →</span></a>
+      <a class="ncard" href="/notes/from-reaction-to-prediction/"><img src="/img/chicago-selfie.jpg" style="object-position:50% 64%" alt="" loading="lazy"><span class="nt">What I build · Enter</span><h3>A company can’t grow faster than its people can decide</h3><p>Why I think scaling starts with prediction, not with more people putting out fires.</p><span class="nr">Read →</span></a>
+      <a class="ncard" href="/notes/pinang-island-manager/"><img src="/img/pinang-ostrov-letecky-800.jpg" alt="" loading="lazy"><span class="nt">What changed me · Pinang</span><h3>Nine months as an island GM. What Pinang taught me</h3><p>It started as curiosity and a dream of living the surfer’s life in Sumatra. It turned into a school of management with no weekends or rest time.</p><span class="nr">Read →</span></a>
       <a class="ncard" href="/notes/kathmandu-thrown-into-the-problem/"><img src="/img/kmd-office.jpg" alt="" loading="lazy"><span class="nt">What changed me · Kathmandu</span><h3>Thrown straight into the problem. What an American team at Kathmandu taught me</h3><p>After years of running my own businesses, I started again inside a global company on the other side of the world.</p><span class="nr">Read →</span></a>
       <a class="ncard" href="/notes/adapted-again/"><img src="/img/repre-ms-pruvod.jpg" alt="" loading="lazy"><span class="nt">What changed me · Adapted</span><h3>What covid took from me, and why we’re building Adapted differently</h3><p>Something you can’t control can always come. But you can build so it doesn’t break you.</p><span class="nr">Read →</span></a>
     </div>
