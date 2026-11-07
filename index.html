@@ -2,261 +2,383 @@
 <html lang="cs">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Milo Brzák</title>
-<meta name="description" content="Milo Brzák, zakladatel Enteru a pedagog oboru Agentic Company na VŠEM. Mluví o adaptaci, řízení změny a firmách v éře AI. Pozvání do podcastů a na konference.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Milo Brzák · Přizpůsobit se dá naučit</title>
+<meta name="description" content="Milo Brzák surfuje s jednou rukou, řídil ostrov u Sumatry a deset let vedl hotel na Bali. Dnes učí firmy a lidi přizpůsobit se světu, který mění AI. Pozvěte ho na konferenci nebo do podcastu.">
+<link rel="canonical" href="https://milobrzak.com/">
 <meta name="author" content="Miloslav Brzák">
-<meta property="og:title" content="Milo Brzák">
-<meta property="og:description" content="Nové prostředí. Vlastní cesta. Zakladatel Enteru.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://milobrzak.com">
-<meta name="theme-color" content="#17202E">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2317202E'/%3E%3Cpath d='M5 21l4-6 3 4 4-8 3 5 2-2' fill='none' stroke='%239AA3B2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='22' cy='14' r='2.6' fill='%2341E39E'/%3E%3Cpath d='M22 14 L28 10' stroke='%2341E39E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#F3F4F2">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:url" content="https://milobrzak.com/">
+<meta property="og:title" content="Milo Brzák · Přizpůsobit se dá naučit">
+<meta property="og:description" content="Surf s jednou rukou, hotel na Bali, ostrov u Sumatry. Dnes učí firmy a lidi přizpůsobit se světu, který mění AI.">
+<meta property="og:image" content="https://milobrzak.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://milobrzak.com/img/og.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Outfit = náhledová náhrada za Greycliff CF (Brand manuál 2.0). -->
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Milo Brzák","alternateName":"Miloslav Brzák","url":"https://milobrzak.com/","image":"https://milobrzak.com/img/og.jpg",
+ "jobTitle":["Zakladatel, Enter","Pedagog oboru Agentic Company, VŠEM"],
+ "worksFor":{"@type":"Organization","name":"Enter","url":"https://enter.ltd"},
+ "affiliation":{"@type":"CollegeOrUniversity","name":"Vysoká škola ekonomie a managementu","alternateName":"VŠEM"},
+ "sameAs":["https://www.linkedin.com/in/milobrzak"],
+ "knowsAbout":["Adaptace","Agentic Company","Řízení změny","Krizové řízení","Adaptive surfing"]}
+</script>
 <style>
-  :root{
-    --slate:#17202E; --slate-2:#1E2939; --grid:rgba(230,233,237,.06);
-    --ink:#FFFFFF; --ink-2:#C9CED6; --ink-3:#9AA3B2;
-    --mint:#BBEED1; --signal:#41E39E;
-    --head:"Greycliff CF","Outfit",system-ui,sans-serif;
-    --body:"Geist",system-ui,sans-serif;
-    --mono:"Geist Mono",ui-monospace,monospace;
-    --g:clamp(20px,4vw,56px);
-    color-scheme:dark;
-  }
-  *,*::before,*::after{box-sizing:border-box}
-  html,body{margin:0;height:100%}
-  body{
-    background:var(--slate); color:var(--ink); font-family:var(--body);
-    -webkit-font-smoothing:antialiased; overflow-x:hidden;
-  }
-  a{color:inherit}
-  :focus-visible{outline:2px solid var(--signal);outline-offset:4px;border-radius:4px}
+/* Minimal: světle šedý papír, bílé karty, černé písmo, zelená jen jako akcent. Tok stránky stoupá nahoru: start → cesta → co předávám → pozvání. */
+:root{
+  --bg:#F3F4F2; --card:#FFFFFF; --ink:#0E1311; --ink-2:#3A403D; --ink-3:#6B716E; --line:#E2E5E1;
+  --mint:#BBEED1; --mist:#E7F7EE; --signal:#41E39E; --deep:#006740;
+  --sans:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,Menlo,monospace;
+  --max:1240px; --sec:clamp(96px,12vw,170px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+:focus-visible{outline:2px solid var(--deep);outline-offset:4px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.chip i{width:6px;height:6px;border-radius:50%;background:var(--signal);display:block}
+.btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 22px;border-radius:999px;background:var(--ink);color:#fff;font:500 15px/1 var(--sans);text-decoration:none;border:0;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--signal);color:var(--ink)}
+.btn.light{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.btn.light:hover{background:var(--mint)}
+.btn.sm{height:38px;padding:0 16px;font-size:13px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-  .stage{position:relative; min-height:100svh; display:grid; grid-template-rows:auto 1fr auto; padding:var(--g)}
-  /* technická mřížka 32 px, mizí do stran */
-  .stage::before{
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-    background-size:32px 32px;
-    -webkit-mask-image:radial-gradient(ellipse 85% 75% at 50% 55%,#000 30%,transparent 100%);
-            mask-image:radial-gradient(ellipse 85% 75% at 50% 55%,#000 30%,transparent 100%);
-  }
+/* hlavička */
+.head{position:sticky;top:0;z-index:20;background:rgba(243,244,242,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.head .wrap{display:flex;align-items:center;gap:24px;height:72px}
+.brand{font:600 17px/1 var(--sans);text-decoration:none;letter-spacing:-.01em}
+.brand b{color:var(--deep)}
+.nav{display:flex;gap:28px;margin:0 auto}
+.nav a{font-size:14px;font-weight:500;text-decoration:none;color:var(--ink-2)}
+.nav a:hover{color:var(--deep)}
+@media(max-width:860px){.nav{display:none}.head .btn{margin-left:auto}}
 
-  .top{position:relative; display:flex; justify-content:space-between; align-items:center; gap:16px;
-       font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3)}
-  .top .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:8px;
-            box-shadow:0 0 0 0 rgba(65,227,158,.6);animation:pulse 2.4s infinite}
-  @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(65,227,158,0)}100%{box-shadow:0 0 0 0 rgba(65,227,158,0)}}
+/* 1 · úvod */
+.hero{padding-top:clamp(28px,4vw,52px)}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;font-size:15px;font-weight:500;line-height:1.35}
+.trio div:nth-child(2){text-align:center}.trio div:nth-child(3){text-align:right}
+.trio .muted{color:var(--ink-3);font-weight:400}
+.name{font-weight:700;font-size:clamp(56px,14.2vw,196px);line-height:.95;letter-spacing:-.055em;text-align:center;margin:clamp(14px,2vw,26px) 0 clamp(18px,2.4vw,30px);white-space:nowrap}
+.frame{position:relative;background:var(--card);border-radius:clamp(18px,2vw,28px);padding:clamp(16px,3vw,40px)}
+.frame::before,.frame::after,.frame .s1,.frame .s2{content:"";position:absolute;width:14px;height:14px;border-radius:50%;border:1.5px solid #D4D8D3;background:var(--bg)}
+.frame::before{top:16px;left:16px}.frame::after{top:16px;right:16px}.frame .s1{bottom:16px;left:16px}.frame .s2{bottom:16px;right:16px}
+.frame img{width:100%;aspect-ratio:2.25/1;object-fit:cover;object-position:68% 30%;border-radius:999px}
+.frame .tag{position:absolute;right:clamp(28px,5vw,70px);bottom:clamp(28px,5vw,64px);background:var(--signal);color:var(--ink);border-radius:999px;padding:8px 14px;font:500 12px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+@media(max-width:720px){.trio{grid-template-columns:1fr 1fr}.trio div:nth-child(2){display:none}.name{white-space:normal}.frame img{aspect-ratio:1.4/1;border-radius:200px}}
 
-  .hero{position:relative; align-self:center; padding:6vh 0 2vh}
-  h1{
-    font-family:var(--head); font-weight:700; margin:0;
-    font-size:clamp(64px,13.5vw,212px); line-height:.86; letter-spacing:-.035em;
-  }
-  h1 .l{display:block; overflow:hidden; padding-bottom:.06em}
-  h1 .l>span{display:inline-block; transform:translateY(110%); animation:up 1.1s cubic-bezier(.2,.7,.1,1) forwards}
-  h1 .l:nth-child(2)>span{animation-delay:.1s}
-  @keyframes up{to{transform:none}}
-  .motto{
-    font-family:var(--head); font-weight:600; color:var(--mint);
-    font-size:clamp(22px,2.6vw,36px); line-height:1.15; letter-spacing:-.015em; margin:28px 0 0;
-    opacity:0; animation:fade .9s .55s ease forwards;
-  }
-  .lead{max-width:44ch; color:var(--ink-2); font-size:clamp(16px,1.25vw,19px); line-height:1.6; margin:16px 0 0;
-        opacity:0; animation:fade .9s .7s ease forwards}
-  @keyframes fade{to{opacity:1}}
-  .topics{margin:18px 0 0; color:var(--ink-2); font-size:15px; line-height:1.6; opacity:0; animation:fade .9s .85s ease forwards}
-  .topics span{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--signal); margin-bottom:4px}
+/* 2 · hlavní sdělení */
+.about{padding-top:var(--sec);text-align:center}
+.about .lead{max-width:22ch;margin:22px auto 0;font-weight:600;font-size:clamp(34px,5vw,64px);line-height:1.05;letter-spacing:-.04em}
+.about .lead span{background:linear-gradient(transparent 62%,var(--mint) 62%)}
+.about .body{max-width:60ch;margin:26px auto 0;font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--ink-2)}
+.about .body strong{color:var(--ink);font-weight:600}
+.about .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:32px}
+.tiles{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(120px,13vw,170px);gap:12px;margin-top:clamp(56px,7vw,90px);overflow-x:auto;padding:4px max(20px,calc((100vw - var(--max))/2 + 20px)) 14px;scrollbar-width:thin}
+.tiles img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px}
 
-  /* linie: reakce → dnes → predikce */
-  .line{position:relative; margin:clamp(24px,5vh,56px) calc(var(--g) * -1) 0}
-  .line svg{display:block; width:100%; height:clamp(150px,22vh,230px); overflow:visible}
-  .past{fill:none; stroke:#7C8798; stroke-width:1.6; stroke-linejoin:round}
-  .band{fill:rgba(65,227,158,.13)}
-  .future{fill:none; stroke:var(--signal); stroke-width:2.4; stroke-linecap:round}
-  .now-rule{stroke:rgba(230,233,237,.28); stroke-dasharray:3 5}
-  .now-dot{fill:var(--slate); stroke:var(--signal); stroke-width:2.4}
-  .stop{fill:var(--slate); stroke:#9AA3B2; stroke-width:1.4; cursor:pointer; transition:r .2s, fill .2s}
-  .stop:hover,.stop:focus,.stop.on{fill:var(--mint); stroke:var(--mint)}
-  .stop:focus{outline:none}
-  .lab{font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; fill:var(--ink-3); pointer-events:none}
-  .lab.now{fill:var(--signal)}
-  .lab.fut{fill:var(--mint)}
+/* 3 · cesta nahoru */
+.climb{padding-top:var(--sec)}
+.sec-head{text-align:center;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2{margin-top:18px;font-weight:600;font-size:clamp(32px,4.4vw,56px);line-height:1.08;letter-spacing:-.035em}
+.sec-head p{max-width:52ch;margin:16px auto 0;color:var(--ink-2)}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:end;list-style:none;padding:0;margin:0}
+.step{background:var(--card);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.step:nth-child(1){margin-top:160px}.step:nth-child(2){margin-top:120px}.step:nth-child(3){margin-top:80px}.step:nth-child(4){margin-top:40px}
+.step.now{background:var(--ink);color:#fff}
+.step .n{display:flex;justify-content:space-between;align-items:center;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.step.now .n{color:var(--signal)}
+.step img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+.step h3{font-weight:600;font-size:20px;line-height:1.2;letter-spacing:-.02em}
+.step p{font-size:14px;line-height:1.55;color:var(--ink-2)}
+.step.now p{color:rgba(255,255,255,.8)}
+.step .learn{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-size:14px;font-weight:600;line-height:1.4;color:var(--deep)}
+.step.now .learn{border-color:rgba(255,255,255,.15);color:var(--signal)}
+.step .learn small{display:block;font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+@media(max-width:1060px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(n){margin-top:0}.step.now{grid-column:1/-1}}
+@media(max-width:620px){.steps{grid-template-columns:1fr}}
 
-  .note{
-    position:absolute; left:0; top:0; max-width:260px; padding:10px 12px; border-radius:10px;
-    background:#0F1621; border:1px solid rgba(230,233,237,.14); color:var(--ink-2);
-    font-size:13px; line-height:1.45; pointer-events:none; opacity:0; transform:translateY(4px);
-    transition:opacity .2s, transform .2s; z-index:2;
-  }
-  .note b{display:block; font-family:var(--mono); font-weight:500; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--mint); margin-bottom:2px}
-  .note.on{opacity:1; transform:none}
+/* 4 · co předávám */
+.give{padding-top:var(--sec)}
+.give-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gcard{background:var(--card);border-radius:24px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px;border:1px solid transparent;transition:border-color .2s,transform .2s}
+.gcard:hover{border-color:var(--signal);transform:translateY(-3px)}
+.gcard .num{width:42px;height:42px;border-radius:50%;background:var(--mint);display:grid;place-items:center;font:600 16px/1 var(--sans)}
+.gcard h3{font-weight:600;font-size:clamp(24px,2.2vw,30px);line-height:1.1;letter-spacing:-.03em}
+.gcard .t{font:500 12px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
+.gcard p{color:var(--ink-2);font-size:15px}
+.gcard .talk{margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.gcard .talk b{display:block;font-weight:600;font-size:17px}
+.gcard .talk span{font-size:13px;color:var(--ink-3)}
+@media(max-width:960px){.give-grid{grid-template-columns:1fr}}
 
-  .foot{position:relative; display:flex; flex-wrap:wrap; align-items:center; gap:14px 28px; margin-top:clamp(20px,4vh,40px)}
-  .btn{
-    display:inline-flex; align-items:center; gap:10px; height:48px; padding:0 20px; border-radius:10px;
-    background:var(--ink); color:var(--slate); font-weight:600; font-size:15px; text-decoration:none;
-    box-shadow:-4px 4px 0 var(--signal); transition:transform .12s, box-shadow .12s;
-  }
-  .btn:hover{transform:translate(1px,-1px); box-shadow:-6px 6px 0 var(--signal)}
-  .link{font-size:15px; color:var(--ink-2); text-decoration:none; border-bottom:1px solid rgba(201,206,214,.35); padding-bottom:2px}
-  .link:hover{color:var(--ink); border-color:var(--signal)}
-  .soon{margin-left:auto; font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3)}
+/* 5 · pro pořadatele */
+.org{padding-top:var(--sec)}
+.org-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px}
+.box{background:var(--card);border-radius:24px;padding:clamp(24px,3vw,36px)}
+.box h3{font-weight:600;font-size:22px;letter-spacing:-.02em;margin-bottom:12px}
+.bio{font-size:16px;color:var(--ink-2)}
+.box .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:15px}
+.facts li span:first-child{color:var(--ink-3)}
+.facts li span:last-child{font-weight:500;text-align:right}
+.press{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:28px;color:var(--ink-3);font:600 15px/1 var(--sans);letter-spacing:.02em;text-transform:uppercase}
+.press a{text-decoration:none}.press a:hover{color:var(--deep)}
+@media(max-width:900px){.org-grid{grid-template-columns:1fr}}
 
-  @media (min-width:1000px){
-    .hero{padding:2vh 0 0}
-    .intro{display:grid; grid-template-columns:auto minmax(300px,500px); justify-content:space-between; align-items:end; gap:48px}
-    h1{font-size:clamp(120px,12.5vw,200px)}
-    .side{padding-bottom:.6em}
-    .motto{margin-top:0}
-    .line svg{height:clamp(140px,19vh,200px)}
-  }
-  @media (max-width:720px){
-    .soon{margin-left:0; width:100%}
-    .lab.hide-sm{display:none}
-    .btn .long{display:none}
-  }
-  @media (prefers-reduced-motion:reduce){
-    *,*::before,*::after{animation:none!important; transition:none!important}
-    h1 .l>span{transform:none} .motto,.lead,.topics{opacity:1}
-  }
+/* 6 · osobně */
+.personal{padding-top:var(--sec)}
+.personal .box{max-width:820px;margin:0 auto}
+.personal p{color:var(--ink-2)}
+.personal p + h3{margin-top:24px}
+.help{margin-top:12px;font-size:14px;color:var(--ink-3)}
+
+/* 7 · kontakt */
+.contact{margin-top:var(--sec);padding-bottom:40px}
+.cbox{background:var(--ink);color:#fff;border-radius:clamp(24px,3vw,36px);padding:clamp(40px,7vw,96px) clamp(24px,5vw,72px);text-align:center}
+.cbox .chip{background:transparent;border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8)}
+.cbox h2{margin-top:22px;font-weight:700;font-size:clamp(48px,9vw,120px);line-height:.95;letter-spacing:-.05em}
+.cbox h2 span{color:var(--signal)}
+.cbox p{max-width:52ch;margin:20px auto 0;color:rgba(255,255,255,.75)}
+.mailrow{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:14px;margin-top:32px}
+.mail{font:600 clamp(22px,3vw,36px)/1.2 var(--sans);letter-spacing:-.02em;color:#fff;text-decoration:none;border-bottom:2px solid var(--signal)}
+.copy{height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font:500 14px/1 var(--sans);cursor:pointer}
+.copy:hover{background:var(--signal);color:var(--ink);border-color:var(--signal)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:24px;font-size:13px;color:var(--ink-3)}
+.foot a{text-decoration:none}.foot a:hover{color:var(--deep)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
-<main class="stage">
-  <header class="top">
-    <span><span class="dot" aria-hidden="true"></span>milobrzak.com</span>
-    <span>CZ · 2026</span>
-  </header>
+<a class="sr-only" href="#obsah">Přeskočit na obsah</a>
+<header class="head">
+  <div class="wrap">
+    <a class="brand" href="#top">Milo<b>.</b>B</a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="#o-mne">O mně</a>
+      <a href="#cesta">Cesta</a>
+      <a href="#predavam">Co předávám</a>
+      <a href="#poradatele">Pro pořadatele</a>
+    </nav>
+    <a class="btn sm" href="#kontakt">Pozvat mě →</a>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="intro">
-    <h1><span class="l"><span>Milo</span></span><span class="l"><span>Brzák</span></span></h1>
-    <div class="side">
-    <p class="motto">Nové prostředí. Vlastní cesta.</p>
-    <p class="lead">Zakladatel Enteru. Pomáháme firmám, aby přestaly jen hasit a začaly předvídat. Cestou sem jsem surfoval s&nbsp;jednou rukou, deset let vedl hotel na Bali a řídil ostrov u&nbsp;Sumatry. Na VŠEM učím obor Agentic Company.</p>
-    <p class="topics"><span>Mluvím o</span> adaptaci · řízení změny · firmách, které se učí s&nbsp;AI · surfu s&nbsp;handicapem</p>
+<main id="obsah">
+<!-- 1 · ÚVOD -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="trio">
+      <div>Ahoj, jsem</div>
+      <div>Zakladatel Enteru<br><span class="muted">pedagog Agentic Company, VŠEM</span></div>
+      <div>Z Česka do světa,<br><span class="muted">konference, podcasty, firmy</span></div>
     </div>
-    </div>
-
-    <figure class="line" aria-label="Cesta: Havířov, Kalifornie, Bali, ostrov Pinang, Nový Zéland, dnes Enter">
-      <svg id="chart" viewBox="0 0 1200 220" role="img" aria-hidden="true"></svg>
-      <div class="note" id="note" role="status"></div>
+    <h1 class="name">Milo Brzák</h1>
+    <figure class="frame" style="margin:0">
+      <img src="img/portret.jpg" srcset="img/portret-800.jpg 800w, img/portret.jpg 2200w" sizes="(max-width:1240px) 100vw, 1200px" alt="Milo Brzák ve staré strojovně v Ostravě" width="2200" height="1238" fetchpriority="high">
+      <span class="s1"></span><span class="s2"></span>
+      <span class="tag">Ostrava · 2026</span>
     </figure>
-  </section>
+  </div>
+</section>
 
-  <footer class="foot">
-    <a class="btn" href="mailto:milo@enterai.cz?subject=Pozv%C3%A1n%C3%AD%3A%20podcast%20%2F%20konference">Pozvat mě<span class="long"> do podcastu nebo na konferenci</span> <span aria-hidden="true">→</span></a>
-    <a class="link" href="https://enter.ltd" target="_blank" rel="noopener">Enter</a>
-    <a class="link" href="https://www.linkedin.com/in/milobrzak" target="_blank" rel="noopener">LinkedIn</a>
-    <span class="soon">Celý web připravuji</span>
-  </footer>
+<!-- 2 · HLAVNÍ SDĚLENÍ -->
+<section class="about" id="o-mne" aria-labelledby="lead">
+  <div class="wrap">
+    <span class="chip"><i></i>O mně · v jedné větě</span>
+    <h2 class="lead" id="lead"><span>Přizpůsobit se</span> dá naučit.</h2>
+    <p class="body">Celý život vstupuju do prostředí, kde nemám návod. <strong>Surfuju s jednou rukou, deset let jsem vedl hotel na Bali a řídil ostrov u Sumatry.</strong> Pokaždé jsem se musel rychle zorientovat, rozhodnout a nést odpovědnost. Dnes to učím firmy a lidi, kterým pravidla mění AI. Tak, aby technologie sloužila lidem.</p>
+    <div class="ctas"><a class="btn" href="#kontakt">Pozvat mě na pódium →</a><a class="btn light" href="#cesta">Jak jsem k tomu došel</a></div>
+  </div>
+  <div class="tiles" aria-label="Fotky z mé cesty">
+    <img src="img/surf-bali-800.jpg" alt="Surf pod útesy na Bali" width="800" height="532" loading="lazy">
+    <img src="img/pinang-plaz-800.jpg" alt="Pláž ostrova Pinang z dronu" width="800" height="600" loading="lazy">
+    <img src="img/riviera-bazen-800.jpg" alt="Hotel Riviera House na Bali" width="800" height="533" loading="lazy">
+    <img src="img/nz-paragliding-800.jpg" alt="Paragliding nad útesy, Nový Zéland" width="800" height="610" loading="lazy">
+    <img src="img/nz-arthurs-800.jpg" alt="Milo na hřebeni na Novém Zélandu" width="800" height="600" loading="lazy">
+    <img src="img/surf-katamaran-800.jpg" alt="Surf za katamaránem z dronu" width="800" height="447" loading="lazy">
+    <img src="img/pinang-ostrov-800.jpg" alt="Ostrov Pinang z výšky" width="800" height="559" loading="lazy">
+    <img src="img/paragliding-cz-800.jpg" alt="Paragliding nad českou krajinou" width="800" height="531" loading="lazy">
+    <img src="img/riviera-noc-800.jpg" alt="Zahrada hotelu Riviera House v noci" width="800" height="534" loading="lazy">
+    <img src="img/nz-zatoka-800.jpg" alt="Zátoka na Novém Zélandu při západu slunce" width="800" height="450" loading="lazy">
+  </div>
+</section>
+
+<!-- 3 · CESTA NAHORU -->
+<section class="climb" id="cesta" aria-labelledby="cesta-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Cesta nahoru · 5 kroků</span>
+      <h2 id="cesta-h">Každé prostředí mě naučilo jednu věc</h2>
+      <p>Zvenku to vypadá jako řada extrémů. Ve skutečnosti je to jedna cesta, kde každý krok stál na tom předchozím.</p>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="n"><span>01 · Start</span><span>Česko</span></span>
+        <h3>Ruka, kterou jsem musel rozhýbat</h3>
+        <p>Narodil jsem se s přetrženými nervy v rameni. Ruku jsem rozpohyboval díky Vojtově metodě a rodičům. Plnou hybnost nemá dodnes.</p>
+        <p class="learn"><small>Co jsem se naučil</small>Omezení mění techniku, ne cíl.</p>
+      </li>
+      <li class="step">
+        <span class="n"><span>02 · Oceán</span><span>Bali</span></span>
+        <img src="img/surf-bali-800.jpg" alt="" width="800" height="532" loading="lazy">
+        <h3>Surf s jednou rukou</h3>
+        <p>Odešel jsem z Evropy, abych mohl surfovat každý den. Pětkrát jsem startoval na mistrovství světa v adaptive surfingu.</p>
+        <p class="learn"><small>Co jsem se naučil</small>Když návod neexistuje, napíšu si vlastní.</p>
+      </li>
+      <li class="step">
+        <span class="n"><span>03 · Provoz</span><span>Bali · Sumatra</span></span>
+        <img src="img/pinang-plaz-800.jpg" alt="" width="800" height="600" loading="lazy">
+        <h3>Hotel a ostrov</h3>
+        <p>Deset let jsem vedl hotel Riviera House. Pak devět měsíců ostrov Pinang, včetně dvou záchranných misí proti bouřce. Obě dopadly dobře.</p>
+        <p class="learn"><small>Co jsem se naučil</small>Rozhodnout se je odpovědnost, ne pohodlí.</p>
+      </li>
+      <li class="step">
+        <span class="n"><span>04 · Pád</span><span>Covid</span></span>
+        <img src="img/riviera-noc-800.jpg" alt="" width="800" height="534" loading="lazy">
+        <h3>Ztratil jsem hotel i Adapted</h3>
+        <p>Covid během chvíle rozložil to, co jsem roky stavěl. Neziskovka Adapted stála jen na mně a bez sponzorů skončila.</p>
+        <p class="learn"><small>Co jsem se naučil</small>Nestavět věci na jednom člověku.</p>
+      </li>
+      <li class="step now">
+        <span class="n"><span>05 · Dnes</span><span>Enter · VŠEM</span></span>
+        <img src="img/nz-arthurs-800.jpg" alt="" width="800" height="600" loading="lazy">
+        <h3>Z korporátu k firmám v éře AI</h3>
+        <p>V Kathmandu na Novém Zélandu jsem se naučil kvalitu a procesy ve velké firmě. Dnes vedu Enter a na VŠEM učím obor Agentic Company.</p>
+        <p class="learn"><small>Co předávám</small>Nejdřív lidé a proces, pak technologie.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4 · CO PŘEDÁVÁM -->
+<section class="give" id="predavam" aria-labelledby="predavam-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Co předávám</span>
+      <h2 id="predavam-h">Tři věci, které učím firmy i lidi</h2>
+      <p>Každá vychází z vlastní zkušenosti. Každá je zároveň téma přednášky nebo rozhovoru.</p>
+    </div>
+    <div class="give-grid">
+      <article class="gcard">
+        <span class="num">1</span><span class="t">Adaptace</span>
+        <h3>Zorientovat se tam, kde nejsou pravidla</h3>
+        <p>Jak se lidé a firmy učí v prostředí, kde přestal platit starý návod. Od surfu s jednou rukou po firmy, které se učí pracovat s AI.</p>
+        <p class="talk"><b>Přednáška: Bez návodu</b><span>Keynote · podcast · firmy a školy</span></p>
+      </article>
+      <article class="gcard">
+        <span class="num">2</span><span class="t">Odpovědnost</span>
+        <h3>Rozhodnout se, když na tom záleží</h3>
+        <p>Co mě o vedení lidí naučily záchranné mise na ostrově, deset let vlastního hotelu a krize kvality v korporátu.</p>
+        <p class="talk"><b>Přednáška: 30 hodin od nemocnice</b><span>Keynote · panel · leadership</span></p>
+      </article>
+      <article class="gcard">
+        <span class="num">3</span><span class="t">Lidé před technologií</span>
+        <h3>AI, která lidem vrací čas</h3>
+        <p>Jak postavit firmu, kde AI agenti pracují pro lidi. Aby lidé trávili méně času u obrazovek a víc s lidmi a v přírodě.</p>
+        <p class="talk"><b>Přednáška: Agentic Company</b><span>Keynote · workshop · vedení firem</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · PRO POŘADATELE -->
+<section class="org" id="poradatele" aria-labelledby="poradatele-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip"><i></i>Pro pořadatele a média</span>
+      <h2 id="poradatele-h">Vše do programu na jednom místě</h2>
+    </div>
+    <div class="org-grid">
+      <div class="box">
+        <h3>Krátké bio</h3>
+        <p class="bio" id="bio">Milo Brzák je zakladatel firmy Enter a pedagog oboru Agentic Company na VŠEM. Surfuje s jednou rukou a pětkrát startoval na mistrovství světa v adaptive surfingu. Deset let vedl vlastní hotel na Bali, devět měsíců řídil ostrov u Sumatry a na Novém Zélandu pracoval pro Kathmandu. Mluví o adaptaci, odpovědnosti a o tom, jak zavádět AI, aby sloužila lidem.</p>
+        <div class="row"><button class="btn" id="copy-bio" type="button">Kopírovat bio</button><a class="btn light" href="img/portret.jpg" target="_blank" rel="noopener">Fotka v plné velikosti ↗</a></div>
+        <span class="sr-only" id="bio-status" role="status" aria-live="polite"></span>
+      </div>
+      <div class="box">
+        <h3>V kostce</h3>
+        <ul class="facts">
+          <li><span>Formáty</span><span>Keynote, panel, podcast, workshop</span></li>
+          <li><span>Témata</span><span>Adaptace, odpovědnost, AI ve firmách</span></li>
+          <li><span>Mistrovství světa</span><span>5× adaptive surfing</span></li>
+          <li><span>Kontakt</span><span>milo@enterai.cz</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="press" aria-label="Psali o mně">
+      <span style="color:var(--ink)">Psali o mně:</span>
+      <a href="https://www.mvso.cz/aktuality/od-longboardove-firme-k-firme-enter" target="_blank" rel="noopener">MVŠO</a>
+      <a href="https://www.emontana.cz/mila-brzak-surf-paraglide-rozhovor/" target="_blank" rel="noopener">eMontana</a>
+      <a href="https://www.wavescape.co.za/archive/the-changing-face-of-adaptive-surfing" target="_blank" rel="noopener">Wavescape</a>
+      <a href="https://thebeatbali.com/?p=160068" target="_blank" rel="noopener">The Beat Bali</a>
+      <span>Esquire</span>
+      <a href="https://www.nn.cz/blog/milo-brzak-vlnach-surfu-padech-ktere-ho-nuti-jit-dal.html" target="_blank" rel="noopener">NN</a>
+      <a href="https://www.freeride.cz/surf/mila-brzak-prvni-adaptive-surfar-reprezentujici-cr-na-mistrovstvi-sveta" target="_blank" rel="noopener">Freeride</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · OSOBNĚ -->
+<section class="personal" aria-labelledby="osobne-h">
+  <div class="wrap">
+    <div class="sec-head"><span class="chip"><i></i>Osobně</span><h2 id="osobne-h">Proč mi na tom záleží</h2></div>
+    <div class="box">
+      <h3>Země, ze které pocházím</h3>
+      <p>Vyrůstal jsem v zemi, kde komunistický režim lidi s handicapem dlouho odsouval na okraj společnosti. To stigma se překonává, ale zmizelo zdaleka ne. Proto teď znovu stavíme Adapted a hledáme partnery v Česku i v zahraničí.</p>
+      <h3>Bratr</h3>
+      <p>Prošel jsem si sebevraždou svého bratra. Naučilo mě to být tady a teď a dělat věci, které dávají smysl. Pomohla mi vipassana, meditace a práce s dechem.</p>
+      <p class="help">Pokud procházíte něčím těžkým, zavolejte na Linku první psychické pomoci 116 123, nonstop a zdarma.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · KONTAKT -->
+<section class="contact" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="wrap">
+    <div class="cbox">
+      <span class="chip"><i></i>Konference · podcasty · média · firmy</span>
+      <h2 id="kontakt-h">Pozvěte mě<span>.</span></h2>
+      <p>Napište datum, místo, formát a publikum. Ozvu se a domluvíme, co si má publikum odnést.</p>
+      <div class="mailrow">
+        <a class="mail" id="mail" href="mailto:milo@enterai.cz?subject=Pozv%C3%A1n%C3%AD">milo@enterai.cz</a>
+        <button class="copy" id="copy" type="button">Kopírovat</button>
+      </div>
+      <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+    </div>
+    <footer class="foot">
+      <span>© 2026 Miloslav Brzák</span>
+      <span><a href="https://www.linkedin.com/in/milobrzak" target="_blank" rel="me noopener">LinkedIn ↗</a> · <a href="https://enter.ltd" target="_blank" rel="noopener">Enter ↗</a></span>
+    </footer>
+  </div>
+</section>
 </main>
 
 <script>
 (() => {
-  const svg = document.getElementById('chart');
-  const note = document.getElementById('note');
-  const NS = 'http://www.w3.org/2000/svg';
-  const H = 220, BASE = 1200;
-  const rect = svg.getBoundingClientRect();
-  const W = Math.max(520, Math.round(H * rect.width / Math.max(rect.height, 1)));
-  const sx = W / BASE, X = (v) => v * sx;
-  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-  const NOWX = X(820), NOWY = 132;
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // zastávky na neklidné linii minulosti
-  const stops = [
-    { x: X(70),  y: 150, t: 'Havířov',     d: 'Vyrostl jsem na skateboardu a snowboardu. Pravou rukou hýbu od narození jen omezeně.' },
-    { x: X(230), y: 92,  t: 'Kalifornie',  d: 'Ve 23 letech Custom Boards: longboardy s díly umělců, výroba v pěti zemích.' },
-    { x: X(410), y: 168, t: 'Bali',        d: 'Deset let hotel Riviera House a surf každý den. Pětkrát mistrovství světa v adaptive surfingu.' },
-    { x: X(560), y: 70,  t: 'Pinang',      d: 'Devět měsíců jsem řídil ostrov u Sumatry. Dvě záchranné mise, obě dopadly dobře.' },
-    { x: X(690), y: 150, t: 'Nový Zéland', d: 'Quality Coordinator v Kathmandu. Retail a kvalitu jsem se učil od základů.' },
-  ];
-
-  const el = (n, a) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); return e; };
-
-  // budoucnost: hladká linie s pásmem
-  const fut = `M${NOWX} ${NOWY} C ${X(930)} 120, ${X(1040)} 92, ${W} 58`;
-  svg.append(el('path', { class: 'band', d: `M${NOWX} ${NOWY} C ${X(930)} 112, ${X(1040)} 72, ${W} 30 L ${W} 88 C ${X(1040)} 112, ${X(930)} 128, ${NOWX} ${NOWY} Z` }));
-  svg.append(el('line', { class: 'now-rule', x1: NOWX, y1: 6, x2: NOWX, y2: H - 6 }));
-
-  const past = el('path', { class: 'past' });
-  svg.append(past);
-  const future = el('path', { class: 'future', d: fut });
-  svg.append(future);
-
-  // neklidná minulost: zastávky + jemný šum mezi nimi
-  const pts = [{ x: 0, y: 128 }, ...stops, { x: NOWX, y: NOWY }];
-  function jag(t) {
-    let d = `M${pts[0].x} ${pts[0].y}`;
-    for (let i = 1; i < pts.length; i++) {
-      const a = pts[i - 1], b = pts[i];
-      const n = 4;
-      for (let k = 1; k < n; k++) {
-        const x = a.x + (b.x - a.x) * k / n;
-        const amp = 26 * Math.sin(k * 2.1 + i);
-        const wob = reduced ? 0 : 5 * Math.sin(t / 700 + i * 1.7 + k);
-        d += ` L${x.toFixed(1)} ${(a.y + (b.y - a.y) * k / n + amp + wob).toFixed(1)}`;
-      }
-      d += ` L${b.x} ${b.y}`;
-    }
-    return d;
-  }
-  past.setAttribute('d', jag(0));
-
-  // popisky
-  const labels = [];
-  stops.forEach((s, i) => {
-    const c = el('circle', { class: 'stop', cx: s.x, cy: s.y, r: 5.5, tabindex: 0, role: 'button', 'aria-label': s.t });
-    const up = s.y > 110;
-    const lab = el('text', { class: 'lab' + (i % 2 ? ' hide-sm' : ''), x: s.x, y: up ? s.y + 26 : s.y - 16, 'text-anchor': 'middle' });
-    lab.textContent = s.t;
-    svg.append(lab, c);
-    labels.push(c);
-    const show = () => {
-      labels.forEach(l => l.classList.toggle('on', l === c));
-      note.innerHTML = `<b>${s.t}</b>${s.d}`;
-      const box = svg.getBoundingClientRect();
-      const px = s.x / W * box.width, py = s.y / H * box.height;
-      const nx = Math.min(Math.max(px - 130, 8), box.width - 268);
-      note.style.transform = '';
-      note.style.left = nx + 'px';
-      note.style.top = (up ? py - 96 : py + 18) + 'px';
-      note.classList.add('on');
-    };
-    const hide = () => { c.classList.remove('on'); note.classList.remove('on'); };
-    c.addEventListener('mouseenter', show); c.addEventListener('focus', show);
-    c.addEventListener('mouseleave', hide); c.addEventListener('blur', hide);
-    c.addEventListener('click', show);
-  });
-
-  const nowDot = el('circle', { class: 'now-dot', cx: NOWX, cy: NOWY, r: 7 });
-  const nowLab = el('text', { class: 'lab now', x: NOWX, y: H - 12, 'text-anchor': 'middle' }); nowLab.textContent = 'Dnes · Enter';
-  const futLab = el('text', { class: 'lab fut', x: W - 8, y: 20, 'text-anchor': 'end' }); futLab.textContent = 'Od reakce k predikci';
-  svg.append(nowDot, nowLab, futLab);
-
-  // kreslení při načtení
-  if (!reduced) {
-    for (const p of [past, future]) {
-      const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L;
-      p.style.transition = `stroke-dashoffset ${p === past ? 1.8 : 1.1}s cubic-bezier(.4,.1,.2,1) ${p === past ? .5 : 2.2}s`;
-    }
-    requestAnimationFrame(() => requestAnimationFrame(() => { past.style.strokeDashoffset = 0; future.style.strokeDashoffset = 0; }));
-    // po dokreslení jemně dýchá
-    setTimeout(() => {
-      past.style.strokeDasharray = 'none'; past.style.transition = 'none';
-      const tick = (t) => { past.setAttribute('d', jag(t)); requestAnimationFrame(tick); };
-      requestAnimationFrame(tick);
-    }, 2400);
-  }
-  let rw = innerWidth; addEventListener('resize', () => { if (Math.abs(innerWidth - rw) > 80) location.reload(); });
-  document.addEventListener('click', (e) => { if (!e.target.classList.contains('stop')) { note.classList.remove('on'); labels.forEach(l => l.classList.remove('on')); } });
+  const copy = (btn, text, status, label) => async () => {
+    try { await navigator.clipboard.writeText(text); btn.textContent = 'Zkopírováno'; status.textContent = 'Zkopírováno do schránky'; }
+    catch (e) { btn.textContent = 'Označte a zkopírujte'; }
+    setTimeout(() => { btn.textContent = label; status.textContent = ''; }, 2200);
+  };
+  const b = document.getElementById('copy');
+  b.addEventListener('click', copy(b, 'milo@enterai.cz', document.getElementById('copy-status'), 'Kopírovat'));
+  const bb = document.getElementById('copy-bio');
+  bb.addEventListener('click', copy(bb, document.getElementById('bio').textContent, document.getElementById('bio-status'), 'Kopírovat bio'));
 })();
 </script>
 </body>
