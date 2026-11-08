@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="x-default" href="https://milobrzak.com/">
 <link rel="canonical" href="https://milobrzak.com/">
 <meta name="author" content="Miloslav Brzák">
-<meta name="theme-color" content="#F3F4F2">
+<meta name="theme-color" content="#F5F3EF">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://milobrzak.com/">
@@ -36,8 +36,8 @@
 <style>
 /* Minimal: světle šedý papír, bílé karty, černé písmo, zelená jen jako akcent. Tok stránky stoupá nahoru: start → cesta → co předávám → pozvání. */
 :root{
-  --bg:#F3F4F2; --card:#FFFFFF; --ink:#0E1311; --ink-2:#3A403D; --ink-3:#6B716E; --line:#E2E5E1;
-  --mint:#BBEED1; --mist:#E7F7EE; --signal:#41E39E; --deep:#006740;
+  --bg:#F5F3EF; --card:#FFFFFF; --ink:#0B1F16; --ink-2:#3A403D; --ink-3:#6B716E; --line:#E6E1D9;
+  --mint:#FEB192; --mist:#FFEDE4; --signal:#01B36C; --deep:#012B1D;
   --sans:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"Geist Mono",ui-monospace,Menlo,monospace;
   --max:1240px; --sec:clamp(96px,12vw,170px);
@@ -61,7 +61,7 @@ h1,h2,h3{text-wrap:balance}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* hlavička */
-.head{position:sticky;top:0;z-index:20;background:rgba(243,244,242,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.head{position:sticky;top:0;z-index:20;background:rgba(245,243,239,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .head .wrap{display:flex;align-items:center;gap:24px;height:72px}
 .brand{text-decoration:none;color:var(--ink);display:inline-flex;align-items:center}
 .logo{height:26px;width:auto;display:block;overflow:visible}
@@ -357,7 +357,7 @@ h1,h2,h3{text-wrap:balance}
 .stances li.key small{border-color:rgba(255,255,255,.15);color:var(--signal)}
 @media(max-width:1000px){.stances{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.stances{grid-template-columns:1fr}}
-.question{margin-top:14px;background:var(--mint);border-radius:clamp(24px,3vw,36px);padding:clamp(28px,5vw,64px);text-align:center}
+.question{margin-top:14px;background:var(--mist);border-radius:clamp(24px,3vw,36px);padding:clamp(28px,5vw,64px);text-align:center}
 .question .chip{background:var(--card)}
 .q{max-width:24ch;margin:20px auto 0;font-weight:800;font-size:clamp(28px,3.8vw,52px);line-height:1.08;letter-spacing:-.05em}
 .q-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:28px auto 0;text-align:left;font-size:16px}
@@ -402,7 +402,7 @@ h1,h2,h3{text-wrap:balance}
 <a class="sr-only" href="#obsah">Skip to content</a>
 <header class="head">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Milo, back to top"><svg class="logo" viewBox="-4 -8 262 112" aria-hidden="true"><g fill="currentColor"><path d="M0 100V0h25l23 57L71 0h25v100H74V42L56 88H40L22 42v58z"/><rect x="110" y="32" width="22" height="68"/><rect x="146" y="0" width="22" height="100"/><circle cx="216" cy="66" r="24.5" fill="none" stroke="currentColor" stroke-width="22"/></g><circle class="dot" cx="121" cy="9" r="12" fill="#41E39E"/></svg></a>
+    <a class="brand" href="#top" aria-label="Milo, back to top"><svg class="logo" viewBox="-4 -8 262 112" aria-hidden="true"><g fill="currentColor"><path d="M0 100V0h25l23 57L71 0h25v100H74V42L56 88H40L22 42v58z"/><rect x="110" y="32" width="22" height="68"/><rect x="146" y="0" width="22" height="100"/><circle cx="216" cy="66" r="24.5" fill="none" stroke="currentColor" stroke-width="22"/></g><circle class="dot" cx="121" cy="9" r="12" fill="#01B36C"/></svg></a>
     <nav class="nav" aria-label="Main">
       <a href="#company2030">What I build</a>
       <a href="#proc">What drives me</a>
