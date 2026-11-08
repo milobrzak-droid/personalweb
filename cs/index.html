@@ -121,6 +121,18 @@ h1,h2,h3{text-wrap:balance}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:end;list-style:none;padding:0;margin:0}
 .step .learn a{color:var(--ink);font-weight:500}
 .step{background:var(--card);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.road-wrap{position:relative}
+.road{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+.road-wrap .steps{position:relative;z-index:1;column-gap:52px;row-gap:90px}
+.road .dash{fill:none;stroke:var(--signal);stroke-width:3;stroke-linecap:round;stroke-dasharray:2 11}
+.road .rev{fill:none;stroke:#fff;stroke-width:40;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .7s ease-out}
+.road-wrap.go .road .rev{stroke-dashoffset:0}
+.road-wrap .step{opacity:0;transform:translateY(40px) rotate(-1.5deg) scale(.96);transition:opacity .5s ease,transform .7s cubic-bezier(.34,1.56,.64,1)}
+.road-wrap .step:nth-child(even){transform:translateY(40px) rotate(1.5deg) scale(.96)}
+.road-wrap.go .step{opacity:1;transform:none}
+@media(max-width:1060px){.road-wrap .steps{column-gap:40px;row-gap:70px}}
+@media(max-width:620px){.road-wrap .steps{row-gap:56px}}
+@media (prefers-reduced-motion:reduce){.road-wrap .step{opacity:1;transform:none;transition:none}.road .rev{transition:none;stroke-dashoffset:0}}
 .step:nth-child(1),.step:nth-child(4){margin-top:110px}.step:nth-child(2),.step:nth-child(5){margin-top:55px}
 .step.now{background:var(--ink);color:#fff}
 .step .n{display:flex;justify-content:space-between;align-items:center;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
@@ -596,6 +608,8 @@ h1,h2,h3{text-wrap:balance}
         </ol>
       </div>
     </figure>
+    <div class="road-wrap">
+    <svg class="road" aria-hidden="true"><defs><marker id="road-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#01B36C"/></marker></defs><g class="road-segs"></g></svg>
     <ol class="steps">
       <li class="step">
         <span class="n"><span>01 · Start</span><span>Česko</span></span>
@@ -609,12 +623,14 @@ h1,h2,h3{text-wrap:balance}
         <img src="/img/custom-boards-800.jpg" alt="Longboardy Custom Boards na stojanu" width="800" height="600" loading="lazy">
         <h3>Longboardy a čtvrtý člověk ve Slevomatu</h3>
         <p>Ve 23 letech jsem založil Custom Boards s výrobou v pěti zemích. Pak jsem byl čtvrtým zaměstnancem Slevomatu, prvního českého slevového portálu. Rozjížděli jsme v Česku úplně nový byznys.</p>
+        <p class="learn"><small>Co jsem pochopil</small>Nový trh se nedá opsat. Musí se postavit.</p>
       </li>
       <li class="step">
         <span class="n"><span>03 · Oceán</span><span>Bali</span></span>
         <img src="/img/riviera-bazen-800.jpg" alt="" width="800" height="532" loading="lazy">
         <h3>Surf s jednou rukou a vlastní hotel</h3>
         <p>Odešel jsem z Evropy, abych mohl surfovat každý den. Pětkrát jsem startoval na mistrovství světa a deset let vedl hotel Riviera House.</p>
+        <p class="learn"><small>Co jsem pochopil</small>Techniku, která funguje pro mě, si musím najít sám.</p>
       </li>
       <li class="step">
         <span class="n"><span>04 · Ostrov</span><span>Sumatra</span></span>
@@ -628,15 +644,17 @@ h1,h2,h3{text-wrap:balance}
         <img src="/img/nz-arthurs-800.jpg" alt="" width="800" height="600" loading="lazy">
         <h3>Ztratil jsem hotel. Pak přišel Kathmandu</h3>
         <p>Covid mi vzal hotel i Adapted. Rozhodl jsem se začít znovu, uvnitř velké mezinárodní firmy na druhém konci světa.</p>
-        <p class="learn"><a href="#kathmandu">Jak to bylo v Kathmandu ↓</a></p>
+        <p class="learn"><small>Co jsem pochopil</small>Znovu začínat má hodnotu i uprostřed kariéry. <a href="#kathmandu">Jak to bylo v Kathmandu ↓</a></p>
       </li>
       <li class="step now">
         <span class="n"><span>06 · Dnes</span><span>Enter · VŠEM</span></span>
         <img src="/img/enter-workshop-800.jpg" alt="Milo Brzák vede workshop o práci s AI" width="800" height="541" loading="lazy">
         <h3>AI ve firmách, s lidmi v centru</h3>
         <p>Vedu Enter a na VŠEM učím obor Agentic Company. Spojuju všechno, co jsem se naučil v předchozích kapitolách.</p>
+        <p class="learn"><small>Co jsem pochopil</small>Nejdřív lidé a proces, pak technologie.</p>
       </li>
     </ol>
+    </div>
   </div>
 </section>
 
@@ -818,6 +836,22 @@ function draw(){var r=box.getBoundingClientRect(),ds=box.querySelectorAll('.d');
 svg.setAttribute('viewBox','0 0 '+r.width+' 44');var d='M'+pts[0][0]+' '+pts[0][1];for(var i=1;i<pts.length;i++){var a=pts[i-1],b=pts[i],m=(a[0]+b[0])/2,o=(i%2?-16:16);d+=' Q'+m+' '+(a[1]+o)+' '+b[0]+' '+b[1]}p.setAttribute('d',d);var L=Math.ceil(p.getTotalLength());p.style.setProperty('--len',L)}
 draw();addEventListener('resize',draw);
 if('IntersectionObserver' in window){new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){f.classList.add('on');o.disconnect()}})},{threshold:.45}).observe(f)}else f.classList.add('on');})();
+</script>
+<script>
+(function(){var w=document.querySelector('.road-wrap');if(!w)return;var svg=w.querySelector('.road'),g=svg.querySelector('.road-segs'),cards=[].slice.call(w.querySelectorAll('.step')),NS='http://www.w3.org/2000/svg',STEP=.38;
+cards.forEach(function(c,i){c.style.transitionDelay=(i*STEP)+'s'});
+function draw(){var R=w.getBoundingClientRect();while(g.firstChild)g.removeChild(g.firstChild);
+ var r=cards.map(function(c){var b=c.getBoundingClientRect(),t=getComputedStyle(c).transform;return{l:b.left-R.left,t:b.top-R.top,r:b.right-R.left,b:b.bottom-R.top,w:b.width,h:b.height}});
+ for(var i=0;i<r.length-1;i++){var a=r[i],b=r[i+1],d;
+  if(b.l>a.r-5&&Math.abs(b.t-a.t)<a.h){var y1=a.t+a.h*.42,y2=b.t+b.h*.42,x1=a.r+6,x2=b.l-8;d='M'+x1+' '+y1+' C'+(x1+18)+' '+(y1-70)+' '+(x2-18)+' '+(y2-70)+' '+x2+' '+y2}
+  else{var x1=a.l+a.w/2,y1=a.b+4,x2=b.l+b.w/2,y2=b.t-6,dy=Math.max(40,(y2-y1)*.9);d='M'+x1+' '+y1+' C'+x1+' '+(y1+dy)+' '+x2+' '+(y2-dy)+' '+x2+' '+y2}
+  var id='rm'+i,m=document.createElementNS(NS,'mask');m.setAttribute('id',id);m.setAttribute('maskUnits','userSpaceOnUse');
+  var rv=document.createElementNS(NS,'path');rv.setAttribute('d',d);rv.setAttribute('class','rev');rv.setAttribute('pathLength','1');rv.style.transitionDelay=((i+.75)*STEP)+'s';m.appendChild(rv);
+  var p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('class','dash');p.setAttribute('mask','url(#'+id+')');p.setAttribute('marker-end','url(#road-arrow)');
+  g.appendChild(m);g.appendChild(p)}}
+var go=w.classList.contains('go');w.classList.add('go');var tmp=cards.map(function(c){var t=c.style.transition;c.style.transition='none';return t});draw();cards.forEach(function(c,i){c.style.transition=tmp[i]});if(!go)w.classList.remove('go');
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){var had=w.classList.contains('go');cards.forEach(function(c){c.style.transition='none'});w.classList.add('go');draw();cards.forEach(function(c){c.style.transition=''});if(!had)w.classList.remove('go')},150)});
+if('IntersectionObserver' in window){new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){w.classList.add('go');o.disconnect()}})},{threshold:.15}).observe(w)}else w.classList.add('go');})();
 </script>
 </body>
 </html>
