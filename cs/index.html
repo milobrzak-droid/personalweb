@@ -135,7 +135,7 @@ h1,h2,h3{text-wrap:balance}
 @media (prefers-reduced-motion:reduce){.road-wrap .step{opacity:1;transform:none;transition:none}.road .rev{transition:none;stroke-dashoffset:0}}
 .step:nth-child(1),.step:nth-child(4){margin-top:110px}.step:nth-child(2),.step:nth-child(5){margin-top:55px}
 .step.now{background:var(--ink);color:#fff}
-.step .n{display:flex;justify-content:space-between;align-items:center;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.step .n{display:flex;justify-content:space-between;align-items:flex-start;gap:6px 14px;flex-wrap:wrap;line-height:1.35;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
 .step.now .n{color:var(--signal)}
 .step img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
 .step h3{font-weight:600;font-size:20px;line-height:1.2;letter-spacing:-.02em}
@@ -220,7 +220,7 @@ h1,h2,h3{text-wrap:balance}
 .vid{margin:0;background:var(--card);border-radius:clamp(18px,2vw,28px);padding:12px}
 .vid figcaption{padding:16px 8px 6px;display:grid;gap:6px}
 .vid figcaption b{font-weight:600;font-size:18px;line-height:1.3;letter-spacing:-.01em}
-.vid figcaption a{font-size:14px;color:var(--ink-3)}
+.vid figcaption a{font-size:14px;color:var(--ink-3);display:inline-flex;align-items:center;min-height:44px}
 .vsrc-n{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--deep)}
 @media(max-width:860px){.videos{grid-template-columns:1fr}}
 .video{margin:0;border-radius:clamp(14px,1.6vw,20px);overflow:hidden;background:var(--ink);aspect-ratio:16/9}
@@ -320,7 +320,7 @@ h1,h2,h3{text-wrap:balance}
 @media(max-width:520px){.case-steps{grid-template-columns:1fr}}
 .c30-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .c30-steps{margin-top:20px}
-.c30-steps li{background:#FFFFFF}
+.c30-steps li{background:#FFFFFF;grid-template-columns:38px 1fr}
 .loop{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin:0 auto}
 .loop svg{position:absolute;inset:0;width:100%;height:100%}
 .loop .ring{fill:none;stroke:#FFFFFF;stroke-width:18}
@@ -328,7 +328,7 @@ h1,h2,h3{text-wrap:balance}
 @keyframes loopspin{to{transform:rotate(360deg)}}
 .loop .core{position:absolute;inset:27%;border-radius:50%;background:var(--deep);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px}
 .loop .core b{font:800 clamp(20px,2.4vw,30px)/1 var(--sans);letter-spacing:-.04em}
-.loop .core small{margin-top:8px;font:500 10px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint)}
+.loop .core small{margin-top:8px;font:500 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint)}
 .loop .st{position:absolute;transform:translate(-50%,-50%);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:600 14px/1 var(--sans);white-space:nowrap;box-shadow:0 6px 18px rgba(14,19,17,.06)}
 .loop .st i{font:500 10px/1 var(--mono);font-style:normal;color:var(--deep);margin-right:6px}
 .roles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
@@ -410,6 +410,8 @@ h1,h2,h3{text-wrap:balance}
 .apx-list{list-style:none;padding:0;margin:0;display:grid;gap:8px;width:100%}
 .apx-list li{background:rgba(255,255,255,.65);border-radius:12px;padding:10px 14px;font-size:14px}
 .apx-list b{display:inline-block;min-width:58px}
+.apx-list li{display:grid;grid-template-columns:62px 1fr;align-items:baseline}
+.apx-list li b{min-width:0}
 .apx-note{font-weight:500}
 @media(max-width:900px){.build-grid{grid-template-columns:1fr}}
 .gcard.key{background:var(--ink);color:#fff}
@@ -485,9 +487,9 @@ h1,h2,h3{text-wrap:balance}
           <p><strong>Enter</strong> je tým, se kterým to převádím do praxe. Pracujeme s majiteli a vedením firem a propojujeme lidi, firemní data a systémy do smyčky rozhodování, práce a učení. Já odpovídám za směr a za to, aby změna dávala smysl lidem ve firmě.</p>
         </div>
         <ul class="apx-list en-steps c30-steps">
-          <li><b>01</b> Audit provozu a úzkých míst přímo s vedením</li>
-          <li><b>02</b> Napojení na systémy, které firma už používá</li>
-          <li><b>03</b> Zapojení lidí a řízení podle živých dat</li>
+          <li><b>01</b> <span>Audit provozu a úzkých míst přímo s vedením</span></li>
+          <li><b>02</b> <span>Napojení na systémy, které firma už používá</span></li>
+          <li><b>03</b> <span>Zapojení lidí a řízení podle živých dat</span></li>
         </ul>
         <div class="c30-cta"><a class="btn" href="https://company2030.com" target="_blank" rel="noopener">Prozkoumat Company 2030 →</a><a class="btn light" href="https://enter.ltd" target="_blank" rel="noopener">Web Enteru ↗</a></div>
       </div>
@@ -532,11 +534,11 @@ h1,h2,h3{text-wrap:balance}
         <p>Narodil jsem se s přetrženými nervy v rameni a v pravé ruce dodnes nemám plnou hybnost. Když jsem poprvé jel na mistrovství světa v adaptive surfingu, v Česku žádná komunita neexistovala. Tak jsme založili Adapted.</p>
         
         <ul class="apx-list">
-          <li><b>2017</b> první český adaptive surfový tým</li>
-          <li><b>2018</b> první český surf kemp pro lidi s handicapem na Bali</li>
-          <li><b>2019</b> <a class="yt" href="https://www.youtube.com/watch?v=1g31bz37Igo" target="_blank" rel="noopener">Bali Adaptive Pro ↗</a>: první profesionální závod surfařů s handicapem v jihovýchodní Asii</li>
-          <li><b>Covid</b> přišli jsme o sponzory, projekt stál jen na mně</li>
-          <li><b>Dnes</b> stavíme Adapted znovu, aby nestál na jednom člověku</li>
+          <li><b>2017</b> <span>první český adaptive surfový tým</span></li>
+          <li><b>2018</b> <span>první český surf kemp pro lidi s handicapem na Bali</span></li>
+          <li><b>2019</b> <span><a class="yt" href="https://www.youtube.com/watch?v=1g31bz37Igo" target="_blank" rel="noopener">Bali Adaptive Pro ↗</a>: první profesionální závod surfařů s handicapem v jihovýchodní Asii</span></li>
+          <li><b>Covid</b> <span>přišli jsme o sponzory, projekt stál jen na mně</span></li>
+          <li><b>Dnes</b> <span>stavíme Adapted znovu, aby nestál na jednom člověku</span></li>
         </ul>
         <p class="apx-note">Adapted teď stavíme znovu. <b>Hledáme partnery a lidi, kteří se zapojí.</b></p>
         <a class="btn" href="#kontakt">Zapojit se do Adapted →</a>
